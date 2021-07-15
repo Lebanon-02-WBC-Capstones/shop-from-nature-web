@@ -1,14 +1,4 @@
-body {
-    margin: 0;
-    font-family: Oswald;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-.olive {
-    background-color: #7EAC8A;
-}
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
