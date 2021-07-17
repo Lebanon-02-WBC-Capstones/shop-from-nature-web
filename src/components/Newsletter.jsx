@@ -1,5 +1,5 @@
 import React from "react";
-import NewsletterInput from "../src/NewsletterInput";
+import NewsletterInput from "../src/components/NewsletterInput";
 
 export default function Newsletter() {
     return ( 
