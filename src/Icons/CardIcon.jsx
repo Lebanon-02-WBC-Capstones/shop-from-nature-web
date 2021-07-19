@@ -3,18 +3,14 @@ import * as React from "react";
 function Icon(props) {
   return (
     <svg
-      width={64}
-      height={59}
+      width={40}
+      height={30}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       {...props}
     >
-      <path
-        fill="url(#prefix__pattern0)"
-        fillOpacity={0.9}
-        d="M.021 0h63v59h-63z"
-      />
+      <path fill="url(#prefix__pattern0)" fillOpacity={0.9} d="M0 0h40v30H0z" />
       <defs>
         <pattern
           id="prefix__pattern0"
@@ -24,7 +20,7 @@ function Icon(props) {
         >
           <use
             xlinkHref="#prefix__image0"
-            transform="matrix(.002 0 0 .00214 0 -.034)"
+            transform="matrix(.002 0 0 .00267 0 -.167)"
           />
         </pattern>
         <image
