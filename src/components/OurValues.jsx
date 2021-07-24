@@ -9,7 +9,7 @@ import Awarness from "./Awarness";
 function OurValues() {
   return (
     <div className="flex flex-row bg-white w-full">
-      <p className="font-medium tracking-tighter text-bric ml-20 mt-10">
+      <p className="font-semibold text-3xl tracking-tighter text-bric ml-20 mt-10">
         Our Values
       </p>
       <div className="flex flex-col mr-60 mt-20 ">
