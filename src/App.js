@@ -8,13 +8,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Footer />
         <Navbar />
         <header className="App-header">
           <p>
             Welcome to the capstone projects, this is your initial react app
           </p>
         </header>
+        <Footer />
       </Router>
     </div >
   );
