@@ -13,6 +13,15 @@ module.exports = {
         olivegreen: "#7EAC8A",
         red: "#9F6544",
       },
+      minHeight: {
+        0: "0",
+        small: "6vh",
+        medium: "15vh",
+        large: "45vh",
+        full: "100vh",
+        "1/2": "50%",
+        "3/4": "75%",
+      },
     },
   },
   variants: {
