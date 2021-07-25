@@ -14,7 +14,6 @@ function Donate() {
         enablebackground="new 0 0 121 91"
         xmlSpace="preserve"
       >
-        {" "}
         <image
           id="image0"
           width="121"

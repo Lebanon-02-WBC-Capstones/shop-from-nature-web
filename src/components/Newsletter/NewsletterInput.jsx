@@ -21,7 +21,7 @@ function NewsletterInput() {
         onChange={(e) => setEmail(e.target.value)}
         required
       />
-      <button className="btn bg-primary text-base p-3 rounded">
+      <button className="btn bg-olivegreen text-base p-3 rounded">
         Subscribe!
       </button>
     </form>
