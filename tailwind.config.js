@@ -1,6 +1,6 @@
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {
       fontFamily: {
@@ -8,10 +8,12 @@ module.exports = {
       },
       colors: {
         transparent: "transparent",
+        mainbg: "#F4EFE8",
         current: "currentColor",
         grey: "#5F7264",
         olivegreen: "#7EAC8A",
         red: "#9F6544",
+        green: "#5F7264",
       },
       minHeight: {
         0: "0",
