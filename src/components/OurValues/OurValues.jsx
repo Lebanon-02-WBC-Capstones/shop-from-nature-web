@@ -1,10 +1,10 @@
 import React from "react";
-import Consume from "./Consume";
-import Waste from "./Waste";
-import Planet from "./Planet";
-import Donate from "./Donate";
-import Quality from "./Quality";
-import Awarness from "./Awarness";
+import ConsumeIcon from "./ConsumeIcon";
+import WasteIcon from "./WasteIcon";
+import PlanetIcon from "./PlanetIcon";
+import DonateIcon from "./DonateIcon";
+import QualityIcon from "./QualityIcon";
+import AwarnessIcon from "./AwarnessIcon";
 
 function OurValues() {
   return (
@@ -14,15 +14,15 @@ function OurValues() {
       </p>
       <div className="flex flex-col mr-60 mt-20 ">
         <div className=" flex flex-row justify-between">
-          <Consume />
+          <ConsumeIcon />
           <p className="font-bold text-secondary m-7">Consume sustainably</p>
         </div>
         <div className=" flex flex-row justify-between">
-          <Waste />
+          <WasteIcon />
           <p className=" font-bold text-secondary my-8 mr-28">Cut the waste</p>
         </div>
         <div className=" flex flex-row justify-between">
-          <Planet />
+          <PlanetIcon />
           <p className=" font-bold text-secondary mt-6 mr-24">
             Save the planet
           </p>
@@ -30,17 +30,17 @@ function OurValues() {
       </div>
       <div className="flex flex-col mr-36 mt-20 ">
         <div className=" flex flex-row justify-between">
-          <Donate />
+          <DonateIcon />
           <p className=" font-bold text-secondary mt-7 mr-36">Donate</p>
         </div>
         <div className=" flex flex-row justify-between">
-          <Quality />
+          <QualityIcon />
           <p className=" font-bold text-secondary mt-10 ml-12">
             Better quality of life
           </p>
         </div>
         <div className=" flex flex-row justify-between">
-          <Awarness />
+          <AwarnessIcon />
           <p className=" font-bold text-secondary mt-7 mr-14">Share awarness</p>
         </div>
       </div>

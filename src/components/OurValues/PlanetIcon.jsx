@@ -14,7 +14,6 @@ function Planet() {
         enablebackground="new 0 0 110 81"
         xmlSpace="preserve"
       >
-        {" "}
         <image
           id="image0"
           width="110"

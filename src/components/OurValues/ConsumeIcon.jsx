@@ -14,7 +14,6 @@ function Consume() {
         enablebackground="new 0 0 114 94"
         xmlSpace="preserve"
       >
-        {" "}
         <image
           id="image0"
           width="114"

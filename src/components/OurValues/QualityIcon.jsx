@@ -14,7 +14,6 @@ function Quality() {
         enablebackground="new 0 0 87 85"
         xmlSpace="preserve"
       >
-        {" "}
         <image
           id="image0"
           width="87"

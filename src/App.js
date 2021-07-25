@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import OurValues from "./components/OurValues";
+import OurValues from "./components/OurValues/OurValues";
 
 function App() {
   return (

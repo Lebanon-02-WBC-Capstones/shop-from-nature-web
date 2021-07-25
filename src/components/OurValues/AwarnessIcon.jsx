@@ -14,7 +14,6 @@ function Awarness() {
         enablebackground="new 0 0 96 82"
         xmlSpace="preserve"
       >
-        {" "}
         <image
           id="image0"
           width="96"

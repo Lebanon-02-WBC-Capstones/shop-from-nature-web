@@ -13,7 +13,6 @@ function Waste() {
         viewBox="0 0 107 90"
         enablebackground="new 0 0 107 90"
       >
-        {" "}
         <image
           id="image0"
           width="107"

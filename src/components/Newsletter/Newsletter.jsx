@@ -7,7 +7,6 @@ function Newsletter() {
     <div className="bg-tan py-10 px-80">
       <NewsletterIcon />
       <p className="text-29 mb-4 text-dark">
-        {" "}
         Subscribe to our newsletter and stay updated!{" "}
       </p>
       <NewsletterInput />
