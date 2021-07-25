@@ -1,10 +1,10 @@
 import React from "react";
-import ConsumeIcon from "./ConsumeIcon";
-import WasteIcon from "./WasteIcon";
-import PlanetIcon from "./PlanetIcon";
-import DonateIcon from "./DonateIcon";
-import QualityIcon from "./QualityIcon";
-import AwarnessIcon from "./AwarnessIcon";
+import ConsumeIcon from "../../Icons/ConsumeIcon";
+import WasteIcon from "../../Icons/WasteIcon";
+import PlanetIcon from "../../Icons/PlanetIcon";
+import DonateIcon from "../../Icons/DonateIcon";
+import QualityIcon from "../../Icons/QualityIcon";
+import AwarnessIcon from "../../Icons/AwarnessIcon";
 
 function OurValues() {
   return (

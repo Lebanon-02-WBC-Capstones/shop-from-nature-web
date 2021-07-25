@@ -1,6 +1,6 @@
 import React from "react";
 import NewsletterInput from "./NewsletterInput";
-import NewsletterIcon from "./NewsletterIcon";
+import NewsletterIcon from "../../Icons/NewsletterIcon";
 
 function Newsletter() {
   return (
