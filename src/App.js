@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import Newsletter from "./components/Newsletter";
+import Newsletter from "./components/Newsletter/Newsletter";
 
 function App() {
   return (
