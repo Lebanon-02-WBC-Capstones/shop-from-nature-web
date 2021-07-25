@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -8,6 +9,7 @@ module.exports = {
       },
       colors: {
         transparent: "transparent",
+        mainbg: "#F4EFE8",
         current: "currentColor",
         grey: "#5F7264",
         olivegreen: "#7EAC8A",
@@ -19,9 +21,15 @@ module.exports = {
         small: "6vh",
         medium: "15vh",
         large: "45vh",
-        full: "100vh",
+        full: "100%",
         "1/2": "50%",
         "3/4": "75%",
+      },
+      maxWidth: {
+        "2xs": "5rem",
+      },
+      boxShadow: {
+        xl: "-15px -15px #7EAC8A",
       },
     },
   },
