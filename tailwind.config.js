@@ -12,6 +12,7 @@ module.exports = {
         grey: "#5F7264",
         olivegreen: "#7EAC8A",
         red: "#9F6544",
+        green: "#5F7264",
       },
       minHeight: {
         0: "0",
