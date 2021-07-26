@@ -8,7 +8,7 @@ import AwarnessIcon from "../../Icons/AwarnessIcon";
 
 function OurValues() {
   return (
-    <div className="flex flex-row bg-white w-full">
+    <div className="flex flex-row bg-white w-full pt-4 pb-10">
       <p className="font-semibold text-3xl tracking-tighter text-bric ml-20 mt-10">
         Our Values
       </p>
