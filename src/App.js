@@ -10,13 +10,13 @@ function App() {
     <div className="App">
       <header className="App-header">  
       </header>
-      <Newsletter />
       <Router>
         <Navbar />
         <header className="App-header">
           <p>
             Welcome to the capstone projects, this is your initial react app
           </p>
+          <Newsletter />
         </header>
         <Footer />
       </Router>
