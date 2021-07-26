@@ -2,9 +2,13 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
+    extend: {
+      fontFamily: {
+        sans: "Oswald",
+      },
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
       grey: "#5F7264",
       olivegreen: "#7EAC8A",
       red: "#9F6544",
@@ -14,11 +18,8 @@ module.exports = {
       dark: "#717771",
       tan: "#fcfbf9",
       bric: "#892E2E",
-    },
-    fontFamily: {
-      "oswald": "Oswald",
-     },
-    extend: {
+        green: "#5F7264",
+      },
       minHeight: {
         0: "0",
         small: "6vh",
@@ -35,3 +36,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+  
