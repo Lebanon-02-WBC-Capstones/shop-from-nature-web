@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-undef
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
@@ -9,10 +10,9 @@ module.exports = {
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        grey: "#5F7264",
-        olivegreen: "#7EAC8A",
+        olivegreen: "#5F7264",
         red: "#9F6544",
-        green: "#5F7264",
+        green: "#7EAC8A",
       },
       minHeight: {
         0: "0",
