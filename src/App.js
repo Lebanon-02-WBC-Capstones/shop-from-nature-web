@@ -7,18 +7,10 @@ import BlogCard from "./components/BlogCard/BlogCard";
 
 function App() {
   return (
-    <div className="App">
-      <BlogCard/>
-      {/* <Router>
-        <Navbar />
-        <header className="App-header">
-          <p>
-            Welcome to the capstone projects, this is your initial react app
-          </p>
-        </header>
-        <Footer />
-      </Router> */}
-    </div >
+    <Router>
+      <Navbar />
+      <Footer />
+    </Router>
   );
 }
 
