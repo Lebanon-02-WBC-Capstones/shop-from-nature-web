@@ -3,20 +3,14 @@ import React from "react";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-
+import CartItem from "./components/CartItem/CartItem";
 function App() {
   return (
-    <div className="App bg-mainbg">
-      <Router>
-        <Navbar />
-        <header className="App-header">
-          <p>
-            Welcome to the capstone projects, this is your initial react app
-          </p>
-        </header>
-        <Footer />
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Footer />
+      <CartItem />
+    </Router>
   );
 }
 

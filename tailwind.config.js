@@ -21,6 +21,7 @@ module.exports = {
         small: "6vh",
         medium: "15vh",
         large: "45vh",
+        full: "100vh",
         full: "100%",
         "1/2": "50%",
         "3/4": "75%",
