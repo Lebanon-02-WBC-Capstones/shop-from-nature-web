@@ -3,7 +3,7 @@ import * as React from "react";
 function Icon() {
   return (
     <svg
-      width="375"
+      width="425"
       viewBox="0 0 476 500"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

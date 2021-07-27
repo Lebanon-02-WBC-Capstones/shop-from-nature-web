@@ -17,7 +17,7 @@ const OurMission = () => {
           sustainably sourced.
         </p>
       </div>
-      <div className="relative right-20 pt-12">
+      <div className="relative right-25 pt-8">
         <Leaf />
       </div>
     </section>
