@@ -1,12 +1,14 @@
 import React from "react";
-import RecentBlogItem from "./components/HomePage/RecentBlogItem";
-//import BambooStraw from "./Images/BambooStraw";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <RecentBlogItem/>
-    </div>
+    <Router>
+      <Navbar />
+      <Footer />
+    </Router>
   );
 }
 
