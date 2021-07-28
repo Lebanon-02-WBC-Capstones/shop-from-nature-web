@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -8,18 +9,29 @@ module.exports = {
       },
       colors: {
         transparent: "transparent",
+        mainbg: "#F4EFE8",
         current: "currentColor",
         grey: "#5F7264",
-        olivegreen: "#5F7264",
+        olivegreen: "#7EAC8A",
         red: "#9F6544",
-        pink: "#F4EFE8",
-        green: "#7EAC8A",
+        green: "#5F7264",
+      },
+      minHeight: {
+        0: "0",
+        small: "6vh",
+        medium: "15vh",
+        large: "45vh",
+        full: "100vh",
+        full: "100%",
+        "1/2": "50%",
+        "3/4": "75%",
+      },
+      maxWidth: {
+        "2xs": "5rem",
       },
       boxShadow: {
-        ll: "-41px -34px #7EAC8A",
-        l: "-30px 14px #9F6544"
+        xl: "-15px -15px #7EAC8A",
       },
-
     },
   },
   variants: {
