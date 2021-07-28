@@ -3,7 +3,7 @@ import ArrivalItems from "./ArrivalItems";
 
 const data = {
     id: 1,
-    img: "/image1.png",
+    img: "./Images/arrivalItem.png",
     title: "Random Product",
     price: "--$",
 };

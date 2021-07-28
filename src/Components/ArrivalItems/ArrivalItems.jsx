@@ -22,7 +22,7 @@ const ArrivalItems = ( {id, Image, title, price} ) => {
                           <h1 className="text-xl ml-16 mr-6 text-olivegreen font-regular">{title}</h1>
                           <h3 className="text-xl mr-6 text-olivegreen font-regular">{price}</h3>
                       </div>
-                    <button className="text-xl mr-6 text-red font-regular border-2 border-grey m-4 p-2">Add To Bag</button>
+                    <button className="text-xl mr-6 text-red font-regular border-2 border-grey mt-4 mb-4 ml-36 p-2">Add To Bag</button>
         
             </div>
           </div>
