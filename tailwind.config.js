@@ -35,7 +35,12 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      boxShadow: ['active'],
+      animation: ['motion-reduce'],
+      padding: ['hover'],
+      textColor: ['hover']
+    },
   },
   plugins: [],
 };
