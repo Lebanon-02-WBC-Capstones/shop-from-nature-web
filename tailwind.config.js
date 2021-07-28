@@ -17,6 +17,8 @@ module.exports = {
       gray: "#c5cbc5",
       dark: "#717771",
       tan: "#fcfbf9",
+      about:"#892E2E",
+      pink:"#F4EFE8",
     },
     minHeight: {
       0: "0",
