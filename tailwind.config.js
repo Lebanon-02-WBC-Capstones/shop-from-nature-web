@@ -1,26 +1,49 @@
 module.exports = {
+  important: true,
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      olivegreen: "#7eac8a",
-      red: "#9F6544",
-      black: "#000000",
-      white:"#fcfbfb",
-      gray: "#c5cbc5",
-      dark: "#717771",
-      tan: "#fcfbf9",
-      bric: "#892E2E",
+    extend: {
+      fontFamily: {
+        sans: "Oswald",
+      },
+      colors: {
+        transparent: "transparent",
+        mainbg: "#F4EFE8",
+        current: "currentColor",
+        grey: "#5F7264",
+        olivegreen: "#7EAC8A",
+        red: "#9F6544",
+        green: "#5F7264",
+        black: "#000000",
+        white:"#fcfbfb",
+        gray: "#c5cbc5",
+        dark: "#717771",
+        tan: "#fcfbf9",
+        bric: "#892E2E",
+      },
+      minHeight: {
+        0: "0",
+        small: "6vh",
+        medium: "15vh",
+        large: "45vh",
+        full: "100vh",
+        full: "100%",
+        "1/2": "50%",
+        "3/4": "75%",
+      },
+      maxWidth: {
+        "2xs": "5rem",
+      },
+      boxShadow: {
+        xl: "-15px -15px #7EAC8A",
+      },
     },
-    fontFamily: {
-      "oswald": "Oswald",
-     },
-    extend: {},
   },
   variants: {
-    extend: {},
+    boxShadow: ["active"],
+    animation: ["motion-reduce"],
+    padding: ["hover"],
+    textColor: ["hover"],
   },
-  plugins: [],
-};
+}
