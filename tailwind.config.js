@@ -35,7 +35,6 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
       boxShadow: ["active"],
       animation: ["motion-reduce"],
       padding: ["hover"],
