@@ -1,4 +1,5 @@
 module.exports = {
+  important: true,
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -7,18 +8,18 @@ module.exports = {
         sans: "Oswald",
       },
       colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      grey: "#5F7264",
-      olivegreen: "#7EAC8A",
-      red: "#9F6544",
-      green: "#5F7264",
-      black: "#000000",
-      white:"#fcfbfb",
-      gray: "#c5cbc5",
-      dark: "#717771",
-      tan: "#fcfbf9",
-      bric: "#892E2E",
+        transparent: "transparent",
+        current: "currentColor",
+        grey: "#5F7264",
+        olivegreen: "#7EAC8A",
+        red: "#9F6544",
+        green: "#5F7264",
+        black: "#000000",
+        white: "#fcfbfb",
+        gray: "#c5cbc5",
+        dark: "#717771",
+        tan: "#fcfbf9",
+        bric: "#892E2E",
       },
       minHeight: {
         0: "0",
@@ -29,12 +30,18 @@ module.exports = {
         "1/2": "50%",
         "3/4": "75%",
       },
+      maxWidth: {
+        "2xs": "5rem",
+      },
+      boxShadow: {
+        xl: "-15px -15px #7EAC8A",
+      },
     },
   },
   variants: {
-    extend: {},
+    boxShadow: ["active"],
+    animation: ["motion-reduce"],
+    padding: ["hover"],
+    textColor: ["hover"],
   },
-  plugins: [],
 };
-
-  
