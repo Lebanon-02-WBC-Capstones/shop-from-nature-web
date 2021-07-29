@@ -6,7 +6,6 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-<<<<<<< HEAD
     <div className="App">
       <Router>
         <Navbar />
@@ -17,13 +16,7 @@ function App() {
         </header>
         <Footer />
       </Router>
-    </div >
-=======
-    <Router>
-      <Navbar />
-      <Footer />
-    </Router>
->>>>>>> f87294dde7f9003c8b1c505c2910bfa6c1bd6812
+    </div>
   );
 }
 
