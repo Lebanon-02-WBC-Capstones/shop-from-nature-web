@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     fontFamily: {
       sans: "Oswald",
@@ -18,6 +18,7 @@ module.exports = {
       gray: "#c5cbc5",
       dark: "#717771",
       tan: "#fcfbf9",
+      ecru: "#F8F5EF",
     },
     minHeight: {
       0: "0",
