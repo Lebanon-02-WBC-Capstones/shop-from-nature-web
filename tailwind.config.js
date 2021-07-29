@@ -33,15 +33,11 @@ module.exports = {
         xl: "-15px -15px #7EAC8A",
       },
     },
-
   },
   variants: {
-    extend: {
-      boxShadow: ['active'],
-      animation: ['motion-reduce'],
-      padding: ['hover'],
-      textColor: ['hover']
-    },
+    boxShadow: ["active"],
+    animation: ["motion-reduce"],
+    padding: ["hover"],
+    textColor: ["hover"],
   },
-  plugins: [],
-};
+}
