@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 const BlogCard = ({ blogDate, blogTitle, blogDescription }) => {
   const blogPage = () => {
-    // eslint-disable-next-line no-console
     console.log(
       "Here should be the path to the Blog Detail Page when it's done"
     );
