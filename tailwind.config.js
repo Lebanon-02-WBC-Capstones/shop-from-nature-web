@@ -37,11 +37,15 @@ module.exports = {
         xl: "-15px -15px #7EAC8A",
       },
     },
+
   },
+  extend: {},
   variants: {
     boxShadow: ["active"],
     animation: ["motion-reduce"],
     padding: ["hover"],
     textColor: ["hover"],
   },
+
 };
+
