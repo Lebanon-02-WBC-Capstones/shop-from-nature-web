@@ -4,6 +4,13 @@ export default function HomePageHeader() {
   return (
     <div className="flex bg-pink py-20" style={{ minHeight: "70vh" }}>
       <div className="relative h-full w-1/2 left-40">
+        
+        
+        
+        
+        
+        
+        
         <img
           src="../images/header3.jpeg"
           alt="product"
