@@ -1,10 +1,10 @@
 import React from "react";
 import Leaf1 from "../../images/about";
-function Aboutpageheader() {
+function AboutPageHeader() {
   return (
     <div className="flex flex-col mx-auto bg-pink">
       <h1
-        className="ml-10 text-6xl font-medium text-about font-sans  left-4.58%
+        className="ml-10 text-6xl font-medium text-brown font-sans  left-4.58%
 right-38.89%
 top-4.46%
 bottom-92.9% "
@@ -37,4 +37,4 @@ bottom-92.9% "
   );
 }
 
-export default Aboutpageheader;
+export default AboutPageHeader;
