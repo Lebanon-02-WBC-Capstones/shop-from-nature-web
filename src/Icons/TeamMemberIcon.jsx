@@ -2,7 +2,7 @@ import React from "react";
 
 function TeamMemberIcon() {
   return (
-    <div>
+    <div className="align-center">
       <svg
         version="1.1"
         id="Layer_1"
@@ -14,6 +14,7 @@ function TeamMemberIcon() {
         enablebackground="new 0 0 277 262"
         xmlSpace="preserve"
       >
+        {" "}
         <image
           id="image0"
           width="277"
