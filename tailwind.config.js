@@ -9,7 +9,6 @@ module.exports = {
       },
       colors: {
         transparent: "transparent",
-        mainbg: "#F4EFE8",
         current: "currentColor",
         grey: "#5F7264",
         olivegreen: "#7EAC8A",
@@ -28,7 +27,6 @@ module.exports = {
         medium: "15vh",
         large: "45vh",
         full: "100vh",
-        full: "100%",
         "1/2": "50%",
         "3/4": "75%",
       },
@@ -39,11 +37,15 @@ module.exports = {
         xl: "-15px -15px #7EAC8A",
       },
     },
+
   },
+  extend: {},
   variants: {
     boxShadow: ["active"],
     animation: ["motion-reduce"],
     padding: ["hover"],
     textColor: ["hover"],
   },
-}
+
+};
+
