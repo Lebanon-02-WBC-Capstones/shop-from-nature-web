@@ -9,12 +9,17 @@ module.exports = {
       },
       colors: {
         transparent: "transparent",
-        mainbg: "#F4EFE8",
         current: "currentColor",
         grey: "#5F7264",
         olivegreen: "#7EAC8A",
         red: "#9F6544",
         green: "#5F7264",
+        black: "#000000",
+        white: "#fcfbfb",
+        gray: "#c5cbc5",
+        dark: "#717771",
+        tan: "#fcfbf9",
+        bric: "#892E2E",
       },
       minHeight: {
         0: "0",
@@ -22,7 +27,6 @@ module.exports = {
         medium: "15vh",
         large: "45vh",
         full: "100vh",
-        full: "100%",
         "1/2": "50%",
         "3/4": "75%",
       },
@@ -33,14 +37,15 @@ module.exports = {
         xl: "-15px -15px #7EAC8A",
       },
     },
+
   },
+  extend: {},
   variants: {
-    extend: {
-      boxShadow: ['active'],
-      animation: ['motion-reduce'],
-      padding: ['hover'],
-      textColor: ['hover']
-    },
+    boxShadow: ["active"],
+    animation: ["motion-reduce"],
+    padding: ["hover"],
+    textColor: ["hover"],
   },
-  plugins: [],
+
 };
+
