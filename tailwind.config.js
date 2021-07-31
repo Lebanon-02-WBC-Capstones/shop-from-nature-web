@@ -30,7 +30,8 @@ module.exports = {
         "2xs": "5rem",
       },
       boxShadow: {
-        xl: "-40px -35px #7EAC8A",
+        xl:"-15px -15px #7EAC8A",
+        xxl: "-40px -35px #7EAC8A",
         ll:"-35px 20px #9F6544",
       },
     },

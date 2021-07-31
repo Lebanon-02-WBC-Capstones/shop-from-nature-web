@@ -12,7 +12,7 @@ export default function HomePageHeader() {
         <img
           src="../images/header1.jpeg"
           alt="product"
-          className="h-60 w-40 object-cover -top-10 absolute  shadow-xl     "
+          className="h-60 w-40 object-cover -top-10 absolute  shadow-xxl     "
         />
         <img
           src="../images/header2.jpeg"
