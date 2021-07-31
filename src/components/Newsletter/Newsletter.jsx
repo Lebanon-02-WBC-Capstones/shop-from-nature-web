@@ -1,16 +1,16 @@
 import React from "react";
-import NewsLetterInput from "./NewsLetterInput";
-import NewsLetterIcon from "../../Icons/NewsletterIcon";
+import NewsletterInput from "./NewsletterInput";
+import NewsletterIcon from "../../Icons/NewsletterIcon";
 
-function NewsLetter() {
+function Newsletter() {
   return (
-    <div className="bg-tan py-9 px-80">
-      <NewsLetterIcon />
+    <div className="bg-tan py-10 px-80">
+      <NewsletterIcon />
       <p className="text-29 mb-4 text-dark">
-        Subscribe to our newsletter and stay updated!
+        Subscribe to our newsletter and stay updated!{" "}
       </p>
-      <NewsLetterInput />
+      <NewsletterInput />
     </div>
   );
 }
-export default NewsLetter;
+export default Newsletter;
