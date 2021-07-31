@@ -2,29 +2,22 @@ import React from "react";
 
 export default function HomePageHeader() {
   return (
-    <div className="flex bg-pink py-20" style={{ minHeight: "70vh" }}>
+    <div className="flex bg-mainbg py-20" style={{ minHeight: "70vh" }}>
       <div className="relative h-full w-1/2 left-40">
-        
-        
-        
-        
-        
-        
-        
         <img
           src="../images/header3.jpeg"
           alt="product"
-          className="h-60 w-60 object-cover absolute left-28 top-36 shadow-lg "
+          className="h-60 w-60 object-cover absolute  left-40 top-40 shadow-lg "
         />
         <img
           src="../images/header1.jpeg"
           alt="product"
-          className="h-60 w-40 object-cover absolute shadow-lg left-4"
+          className="h-60 w-40 object-cover -top-10 absolute  shadow-xl     "
         />
         <img
           src="../images/header2.jpeg"
           alt="product"
-          className="h-40 w-30 object-cover absolute top-40 left-4 shadow-l"
+          className="h-40 w-30 object-cover absolute -left-1 top-80 shadow-lg shadow-ll"
         />
       </div>
       <div className="flex flex-col justify-center w-1/2">
