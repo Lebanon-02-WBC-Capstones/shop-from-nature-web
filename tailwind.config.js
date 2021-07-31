@@ -37,7 +37,6 @@ module.exports = {
         xl: "-15px -15px #7EAC8A",
       },
     },
-
   },
   extend: {},
   variants: {
@@ -46,6 +45,5 @@ module.exports = {
     padding: ["hover"],
     textColor: ["hover"],
   },
-
 };
 
