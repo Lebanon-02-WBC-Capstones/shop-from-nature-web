@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 const RecentBlogItem = ({ title, description, image }) => {
   return (
-    <div className=" container flex">
-      <div className="static p-1.5">{image}</div>
-      <div className="bg-ecru absolute border-2 border-olivegreen top-12 left-48">
+    <div className="container flex relative">
+      <div className="p-1.5">{image}</div>
+      <div className="absolute border-2 border-olivegreen top-12 left-48 bg-white">
         <h1 className="flex justify-center text-3xl text-red font-medium px-10">
           {title}
         </h1>
