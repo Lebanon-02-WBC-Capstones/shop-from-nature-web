@@ -9,7 +9,9 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <ShopListItem/>
+      <ShopListItem id ={"1"} 
+      img={"https://utecinc.org/wp-content/uploads/2018/07/2019-09-13-utec-013.jpg"} 
+      name={"Bento Box | Cutting Board"} price={"25$"}/>
       <Footer />
     </Router>
   );
