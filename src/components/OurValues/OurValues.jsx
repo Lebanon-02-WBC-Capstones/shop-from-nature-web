@@ -1,4 +1,5 @@
 import React from "react";
+
 import ConsumeIcon from "../../Icons/ConsumeIcon";
 import WasteIcon from "../../Icons/WasteIcon";
 import PlanetIcon from "../../Icons/PlanetIcon";

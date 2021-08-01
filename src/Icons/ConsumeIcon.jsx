@@ -3,6 +3,7 @@ import React from "react";
 function Consume() {
   return (
     <div className="float-left">
+
       <svg
         version="1.1"
         id="Layer_1"
