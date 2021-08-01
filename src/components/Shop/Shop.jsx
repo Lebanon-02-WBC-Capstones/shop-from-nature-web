@@ -1,8 +1,8 @@
 import React from "react";
-
+ 
 const Shop = () => {
   return (
-    <div style={{ backgroundImage: "url(./shopimage.png)" }}>
+    <div className="bg-cover bg-opacity-5" style={{ backgroundImage: "url(./images/shopheader.jpg)" }}>
       <h1 className="text-5xl text-olivegreen font-regular ml-64 mt-8">
         Save The World!
       </h1>
@@ -20,8 +20,8 @@ const Shop = () => {
           </li>
         </div>
       </ul>
-      <div className="ml-60">
-        <h1 className="text-5xl text-grey font-regular ml-96 m-16">Shop</h1>
+      <div className="text-center">
+        <h1 className="text-5xl text-grey font-regular m-16">Shop</h1>
       </div>
     </div>
   );

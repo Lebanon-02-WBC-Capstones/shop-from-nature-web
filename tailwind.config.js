@@ -36,6 +36,13 @@ module.exports = {
       boxShadow: {
         xl: "-15px -15px #7EAC8A",
       },
+       backgroundSize: {
+         "cover": "cover", 
+       },
+        backgroundOpacity: {
+          "0": "0",
+          "5": "0.05",
+        },
     },
 
   },
@@ -45,6 +52,7 @@ module.exports = {
     animation: ["motion-reduce"],
     padding: ["hover"],
     textColor: ["hover"],
+    backgroundOpacity: ["active"]
   },
 
 };
