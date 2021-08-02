@@ -1,13 +1,6 @@
 import React from "react";
-//import Istem1 from "../../images/Istem1";
 import PropTypes from "prop-types";
 
-//const ShopItemListData = {
-  //id: 1,
-  //img: "www.images.com/somerandomimage.jpg", 
-  //name: "Bento Box | Cutting Board",
- // price: "25$",
-//}; 
 
 const ShopListItem = ({id,img,name,price}) => {
     
