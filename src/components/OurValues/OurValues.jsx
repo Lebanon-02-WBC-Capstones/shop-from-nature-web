@@ -1,45 +1,46 @@
 import React from "react";
-import Consume from "../../Icons/ConsumeIcon";
-import Waste from "../../Icons/WasteIcon";
-import Planet from "../../Icons/PlanetIcon";
-import Donate from "../../Icons/DonateIcon";
-import Quality from "../../Icons/QualityIcon";
-import Awarness from "../../Icons/AwarnessIcon";
+
+import ConsumeIcon from "../../Icons/ConsumeIcon";
+import WasteIcon from "../../Icons/WasteIcon";
+import PlanetIcon from "../../Icons/PlanetIcon";
+import DonateIcon from "../../Icons/DonateIcon";
+import QualityIcon from "../../Icons/QualityIcon";
+import AwarnessIcon from "../../Icons/AwarnessIcon";
 
 function OurValues() {
   return (
-    <div className="flex flex-row bg-white w-full">
-      <p className="font-semibold text-3xl tracking-tighter text-bric ml-20 mt-10">
+    <div className="bg-white w-full pt-14 pb-14">
+      <p className="font-normal text-left ml-60 mb-9 text-4xl tracking-tighter text-bric">
         Our Values
       </p>
-      <div className="flex flex-col mr-60 mt-20 ">
-        <div className=" flex flex-row justify-between">
-          <Consume />
-          <p className="font-bold text-red m-7">Consume sustainably</p>
+      <div className="flex flex-nowrap justify-evenly">
+        <div className="justify-evenly">
+          <div className="flex items-center">
+            <ConsumeIcon />
+            <p className="font-bold text-red ml-10">Consume sustainably</p>
+          </div>
+          <div className="flex items-center ">
+            <WasteIcon />
+            <p className="font-bold text-red ml-12">Cut the waste</p>
+          </div>
+          <div className="flex items-center mt-3">
+            <PlanetIcon />
+            <p className=" font-bold text-red ml-12">Save the planet</p>
+          </div>
         </div>
-        <div className=" flex flex-row justify-between">
-          <Waste />
-          <p className=" font-bold text-red my-8 mr-28">Cut the waste</p>
-        </div>
-        <div className=" flex flex-row justify-between">
-          <Planet />
-          <p className=" font-bold text-red mt-6 mr-24">Save the planet</p>
-        </div>
-      </div>
-      <div className="flex flex-col mr-36 mt-20 ">
-        <div className=" flex flex-row justify-between">
-          <Donate />
-          <p className=" font-bold text-red mt-7 mr-36">Donate</p>
-        </div>
-        <div className=" flex flex-row justify-between">
-          <Quality />
-          <p className=" font-bold text-red mt-10 ml-12">
-            Better quality of life
-          </p>
-        </div>
-        <div className=" flex flex-row justify-between">
-          <Awarness />
-          <p className=" font-bold text-red mt-7 mr-14">Share awarness</p>
+        <div className="justify-evenly">
+          <div className="flex items-center">
+            <DonateIcon />
+            <p className="font-bold text-red ml-12">Donate</p>
+          </div>
+          <div className="flex items-center">
+            <QualityIcon />
+            <p className=" font-bold text-red ml-16">Better quality of life</p>
+          </div>
+          <div className="flex items-center">
+            <AwarnessIcon />
+            <p className=" font-bold text-red ml-14">Share awarness</p>
+          </div>
         </div>
       </div>
     </div>
