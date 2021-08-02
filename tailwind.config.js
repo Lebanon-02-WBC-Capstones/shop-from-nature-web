@@ -37,16 +37,8 @@ module.exports = {
       boxShadow: {
         xl: "-15px -15px #7EAC8A",
       },
-       backgroundSize: {
-         "cover": "cover", 
-       },
-        backgroundOpacity: {
-          "0": "0",
-          "5": "0.05",
-        },
     },
   },
-  extend: {},
   variants: {
     boxShadow: ["active"],
     animation: ["motion-reduce"],
