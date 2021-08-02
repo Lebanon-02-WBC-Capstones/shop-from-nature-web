@@ -2,23 +2,23 @@ import React from "react";
 
 function ChangeTheWayLeaf() {
   return (
-    <div className="flex items-center">
+    <div className="">
       <svg
         version="1.1"
         id="Layer_1"
         x="0px"
         y="0px"
-        width="1500px"
-        height="590px"
-        viewBox="0 122 670 1"
+        width="600px"
+        height="246px"
+        viewBox="0 350 670 1"
         enablebackground="new 0 0 695 268"
         xmlSpace="preserve"
       >
         {" "}
         <image
           id="image0"
-          width="695"
-          height="268"
+          width="695px"
+          height="668px"
           x="0"
           y="0"
           xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAArcAAAEMCAIAAABRGgkLAAAABGdBTUEAALGPC/xhBQAAACBjSFJN

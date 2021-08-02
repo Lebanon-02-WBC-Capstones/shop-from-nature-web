@@ -3,11 +3,13 @@ import ChangeTheWayLeaf from "../../Icons/ChangeTheWayLeaf";
 
 function ChangeTheWayYouShop() {
   return (
-    <div className="m-auto bg-mainbg object-center p-12">
+    <div className="m-auto bg-mainbg p-12">
       <h1 className="text-bric font-light text-5xl ml-12 mt-6 mb-1">
         Change the way you shop, for Good
       </h1>
-      <ChangeTheWayLeaf />
+      <div className="flex mx-auto justify-center ">
+        <ChangeTheWayLeaf />
+      </div>
       <div className="text-center mt-5">
         <p className="text-green font-medium">
           Fostering a culture of sustainability.
