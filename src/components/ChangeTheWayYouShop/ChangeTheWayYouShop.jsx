@@ -10,7 +10,7 @@ function ChangeTheWayYouShop() {
       <div className="flex mx-auto justify-center ">
         <ChangeTheWayLeaf />
       </div>
-      <div className="text-center mt-5">
+      <div className="text-center mt-5 text-xl">
         <p className="text-green font-medium">
           Fostering a culture of sustainability.
         </p>

@@ -8,6 +8,9 @@ const TeamMemberCard = ({ id, name, title }) => {
       id={id}
       className="flex flex-col bg-mainbg place-items-center text-center p-10"
     >
+      <p className="text-bric font-sans font-normal text-3xl">
+        People behind our success
+      </p>
       <TeamMemberIcon />
       <div className="">
         <h2 className="text-green font-sans font-medium ">{name}</h2>
