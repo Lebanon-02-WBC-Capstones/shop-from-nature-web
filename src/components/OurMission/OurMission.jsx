@@ -3,7 +3,7 @@ import Leaf from "../../images/Leaf";
 const OurMission = () => {
   return (
     <div>
-      <section className="flex">
+      <section className="flex bg-mainbg">
         <div className="max-w-xxl">
           <header>
             <h1 className="text-red text-left ml-3 py-4 text-4xl">
