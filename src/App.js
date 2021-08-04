@@ -7,13 +7,10 @@ import BlogPage from "./pages/BlogsPage/BlogPage";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Navbar />
-        <BlogPage />
-        <Footer />
-      </Router>
-    </div>
+    <Router>
+      <Navbar />
+      <Footer />
+    </Router>
   );
 }
 

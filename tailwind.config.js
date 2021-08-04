@@ -39,12 +39,12 @@ module.exports = {
       },
     },
   },
-  extend: {},
   variants: {
     boxShadow: ["active"],
     animation: ["motion-reduce"],
     padding: ["hover"],
     textColor: ["hover"],
+    backgroundOpacity: ["active"]
   },
 };
 
