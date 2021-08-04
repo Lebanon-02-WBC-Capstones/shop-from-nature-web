@@ -3,17 +3,14 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import { BrowserRouter as Router } from "react-router-dom";
+import BlogPage from "./pages/BlogsPage/BlogPage";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
-        <header className="App-header">
-          <p>
-            Welcome to the capstone projects, this is your initial react app
-          </p>
-        </header>
+        <BlogPage />
         <Footer />
       </Router>
     </div>
