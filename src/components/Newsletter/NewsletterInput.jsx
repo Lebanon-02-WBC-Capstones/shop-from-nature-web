@@ -11,7 +11,7 @@ function NewsletterInput() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-row space-x-3 ml-7 tracking-wide"
+      className="flex flex-row space-x-3 justify-center tracking-wide"
     >
       <input
         type="text"
