@@ -1,19 +1,21 @@
 import React from "react";
 import "./App.css";
-// import Navbar from "./components/Navbar/Navbar";
-// import Footer from "./components/Footer/Footer";
-import { BrowserRouter as Router } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Switch,Route } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import AboutUs from "./pages/AboutUs/AboutUs";
-
+import About from "./pages/About/About";
 
 
 function App() {
   return (
     <Router>
-      {/* <Navbar /> */}
-      <AboutUs />
-      {/* <Footer /> */}
+      <Navbar />
+      <About />
+      <Footer />
+      <Switch>
+        <Route path='/about' component={About} />
+          </Switch>
     </Router>
   );
 }

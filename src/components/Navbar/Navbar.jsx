@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link to="/">
           <p className="text-xl mr-6 text-red font-regular">Home</p>
         </Link>
-        <Link to="/about">
+        <Link to={"/about"}>
           <p className="text-xl mr-6 text-red font-regular">About Us</p>
         </Link>
         <Link to="/shop">
