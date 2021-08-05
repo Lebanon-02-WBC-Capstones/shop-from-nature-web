@@ -33,9 +33,13 @@ module.exports = {
       },
       maxWidth: {
         "2xs": "5rem",
+        md: "50%",
       },
       boxShadow: {
         xl: "-15px -15px #7EAC8A",
+        xxl: "-40px -35px #7EAC8A",
+        ll: "-35px 20px #9F6544",
+        fz: "15px -20px #9F6544",
       },
     },
   },
@@ -47,4 +51,3 @@ module.exports = {
     backgroundOpacity: ["active"]
   },
 };
-
