@@ -5,11 +5,14 @@ import Footer from "./components/Footer/Footer";
 import BlogDetailsPage from "./pages/BlogDetailsPage/BlogDetailsPage";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+
 function App() {
   return (
     <Router>
       <Navbar />
-      <Route path="/Blog/:id" component={BlogDetailsPage} />
+      <Route path="/Blog/:id">
+        <BlogDetailsPage />
+      </Route>
       <Footer />
     </Router>
   );

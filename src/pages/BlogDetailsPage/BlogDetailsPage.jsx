@@ -1,13 +1,14 @@
 import React from "react";
-import { data } from "./data";
-import { useParams } from "react-router";
+import {data} from "./data";
+import { useParams } from "react-router-dom";
 
 const BlogDetailsPage = () => {
   
   const { id } = useParams();
-  const blogData = data.filter(item => item.id == id);
+  const blogDataArray = data.filter(item => item.id == id);
+  const blogData =  blogDataArray[0];
   console.log(blogData);
-
+ 
   return (
     <div>
       <section className="bg-tan p-32 text-xl">

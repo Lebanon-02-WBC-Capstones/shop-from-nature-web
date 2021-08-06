@@ -38,7 +38,7 @@ export const data = [
     "Absolutely! Bamboo straws can be branded easily with a company logo or emblem and will look great in every environment. Bamboo straws can be used for restaurants, weddings & events, and most other occasions that you can think of. Branded bamboo straws are not only affordable, but are a great way to show your company or businesses green credentials and can be a great way to market your ideas and the story behind your brand.",
   img4: "https://images.squarespace-cdn.com/content/v1/5b277af875f9ee04f69775de/1584260363217-2EIE8UG406XWYYWNEBVC/Bamboo+Drinking+Straws+by+Jungle+Straws+Jungle+Culture?format=500w",
   img5: "https://images.squarespace-cdn.com/content/v1/5b277af875f9ee04f69775de/1584260362741-7BSN67YX4JO91WM6F3FO/Jungle+Straws+Bamboo+Drinking+Straws+Reusbale.jpg?format=750w"
-}, 
+ }
 
-];
+]
 
