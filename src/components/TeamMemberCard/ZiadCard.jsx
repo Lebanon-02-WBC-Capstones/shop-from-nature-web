@@ -1,9 +1,9 @@
 import React from "react";
-import Member2Image from "./../../images/Member2Image";
+import ZiadPhoto from "../../images/ZiadPhoto";
 function Member2() {
   return (
     <div className="flex justify-center flex-col m-auto">
-      <Member2Image />
+      <ZiadPhoto />
       <div className="block text-center">
         <p className="text-green font-sans font-normal text-xl uppercase">
           Ziad Baroudi

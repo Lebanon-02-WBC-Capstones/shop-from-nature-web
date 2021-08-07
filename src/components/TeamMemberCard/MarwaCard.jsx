@@ -1,9 +1,9 @@
 import React from "react";
-import Member6Image from "./../../images/Member6Image";
+import MarwaPhoto from "../../images/MarwaPhoto";
 function Member6() {
   return (
     <div className="flex justify-center flex-col m-auto p-4">
-      <Member6Image />
+      <MarwaPhoto />
       <div className="block justify-center text-center">
         <p className="text-green font-sans font-normal text-xl uppercase">
           Mohamad Al-Sabaa

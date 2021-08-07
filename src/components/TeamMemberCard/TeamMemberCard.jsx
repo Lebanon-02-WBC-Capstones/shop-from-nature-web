@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Member1 from "./../../components/TeamMemberCard/Member1";
-import Member2 from "./../../components/TeamMemberCard/Member2";
-import Member3 from "./../../components/TeamMemberCard/Member3";
-import Member4 from "./../../components/TeamMemberCard/Member4";
-import Member5 from "./../../components/TeamMemberCard/Member5";
-import Member6 from "./../../components/TeamMemberCard/Member6";
-import Member7 from "./../../components/TeamMemberCard/Member7";
+import OsamaCard from "./OsamaCard";
+import ZiadCard from "./ZiadCard";
+import CesarCard from "./CesarCard";
+import MohamadCard from "./MohamadCard";
+import JanaCard from "./JanaCard";
+import MarwaCard from "./MarwaCard";
+import MiraCard from "./MiraCard";
 import KeepInTouch from "./KeepInTouch";
 function TeamMemberCard() {
   const [showModal, setShowModal] = useState(false);
@@ -19,14 +19,14 @@ function TeamMemberCard() {
         <KeepInTouch key={showModal} onClick={() => setShowModal(true)} />
       </div>
       <div className="">
-        <Member1 />
+        <OsamaCard />
         <div className="grid grid-flow-col grid-rows-2 gap-x-px gap-y-4 ">
-          <Member2 />
-          <Member3 />
-          <Member4 />
-          <Member5 />
-          <Member6 />
-          <Member7 />
+          <ZiadCard />
+          <CesarCard />
+          <MohamadCard />
+          <JanaCard />
+          <MarwaCard />
+          <MiraCard />
         </div>
       </div>
     </div>
