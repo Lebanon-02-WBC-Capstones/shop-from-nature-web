@@ -17,7 +17,7 @@ function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
     <button onClick={onClick} className="mr-10">
-      <ArrowBack/>
+      <ArrowBack />
     </button>
   );
 }
@@ -33,11 +33,11 @@ const DailyDoseCarousel = () => {
 
   return (
     <div className="mx-48 my-4 bg-white">
-        <h2 className="text-center text-4xl text-green py-16 font-bold">
-            Your daily dose of Facts
-          </h2>
+      <h2 className="text-center text-4xl text-green py-16 font-bold">
+        Your daily dose of Facts
+      </h2>
       <Slider className="flex items-center justify-center pb-24" {...settings}>
-        <div className="mb-4">        
+        <div className="mb-4">
           <div className="flex justify-center items-center">
             <div className="text-center px-24">
               <h3 className="text-3xl text-red mb-4">Fact 1</h3>
@@ -51,7 +51,7 @@ const DailyDoseCarousel = () => {
             </div>
           </div>
         </div>
-        <div className="mb-4">        
+        <div className="mb-4">
           <div className="flex justify-center items-center">
             <div className="text-center px-24">
               <h3 className="text-3xl text-red mb-4">Fact 1</h3>
@@ -65,7 +65,7 @@ const DailyDoseCarousel = () => {
             </div>
           </div>
         </div>
-        <div className="mb-4">        
+        <div className="mb-4">
           <div className="flex justify-center items-center">
             <div className="text-center px-24">
               <h3 className="text-3xl text-red mb-4">Fact 1</h3>
