@@ -5,12 +5,15 @@ import Footer from "./components/Footer/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter as Router } from "react-router-dom";
+import BlogDetailsPage from "./pages/BlogDetailsPage/BlogDetailsPage";
+import BlogPage from "./pages/BlogsPage/BlogPage";
 
 function App() {
-
   return (
     <Router>
       <Navbar />
+      {/* <BlogDetailsPage /> */}
+      <BlogPage />
       <Footer />
     </Router>
   );
