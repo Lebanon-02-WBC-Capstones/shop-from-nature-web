@@ -2,20 +2,22 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import About from "../../pages/About";
 import { BrowserRouter as Router, Switch,Route } from "react-router-dom";
-import { useHistory } from "react-router-dom";
-import About from "./pages/About/About";
 
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <About />
       <Footer />
       <Switch>
-        <Route path='/about' component={About} />
-          </Switch>
+        <Route path='/about' >
+          <About />
+        </Route>
+      </Switch>
     </Router>
   );
 }
