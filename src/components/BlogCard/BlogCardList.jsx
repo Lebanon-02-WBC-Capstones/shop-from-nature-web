@@ -11,8 +11,28 @@ const blogData = {
 
 const BlogCardList = () => {
   return (
-    <div>
-      <BlogCard {...blogData} /> 4
+    <div className="flex flex-wrap m-20">
+      <div className=" m-2">
+        <BlogCard {...blogData} />
+      </div>
+      <div className=" m-2">
+        <BlogCard {...blogData} />
+      </div>
+      <div className=" m-2">
+        <BlogCard {...blogData} />
+      </div>
+      <div className=" m-2">
+        <BlogCard {...blogData} />
+      </div>
+      <div className=" m-2">
+        <BlogCard {...blogData} />
+      </div>
+      <div className=" m-2">
+        <BlogCard {...blogData} />
+      </div>
+      <div className=" m-2">
+        <BlogCard {...blogData} />
+      </div>
     </div>
   );
 };
