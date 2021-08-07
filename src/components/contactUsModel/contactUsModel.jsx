@@ -59,11 +59,11 @@ export default function ContactUsModel({open,setOpen}) {
                     <div className="mt-2">
                      
             <p className="text-red text-sans text-xl pr-4  pt-3 ">Name</p>
-            <input type="text" className="pr-1 pl-1 h-8 w-80 wx-auto focus:outline-none shadow-lg"  /> <br/>
+            <textarea type="text" className="pr-1 pl-1 h-8 w-80 wx-auto focus:outline-none shadow-lg"  /> <br/>
             <p className="text-red text-sans text-xl pr-4 pt-3">Email</p>
-            <input type="text" className="border w-full border-transparent pr-1 pl-1 h-8 w-80  focus:outline-none shadow-lg"  /> <br/>
+            <textarea type="text" className="border w-full border-transparent pr-1 pl-1 h-8 w-80  focus:outline-none shadow-lg"  /> <br/>
             <p className="text-red text-sans text-xl pr-4  pt-3">Message</p>
-            <input type="text" className="pl-1 pr-1 wx-auto w-full h-40 shadow-lg focus:outline-none" placeholder="" /> <br/>
+            <textarea type="text" className="pl-1 pr-1 wx-auto w-full h-40 shadow-lg focus:outline-none" placeholder="" /> <br/>
                     </div>
                   </div>
                 </div>
