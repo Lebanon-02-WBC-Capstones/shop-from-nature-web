@@ -44,20 +44,16 @@ module.exports = {
     },
   },
   variants: {
-<<<<<<< HEAD
+
     extend: {
       boxShadow: ['active'],
-      // animation: ['motion-reduce'],
+     animation: ['motion-reduce'],
       padding: ['hover'],
       textColor: ['hover'],
     
     },
-=======
-    boxShadow: ["active"],
-    animation: ["motion-reduce"],
-    padding: ["hover"],
-    textColor: ["hover"],
-    backgroundOpacity: ["active"]
->>>>>>> dd9e468eb6f8bd9021fc2afa9c588f9fb602d99f
+
+   
+
   },
 };
