@@ -12,12 +12,12 @@ function App() {
   return (
     <Router>
       <Navbar />
+        <Switch>
+          <Route path='/about' >
+            <About />
+          </Route>
+        </Switch>
       <Footer />
-      <Switch>
-        <Route path='/about' >
-          <About />
-        </Route>
-      </Switch>
     </Router>
   );
 }
