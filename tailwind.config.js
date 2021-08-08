@@ -1,7 +1,8 @@
+/* eslint-disable no-undef */
 module.exports = {
   important: true,
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {
       fontFamily: {
@@ -9,12 +10,17 @@ module.exports = {
       },
       colors: {
         transparent: "transparent",
-        mainbg: "#F4EFE8",
         current: "currentColor",
         grey: "#5F7264",
         olivegreen: "#7EAC8A",
         red: "#9F6544",
         green: "#5F7264",
+        black: "#000000",
+        white:"#fcfbfb",
+        gray: "#c5cbc5",
+        dark: "#717771",
+        tan: "#fcfbf9",
+        bric: "#892E2E",
       },
       minHeight: {
         0: "0",
@@ -22,19 +28,23 @@ module.exports = {
         medium: "15vh",
         large: "45vh",
         full: "100vh",
-        full: "100%",
         "1/2": "50%",
         "3/4": "75%",
       },
       maxWidth: {
         "2xs": "5rem",
+        md: "50%",
       },
       boxShadow: {
         xl: "-15px -15px #7EAC8A",
+        xxl: "-40px -35px #7EAC8A",
+        ll: "-35px 20px #9F6544",
+        fz: "15px -20px #9F6544",
       },
     },
   },
   variants: {
+<<<<<<< HEAD
     extend: {
       boxShadow: ['active'],
       // animation: ['motion-reduce'],
@@ -42,6 +52,12 @@ module.exports = {
       textColor: ['hover'],
     
     },
+=======
+    boxShadow: ["active"],
+    animation: ["motion-reduce"],
+    padding: ["hover"],
+    textColor: ["hover"],
+    backgroundOpacity: ["active"]
+>>>>>>> dd9e468eb6f8bd9021fc2afa9c588f9fb602d99f
   },
-  plugins: [],
 };
