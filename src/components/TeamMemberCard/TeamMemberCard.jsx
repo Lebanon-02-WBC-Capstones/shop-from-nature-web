@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import OsamaCard from "./OsamaCard";
 import ZiadCard from "./ZiadCard";
 import CesarCard from "./CesarCard";
@@ -6,11 +6,8 @@ import MohamadCard from "./MohamadCard";
 import JanaCard from "./JanaCard";
 import MarwaCard from "./MarwaCard";
 import MiraCard from "./MiraCard";
-import KeepInTouch from "./KeepInTouch";
-import ContactModal from "../../components/ContactModal/ContactModal";
-function TeamMemberCard() {
-  const [open, setOpen] = useState(false);
 
+function TeamMemberCard() {
   return (
     <div className="flex flex-col bg-mainbg mb-0 py-8">
       <div className="flex flex-row justify-around">
@@ -27,15 +24,6 @@ function TeamMemberCard() {
           <JanaCard />
           <MarwaCard />
           <MiraCard />
-        </div>
-      </div>
-      <div className="bg-white border-box w-full py-3">
-        <p className="text-red font-sans text-3xl font-extralight text-center mt-2">
-          Upcycle your information about us!
-        </p>
-        <div className="flex justify-center">
-          <KeepInTouch handleShow={(open) => setOpen(open)} />
-          <ContactModal open={open} />
         </div>
       </div>
     </div>
