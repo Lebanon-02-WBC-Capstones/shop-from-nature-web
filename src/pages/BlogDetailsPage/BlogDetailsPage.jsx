@@ -6,7 +6,6 @@ const BlogDetailsPage = () => {
   const { id } = useParams();
   const blogDataArray = data.filter((item) => item.id == id);
   const blogData = blogDataArray[0];
-  
 
   return (
     <div>
