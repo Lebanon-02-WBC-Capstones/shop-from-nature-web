@@ -15,8 +15,8 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/about" component={About} />
-        <Route path="/blog" component={BlogPage} />
-        <Route path="/blogdetails/:id" component={BlogDetailsPage} />
+        <Route exact path="/blog" component={BlogPage} />
+        <Route path="/blog/:id" component={BlogDetailsPage} />
       </Switch>
       <Footer />
     </Router >

@@ -4,16 +4,15 @@ import { useParams } from "react-router-dom";
 
 const BlogDetailsPage = () => {
   const { id } = useParams();
-  // console.log(id);
   const [blogsData, setBlogDetails] = useState([]);
   useEffect(() => {
     API.getBlogs().then((blogs) => {
       setBlogDetails(blogs);
     });
   }, []);
-  // console.log(blogsData[0].id);
+  
   let blogData = blogsData.find((blog) => blog.id == id);
-  console.log(blogData);
+
   return (
     <div>
       {blogData && (

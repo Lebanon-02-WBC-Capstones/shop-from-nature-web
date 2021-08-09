@@ -15,7 +15,7 @@ const BlogCard = ({ blog }) => {
           {blog.descp1}
         </p>
       </div>
-      <Link to={`/blogdetails/${blog.id}`}>
+      <Link to={`/blog/${blog.id}`}>
         <button
           type="button"
           className=" bg-green text-center text-white text-sm w-28 h-12 rounded my-6"
