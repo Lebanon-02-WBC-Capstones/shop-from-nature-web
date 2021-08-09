@@ -5,10 +5,11 @@ import Footer from "./components/Footer/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import About from "./pages/About/About";
-import { BrowserRouter as Router, Switch,Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import BlogPage from "./pages/BlogsPage/BlogPage";
+import BlogDetailsPage from "./pages/BlogDetailsPage/BlogDetailsPage";
 
 function App() {
-
   return (
     <Router>
       <Navbar />
@@ -17,8 +18,13 @@ function App() {
             <About />
           </Route>
         </Switch>
+      <Switch>
+        <Route path="/about" component={About} />
+        <Route exact path="/blog" component={BlogPage} />
+        <Route path="/blog/:id" component={BlogDetailsPage} />
+      </Switch>
       <Footer />
-    </Router>
+    </Router >
   );
 }
 
