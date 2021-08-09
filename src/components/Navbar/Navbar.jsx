@@ -17,15 +17,15 @@ const Navbar = () => {
       <div className="flex items-center">
         <Link to="/">
           <p className="text-xl mr-6 text-red font-regular">Home</p>
-        </Link>
-        <Link to={"/about"}>
-          <p className="text-xl mr-6 text-red font-regular">About Us</p>
-        </Link>
+        </Link>       
         <Link to="/shop">
           <p className="text-xl mr-6 text-red font-regular">Shop</p>
         </Link>
         <Link to="/blog">
           <p className="text-xl mr-6 text-red font-regular">Blog</p>
+        </Link>
+        <Link to={"/about"}>
+          <p className="text-xl mr-6 text-red font-regular">About Us</p>
         </Link>
         <Link to="/card">
           <CardIcon className="mr-8" />
