@@ -26,4 +26,3 @@ FoodContainer.propTypes = {
     products: PropTypes.any,
   };
 export default FoodContainer;
-

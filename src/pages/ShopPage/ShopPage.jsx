@@ -3,9 +3,7 @@ import React, { useState, useEffect } from "react";
 import Shop from "../../components/Shop/Shop";
 import NewsLetter from "../../components/Newsletter/Newsletter";
 import Categories from "./Categories";
-
 import LinesDown from "../../images/LinesDown.svg";
-//import LinesUp from "../../images/LinesUp.svg";
 import PopularList from "./PopularList";
 import GlasswareList from "./GlasswareList";
 import FoodContainerList from "./FoodContainerList";
@@ -41,6 +39,6 @@ const shopPage = () => {
                <div className="absolute ml-40 bottom-20 left-20"><NewsLetter/></div></div>
             </div>
         </div>
-    );
+  );
 };
 export default shopPage;

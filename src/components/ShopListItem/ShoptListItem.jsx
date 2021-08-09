@@ -12,7 +12,8 @@ const ShopListItem = ({id,img,title,price}) => {
           <h3 className="mb-6  text-red font-regular"> {price} </h3>
         </div>
         </div>
-    );
+       
+  );
 };
 ShopListItem.propTypes = {
   id: PropTypes.number,

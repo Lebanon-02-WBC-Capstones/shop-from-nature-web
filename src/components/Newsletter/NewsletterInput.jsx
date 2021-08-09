@@ -17,11 +17,11 @@ function NewsletterInput() {
         type="text"
         value={email}
         placeholder="Enter your email"
-        className="text-black bg-gray w-45 py-2 px-2 placeholder-dark border-none rounded"
+        className="text-black bg-gray w-60 py-2 px-2 placeholder-dark border-none rounded"
         onChange={(e) => setEmail(e.target.value)}
         required
       />
-      <button className="btn bg-olivegreen text-base p-3 rounded">
+      <button className="btn bg-olivegreen text-base p-3 rounded text-white hover:bg-red">
         Subscribe!
       </button>
     </form>
