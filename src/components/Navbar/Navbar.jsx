@@ -4,7 +4,7 @@ import MainLogo from "../../Icons/MainLogo";
 import CardIcon from "../../Icons/CardIcon";
 const Navbar = () => {
   return (
-    <nav className="flex items-center justify-between">
+    <nav className="flex items-center justify-between bg-mainbg">
       <Link to="/">
         <div className="flex items-center">
           <MainLogo />
@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link to="/">
           <p className="text-xl mr-6 text-red font-regular">Home</p>
         </Link>
-        <Link to="/about">
+        <Link to={"/about"}>
           <p className="text-xl mr-6 text-red font-regular">About Us</p>
         </Link>
         <Link to="/shop">
