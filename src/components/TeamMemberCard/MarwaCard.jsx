@@ -1,12 +1,12 @@
 import React from "react";
 import MarwaPhoto from "../../images/MarwaPhoto";
-function Member6() {
+function MarwaCard() {
   return (
     <div className="flex justify-center flex-col m-auto p-4">
       <MarwaPhoto />
       <div className="block justify-center text-center">
         <p className="text-green font-sans font-normal text-xl uppercase">
-          Mohamad Al-Sabaa
+          Marwa Ghassa
         </p>
         <p className="text-green font-sans font-normal text-xl">
           Front-end Web Developer
@@ -16,4 +16,4 @@ function Member6() {
   );
 }
 
-export default Member6;
+export default MarwaCard;

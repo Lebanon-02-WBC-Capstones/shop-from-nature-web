@@ -1,6 +1,6 @@
 import React from "react";
 import ZiadPhoto from "../../images/ZiadPhoto";
-function Member2() {
+function ZiadCard() {
   return (
     <div className="flex justify-center flex-col m-auto">
       <ZiadPhoto />
@@ -16,4 +16,4 @@ function Member2() {
   );
 }
 
-export default Member2;
+export default ZiadCard;

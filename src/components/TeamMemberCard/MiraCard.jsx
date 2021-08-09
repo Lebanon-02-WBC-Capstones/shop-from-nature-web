@@ -1,6 +1,6 @@
 import React from "react";
 import MiraPhoto from "../../images/MiraPhoto";
-function Member7() {
+function MiraCard() {
   return (
     <div className="flex justify-center flex-col m-auto p-4">
       <MiraPhoto />
@@ -16,4 +16,4 @@ function Member7() {
   );
 }
 
-export default Member7;
+export default MiraCard;

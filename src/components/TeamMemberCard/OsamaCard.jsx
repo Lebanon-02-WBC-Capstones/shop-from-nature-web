@@ -1,6 +1,6 @@
 import React from "react";
 import OsamaPhoto from "../../images/OsamaPhoto";
-function Member1() {
+function OsamaCard() {
   return (
     <div className="flex justify-center flex-col m-auto p-4">
       <OsamaPhoto />
@@ -16,4 +16,4 @@ function Member1() {
   );
 }
 
-export default Member1;
+export default OsamaCard;
