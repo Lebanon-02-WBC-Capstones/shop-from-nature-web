@@ -1,19 +1,23 @@
 import React from "react";
 import ShopListItem from "../../components/ShopListItem/ShoptListItem";
-import  {data} from "./data.js";
 
+import PropTypes from "prop-types";
 
-const PopularList = () =>{
+const PopularList = ({products}) =>{
     return (
         <div className="flex flex-wrap">
      {
-         data.filter (data=>data.category === "popular").map (filteredProduct =>(
-             <ShopListItem key={filteredProduct.id} img={filteredProduct.img} title={filteredProduct.title} price={filteredProduct.price}/>
+         products.filter (data=>data.Category === "Other").map (filteredProduct =>(
+             <ShopListItem key={filteredProduct.id} img={filteredProduct.img1} title={filteredProduct.Name} price={filteredProduct.Price}/>
          ))
      }
      </div>
        
     );
 };
+
+PopularList.propTypes = {
+    products: PropTypes.any,
+  };
 
 export default PopularList;

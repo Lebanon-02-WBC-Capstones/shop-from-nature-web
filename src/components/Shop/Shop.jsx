@@ -4,7 +4,7 @@ import React from "react";
 const Shop = () => {
   return (
     <div  style={{ backgroundImage: "url(./images/shopimage.png)" }}>
-      <h1 className="text-5xl text-olivegreen font-regular ml-64 mt-8">
+      <h1 className="text-5xl text-darkGreen font-regular ml-64 mt-8">
         Save The World!
       </h1>
 
@@ -17,7 +17,7 @@ const Shop = () => {
             <span className="text-grey">R</span>educe
           </li>
           <li className="text-3xl font-regular">
-            <span className="text-olivegreen">R</span>ecycle
+            <span className="text-darkGreen">R</span>ecycle
           </li>
         </div>
       </ul>

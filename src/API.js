@@ -2,7 +2,7 @@ import { db } from "./firebase";
 
 class API {
   static getProducts = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       db.collection("Products").onSnapshot((snapchot) => {
         const allProducts = snapchot.docs.map((doc) => ({
           id: doc.id,
