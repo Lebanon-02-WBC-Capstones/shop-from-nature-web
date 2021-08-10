@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SocialMediaIcons from "../../Icons/SocialMediaIcons";
 const Footer = () => {
   return (
-    <footer className="min-h-small bg-transparent mt-1">
+    <footer className="min-h-small bg-mainbg -mt-1">
       <div className="border-t-2 border-green mb-1 border-opacity-50" />
       <div className="flex items-center justify-between">
         <Link to="/">
