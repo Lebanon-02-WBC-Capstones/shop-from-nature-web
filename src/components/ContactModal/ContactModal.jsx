@@ -42,7 +42,7 @@ export default function ContactModal() {
                       Email
                     </p>
                     <textarea
-                    required
+                      required
                       type="text"
                       className="border w-full border-transparent pr-1 pl-1 h-8 focus:outline-none shadow-lg"
                     />
