@@ -21,6 +21,7 @@ module.exports = {
         dark: "#717771",
         tan: "#fcfbf9",
         bric: "#892E2E",
+        mainbg: "#F4EFE8",
       },
       minHeight: {
         0: "0",
