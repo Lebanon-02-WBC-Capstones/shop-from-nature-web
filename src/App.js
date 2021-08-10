@@ -8,11 +8,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ShopPage from "./pages/ShopPage/ShopPage";
 
 function App() {
-
   return (
     <Router>
       <Navbar />
-      <Switch><Route path="/shop" component={ShopPage}/></Switch>
+      <Switch>
+        <Route path="/shop" component={ShopPage} />
+      </Switch>
       <Footer />
     </Router>
   );
