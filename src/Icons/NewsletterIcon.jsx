@@ -2,7 +2,7 @@ import React from "react";
 
 function NewsletterIcon() {
   return (
-    <div className=" ml-12 mr-12 -mt-1 ">
+    <div className=" flex justify-center ">
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
