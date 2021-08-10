@@ -17,14 +17,7 @@ const Navbar = () => {
       <div className="flex items-center">
         <Link to="/">
           <p className="text-xl mr-6 text-red font-regular">Home</p>
-<<<<<<< HEAD
         </Link>
-        <Link to={"/about"}>
-          <p className="text-xl mr-6 text-red font-regular">About Us</p>
-        </Link>
-=======
-        </Link>       
->>>>>>> main
         <Link to="/shop">
           <p className="text-xl mr-6 text-red font-regular">Shop</p>
         </Link>

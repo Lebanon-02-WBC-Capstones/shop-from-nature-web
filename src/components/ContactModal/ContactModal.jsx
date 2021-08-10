@@ -29,48 +29,6 @@ export default function ContactModal() {
                   </button>
                 </div>
 
-<<<<<<< HEAD
-                <div className="relative w-full p-6 flex-auto">
-                  <p className="text-red text-sans text-xl    ">Name</p>
-                  <textarea
-                    type="text"
-                    className="pr-1 pl-1 h-8 w-80 wx-auto focus:outline-none shadow-lg"
-                  />{" "}
-                  <br />
-                  <p className="text-red text-sans text-xl pr-4 pt-3">Email</p>
-                  <textarea
-                    type="text"
-                    className="border w-full border-transparent pr-1 pl-1 h-8 w-80  focus:outline-none shadow-lg"
-                  />{" "}
-                  <br />
-                  <p className="text-red text-sans text-xl pr-4  pt-3">
-                    Message
-                  </p>
-                  <textarea
-                    type="text"
-                    className="pl-1 pr-1 wx-auto w-full h-40 shadow-lg focus:outline-none"
-                    placeholder=""
-                  />{" "}
-                  <br />
-                </div>
-
-                <div className="flex items-center justify-center p-5 border-t border-solid border-red rounded-b">
-                  <button
-                    className="p-4 ml-3 transform hover:scale-110 motion-reduce:transform-none inline-flex justify-center bg-red text-white   uppercase  px-3 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all  duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Submit
-                  </button>
-                  <button
-                    className="p-4 ml-3 transform hover:scale-110 motion-reduce:transform-none  inline-flex justify-center bg-red text-white active:bg-olivegreen  uppercase  px-3 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all  duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Cancel
-                  </button>
-                </div>
-=======
                 <form>
                   <div className="relative w-full p-6 flex-auto">
                     <p className="text-red text-sans text-xl">Name</p>
@@ -84,7 +42,7 @@ export default function ContactModal() {
                       Email
                     </p>
                     <textarea
-                    required
+                      required
                       type="text"
                       className="border w-full border-transparent pr-1 pl-1 h-8 focus:outline-none shadow-lg"
                     />
@@ -117,7 +75,6 @@ export default function ContactModal() {
                     </button>
                   </div>
                 </form>
->>>>>>> main
               </div>
             </div>
           </div>
