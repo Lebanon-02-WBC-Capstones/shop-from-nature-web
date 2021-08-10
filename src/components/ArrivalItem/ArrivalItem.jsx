@@ -1,36 +1,47 @@
-import React from "react";
-import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
+import API from "../../API";
 
-const ArrivalItem = ({ id, Image, title, price }) => {
+const ArrivalItem = () => {
+  const [arrivalItems, setArrivalItems] = useState([]);
+  useEffect(() => {
+    API.getProducts().then((products) => {
+      setArrivalItems(products);
+    });
+  }, []);
   return (
-    <div className="mt-8">
-      <div className="container max-w-sm ">
-        <div id={id}>
-          <div className="mx-14">
-            <img src={Image} alt={title + " image "} />
-          </div>
-          <div className="flex space-x-20">
-            <h1 className="text-xl ml-16 mr-6 text-olivegreen font-regular">
-              {title}
-            </h1>
-            <h3 className="text-xl mr-6 text-olivegreen font-regular">
-              {price}
-            </h3>
-          </div>
-          <button className="text-xl mr-6 text-red font-regular border-2 border-grey mt-4 mb-4 ml-36 p-2">
-            Add To Bag
-          </button>
-        </div>
+    <>
+      <h3 className="text-4xl mt-5 font-medium text-grey font-sans text-center">
+        New Arrivals
+      </h3>
+      <div className="mt-8 flex justify-between items-center mb-10">
+        {arrivalItems.length != 0 &&
+          arrivalItems.slice(0, 5).map((arrivalItem) => (
+            <div id={arrivalItem.id}>
+              <div className="min-h-prdsh bg-white mx-3 flex items-center shadow-xl">
+                <img
+                  className="max-w-xs"
+                  src={arrivalItem.img1}
+                  alt={arrivalItem.Name + " image "}
+                />
+              </div>
+              <div className="flex justify-center flex-col items-center">
+                <div className="flex">
+                  <h1 className="text-md text-olivegreen mr-2 font-regular">
+                    {arrivalItem.Name}
+                  </h1>
+                  <h3 className="text-md text-olivegreen font-regular">
+                    {arrivalItem.Price}
+                  </h3>
+                </div>
+                <button className="text-md text-red font-regular border-2 border-grey px-2 mt-2">
+                  Add To Bag
+                </button>
+              </div>
+            </div>
+          ))}
       </div>
-    </div>
+    </>
   );
-};
-
-ArrivalItem.propTypes = {
-  id: PropTypes.number,
-  Image: PropTypes.string,
-  title: PropTypes.string,
-  price: PropTypes.string,
 };
 
 export default ArrivalItem;

@@ -14,22 +14,21 @@ module.exports = {
       height: {
         prd: "250px",
       },
-
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        mainbg:"#f4f0e9",
+        mainbg: "#f4f0e9",
         grey: "#5F7264",
         olivegreen: "#7EAC8A",
         red: "#9F6544",
         green: "#5F7264",
         black: "#000000",
-        white:"#fffdfb",
+        white: "#fffdfb",
         gray: "#c5cbc5",
         dark: "#717771",
         tan: "#fcfbf9",
         bric: "#892E2E",
-        darkGreen:"#186717"
+        darkGreen: "#186717",
       },
       minHeight: {
         0: "0",
@@ -43,6 +42,7 @@ module.exports = {
       },
       maxWidth: {
         "2xs": "5rem",
+        xs: "18vw",
         md: "50%",
       },
       boxShadow: {

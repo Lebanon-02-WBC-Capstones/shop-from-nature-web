@@ -1,30 +1,44 @@
-import React from "react";
-import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import API from "../../API";
 
 const RecentBlogItem = ({ title, description, image }) => {
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    API.getBlogs().then((blogs) => {
+      setBlogs(blogs);
+    });
+  }, []);
   return (
-    <div className="container flex relative">
-      <div className="p-1.5">{image}</div>
-      <div className="absolute border-2 border-olivegreen top-12 left-48 bg-white">
-        <h1 className="flex justify-center text-3xl text-red font-medium px-10">
-          {title}
-        </h1>
-        <p className="text-xl text-black font-regular w-96 min-w-full h-40 px-2 py-4">
-          {" "}
-          {description}{" "}
-          <span className="border-b-2 border-red text-sm text-olivegreen m-16">
-            Keep Reading
-          </span>{" "}
-        </p>
+    <>
+      <h3 className="text-4xl mt-5 font-medium text-grey font-sans text-center">
+        Recent Blogs
+      </h3>
+      <div className="container ml-9 my-5 grid grid-cols-2">
+        {blogs.length != 0 &&
+          blogs.slice(0, 2).map((blog) => (
+            <div className="flex relative w-max">
+              <div className="p-1.5 max-w-sm">
+                <img src={blog.img1} />
+              </div>
+              <div className="absolute border-2 border-olivegreen top-12 min-w-full left-40 bg-white">
+                <h1 className="flex justify-center text-2xl text-red font-medium text-center">
+                  {blog.title}
+                </h1>
+                <p className="text-lg text-black min-w-full font-regular mb-5 mx-2 mt-2">
+                  {blog.descp1.substring(0, 100)}...
+                  <Link to={`/blog/${blog.id}`}>
+                    <span className="border-b-2 border-red text-sm text-olivegreen ml-2">
+                      Keep Reading
+                    </span>
+                  </Link>
+                </p>
+              </div>
+            </div>
+          ))}
       </div>
-    </div>
+    </>
   );
-};
-
-RecentBlogItem.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.elementType,
 };
 
 export default RecentBlogItem;
