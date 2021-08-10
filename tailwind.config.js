@@ -44,6 +44,10 @@ module.exports = {
         "2xs": "5rem",
         xs: "18vw",
         md: "50%",
+        maxp: "65%",
+      },
+      maxHeight: {
+        lg: "200px",
       },
       boxShadow: {
         xl: "-15px -15px #7EAC8A",

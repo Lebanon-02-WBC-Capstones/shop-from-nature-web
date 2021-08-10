@@ -17,7 +17,7 @@ const ArrivalItem = () => {
         {arrivalItems.length != 0 &&
           arrivalItems.slice(0, 5).map((arrivalItem) => (
             <div id={arrivalItem.id}>
-              <div className="min-h-prdsh bg-white mx-3 flex items-center shadow-xl">
+              <div className="min-h-prdsh bg-white px-2 flex items-center shadow-xl">
                 <img
                   className="max-w-xs"
                   src={arrivalItem.img1}
