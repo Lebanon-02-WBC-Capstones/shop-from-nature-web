@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import API from "../../API";
 
-const RecentBlogItem = ({ title, description, image }) => {
+const RecentBlogItem = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
     API.getBlogs().then((blogs) => {
@@ -17,7 +17,7 @@ const RecentBlogItem = ({ title, description, image }) => {
       <div className=" my-5 grid grid-cols-2">
         {blogs.length != 0 &&
           blogs.slice(0, 2).map((blog) => (
-            <div className="flex relative ">
+            <div key={blog.id} className="flex relative ">
               <div className="p-1.5 max-w-sm">
                 <img className="max-h-lg" src={blog.img1} />
               </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import API from "../../API";
 
 const ArrivalItem = () => {
@@ -16,7 +16,7 @@ const ArrivalItem = () => {
       <div className="mt-8 flex justify-between items-center mb-10">
         {arrivalItems.length != 0 &&
           arrivalItems.slice(0, 5).map((arrivalItem) => (
-            <div id={arrivalItem.id}>
+            <div key={arrivalItem.id}>
               <div className="min-h-prdsh bg-white px-2 flex items-center shadow-xl">
                 <img
                   className="max-w-xs"
