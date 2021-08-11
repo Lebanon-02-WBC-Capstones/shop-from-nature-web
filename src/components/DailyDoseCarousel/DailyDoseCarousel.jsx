@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ArrowForward from "../../Icons/ArrowForward";
 import ArrowBack from "../../Icons/ArrowBack";
 import Slider from "react-slick";

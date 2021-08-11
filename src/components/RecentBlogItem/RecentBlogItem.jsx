@@ -17,7 +17,7 @@ const RecentBlogItem = () => {
       <div className=" my-5 grid grid-cols-2">
         {blogs.length != 0 &&
           blogs.slice(0, 2).map((blog) => (
-            <div key={blog.id} className="flex relative ">
+            <div key={blog.id} className="flex relative ml-10 my-20 ">
               <div className="p-1.5 max-w-sm">
                 <img className="max-h-lg" src={blog.img1} />
               </div>
