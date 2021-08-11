@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import API from "../../API";
 import ArrowForward from "../../Icons/ArrowForward";
 import ArrowBack from "../../Icons/ArrowBack";
