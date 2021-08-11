@@ -24,6 +24,10 @@ class API {
       });
     });
   };
+
+  static setContactData = (data) => {
+    db.collection("Contact-us").add(data).then(console.log("data added"));
+  };
 }
 
 export default API;
