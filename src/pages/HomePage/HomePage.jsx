@@ -1,4 +1,3 @@
-// eslint-disable
 import React from "react";
 import HomePageHeader from "../../components/HomePageHeader/homepageheader";
 import DailyDoseCarousel from "../../components/DailyDoseCarousel/DailyDoseCarousel";
