@@ -1,8 +1,8 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import ArrowForward from "../../Icons/ArrowForward";
 import ArrowBack from "../../Icons/ArrowBack";
 import Slider from "react-slick";
-import NewsPaper from "../../images/NewsPaper";
+import API from "../../API";
 
 function SampleNextArrow(props) {
   const { onClick } = props;
@@ -22,6 +22,12 @@ function SamplePrevArrow(props) {
   );
 }
 const DailyDoseCarousel = () => {
+  const [facts, setFacts] = useState([]);
+  useEffect(() => {
+    API.getFacts().then((facts) => {
+      setFacts(facts);
+    });
+  }, []);
   const settings = {
     infinite: true,
     speed: 500,
@@ -32,59 +38,32 @@ const DailyDoseCarousel = () => {
   };
 
   return (
-    <div className="mx-48 my-4 bg-white">
-      <h2 className="text-center text-4xl text-green py-16 font-bold">
+    <div className=" mb-20  bg-white">
+      <h2 className="text-center text-4xl text-green py-16 font-medium">
         Your daily dose of Facts
       </h2>
-      <Slider className="flex items-center justify-center pb-24" {...settings}>
-        <div className="mb-4">
-          <div className="flex justify-center items-center">
-            <div className="text-center px-24">
-              <h3 className="text-3xl text-red mb-4">Fact 1</h3>
-              <p className="text-2xl text-red">
-                Half a million trees have to be cut down just to produce the
-                Sunday newspapers each week.
-              </p>
+      {facts.length != 0 && (
+        <Slider
+          className="flex items-center justify-between pb-20"
+          {...settings}
+        >
+          {facts.map((fact) => (
+            <div className="mb-4">
+              <div className="flex justify-between items-center">
+                <div className="text-center px-24">
+                  <h3 className="text-3xl text-green mb-4">Fact {fact.nb}</h3>
+                  <p className="text-2xl text-red">{fact.Fact}</p>
+                </div>
+                <div className=" mr-8 shadow-fz max-w-xs">
+                  <img src={fact.img} />
+                </div>
+              </div>
             </div>
-            <div className="shadow-fz mr-9">
-              <NewsPaper />
-            </div>
-          </div>
-        </div>
-        <div className="mb-4">
-          <div className="flex justify-center items-center">
-            <div className="text-center px-24">
-              <h3 className="text-3xl text-red mb-4">Fact 1</h3>
-              <p className="text-2xl text-red">
-                Half a billion trees have to be cut down just to produce the
-                Sunday newspapers each week.
-              </p>
-            </div>
-            <div className="shadow-fz mr-9">
-              <NewsPaper />
-            </div>
-          </div>
-        </div>
-        <div className="mb-4">
-          <div className="flex justify-center items-center">
-            <div className="text-center px-24">
-              <h3 className="text-3xl text-red mb-4">Fact 1</h3>
-              <p className="text-2xl text-red">
-                Half a zillion trees have to be cut down just to produce the
-                Sunday newspapers each week.
-              </p>
-            </div>
-            <div className="shadow-fz mr-9">
-              <NewsPaper />
-            </div>
-          </div>
-        </div>
-        <div>
-          <h3>MORE FACTS</h3>
-        </div>
-      </Slider>
+          ))}
+          {console.log(facts)}
+        </Slider>
+      )}
     </div>
   );
 };
-
 export default DailyDoseCarousel;

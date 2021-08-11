@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import API from "../../API";
+import ArrowForward from "../../Icons/ArrowForward";
+import ArrowBack from "../../Icons/ArrowBack";
+import Slider from "react-slick";
 
 const ArrivalItem = () => {
   const [arrivalItems, setArrivalItems] = useState([]);
@@ -8,39 +11,64 @@ const ArrivalItem = () => {
       setArrivalItems(products);
     });
   }, []);
+
+  function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+      <button onClick={onClick} className=" mb-11 ml-10">
+        <ArrowForward />
+      </button>
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+      <button onClick={onClick} className="mr-10 mb-20">
+        <ArrowBack />
+      </button>
+    );
+  }
+
+  const settings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
   return (
-    <>
-      <h3 className="text-4xl mt-5 font-medium text-grey font-sans text-center">
+    <div className="">
+      <h2 className="text-center text-4xl text-grey py-16 font-medium">
         New Arrivals
-      </h3>
-      <div className="mt-8 flex justify-between items-center mb-10">
-        {arrivalItems.length != 0 &&
-          arrivalItems.slice(0, 5).map((arrivalItem) => (
-            <div id={arrivalItem.id}>
-              <div className="min-h-prdsh bg-white px-2 flex items-center shadow-xl">
-                <img
-                  className="max-w-xs"
-                  src={arrivalItem.img1}
-                  alt={arrivalItem.Name + " image "}
-                />
-              </div>
-              <div className="flex justify-center flex-col items-center">
-                <div className="flex">
-                  <h1 className="text-md text-olivegreen mr-2 font-regular">
-                    {arrivalItem.Name}
-                  </h1>
-                  <h3 className="text-md text-olivegreen font-regular">
-                    {arrivalItem.Price}
-                  </h3>
+      </h2>
+      {arrivalItems.length != 0 && (
+        <Slider
+          className="flex items-center justify-center pb-24"
+          {...settings}
+        >
+          {arrivalItems.map((item) => (
+            <div>
+              <div className="flex min-h-prdsh bg-white mr-2 justify-center items-center">
+                <div className="mr-9">
+                  <img src={item.img1} />
                 </div>
-                <button className="text-md text-red font-regular border-2 border-grey px-2 mt-2">
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center mx-3">
+                  <p className="text-grey mr-12 text-lg">{item.Name}</p>
+                  <p className="text-grey">{item.Price}</p>
+                </div>
+                <button className="text-md text-red font-regular border-2 border-grey px-2 mt-2 ">
                   Add To Bag
                 </button>
               </div>
             </div>
           ))}
-      </div>
-    </>
+        </Slider>
+      )}
+    </div>
   );
 };
 
