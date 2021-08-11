@@ -13,7 +13,7 @@ function ArrowForward() {
           d="M0.75 59.75L21 39.5L0.75 19.25"
           stroke="black"
           strokeWidth="2"
-          stroke-Lnecap="round"
+          strokelnecap="round"
           strokeLinejoin="round"
         />
       </g>

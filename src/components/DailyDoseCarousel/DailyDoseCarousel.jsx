@@ -38,7 +38,7 @@ const DailyDoseCarousel = () => {
   };
 
   return (
-    <div className=" mb-20  bg-white">
+    <div className=" mb-20 bg-white">
       <h2 className="text-center text-4xl text-green py-16 font-medium">
         Your daily dose of Facts
       </h2>
@@ -48,7 +48,7 @@ const DailyDoseCarousel = () => {
           {...settings}
         >
           {facts.map((fact) => (
-            <div className="mb-4">
+            <div key={fact.id} className="mb-4">
               <div className="flex justify-between items-center">
                 <div className="text-center px-24">
                   <h3 className="text-3xl text-green mb-4">Fact {fact.nb}</h3>
@@ -60,7 +60,6 @@ const DailyDoseCarousel = () => {
               </div>
             </div>
           ))}
-          {console.log(facts)}
         </Slider>
       )}
     </div>

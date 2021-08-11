@@ -48,8 +48,8 @@ const ArrivalItem = () => {
           className="flex items-center justify-center pb-24"
           {...settings}
         >
-          {arrivalItems.map((item) => (
-            <div>
+          {arrivalItems.map((item, i) => (
+            <div key={item.id}>
               <div className="flex min-h-prdsh bg-white mr-2 justify-center items-center">
                 <div className="mr-9">
                   <img src={item.img1} />
@@ -60,7 +60,12 @@ const ArrivalItem = () => {
                   <p className="text-grey mr-12 text-lg">{item.Name}</p>
                   <p className="text-grey">{item.Price}</p>
                 </div>
-                <button className="text-md text-red font-regular border-2 border-grey px-2 mt-2 ">
+                <button
+                  onClick={() => {
+                    API.setCart(item);
+                  }}
+                  className="text-md text-red font-regular border-2 border-grey px-2 mt-2 "
+                >
                   Add To Bag
                 </button>
               </div>
