@@ -1,30 +1,33 @@
-
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import API from "../../API";
 
- const MyCategories = () => {
+const MyCategories = () => {
   const [catg, setCategories] = useState([]);
   useEffect(() => {
-      API.getCategories().then((categories) => {
-        console.log(categories);
-        setCategories(categories);
-      });
-    }, []);
-        
-     //const catego = [];
-    //catg.map((category)=> catego.push(category));
-   //<Select  options={catg.value}/>
+    API.getCategories().then((categories) => {
+      setCategories(categories);
+    });
+  }, []);
+
+  let array = [];
+  if (catg.length != 0) {
+    console.log(catg);
+    for (let i = 0; i < catg.length; i++) {
+      console.log(catg[i]);
+      array.push({ value: catg[i].value, label: catg[i].value });
+    }
+  }
 
   return (
-    <div className="w-24 mr-12">
-     {/* {catg.length !=0 && <Select
-            {... catg.map((category) => (
-              <option key={category.id} value={category.value}>{category.value}</option>
-            ))} />} */}
-    </div>
+    <>
+      {array.length != 0 && (
+        <div className="w-24 mr-12">
+          <Select options={array} />
+        </div>
+      )}
+    </>
   );
 };
 
- 
 export default MyCategories;

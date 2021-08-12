@@ -13,18 +13,17 @@ class API {
     });
   };
 
-
-   static getCategories = () => {
-  return new Promise((resolve) => {
-    db.collection("Categories").onSnapshot((snapchot) => {
-      const allCategories = snapchot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      resolve(allCategories);
+  static getCategories = () => {
+    return new Promise((resolve) => {
+      db.collection("Categories").onSnapshot((snapchot) => {
+        const allCategories = snapchot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        resolve(allCategories);
+      });
     });
-  });
-};
+  };
 
   static getBlogs = () => {
     return new Promise((resolve) => {
@@ -39,11 +38,3 @@ class API {
   };
 }
 export default API;
-
-
-  
-
-<<<<<<< HEAD
-=======
-export default API;
->>>>>>> 691701cba16bad125638357e5771f30ea43858e5
