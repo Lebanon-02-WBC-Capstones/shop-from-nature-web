@@ -21,7 +21,7 @@ function App() {
         <Route path="/blog/:id" component={BlogDetailsPage} />
       </Switch>
       <Footer />
-    </Router >
+    </Router>
   );
 }
 
