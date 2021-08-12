@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 const TabsRender = ({ product }) => {
   console.log(product);
   const [openTab, setOpenTab] = React.useState(1);
+
   return (
     <>
       <div className="flex flex-wrap">
@@ -17,7 +18,7 @@ const TabsRender = ({ product }) => {
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
-                  "text-lg font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  "text-lg  uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 1
                     ? "text-red bg-white"             : "text-white bg-olivegreen")
                 } 
@@ -35,7 +36,7 @@ const TabsRender = ({ product }) => {
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
-                  "text-lg font-bold uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
+                  "text-lg  uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 2
                     ? "text-red bg-white" 
                     : "text-white bg-olivegreen")
@@ -61,9 +62,10 @@ const TabsRender = ({ product }) => {
                   </p>
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <p>
-                  {product && product.Tags.split(",")}
-                  </p>
+                  <div>
+                  {product && product.Tags.split(",")
+                  }
+                  </div>
                 </div>
               </div>
             </div>

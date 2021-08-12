@@ -72,7 +72,7 @@ const ProductDetailsItem = () => {
               )}
 
               <button
-                className="transform hover:scale-110 motion-reduce:transform-none bg-green text-white  font-bold uppercase text-sm px-6 py-3 rounded-lg shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="transform hover:scale-110 motion-reduce:transform-none bg-green text-white  uppercase text-sm px-6 py-3 rounded-lg shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
               >
                 Add to cart
