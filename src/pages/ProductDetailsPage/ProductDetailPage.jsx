@@ -1,9 +1,11 @@
 import React from 'react'
-import Cartitem from '../../components/Cartitem/CartItem';
+import ProductDetailsItem from '../../components/ProductDetailsItem/ProductDetailsItem'
+
 export default function ProductDetailPage() {
     return (
         <div>
-        <Cartitem />
+        <ProductDetailsItem />
+  
         </div>
     )
 }

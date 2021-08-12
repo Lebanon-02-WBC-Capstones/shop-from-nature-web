@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SampleProduct from "../../images/SampleProduct";
-import Modal from "../ThankYou";
+
 import TabsRender from "./TabsRender";
 
 const ProductDetailsItem = (product) => {
@@ -35,7 +35,7 @@ const ProductDetailsItem = (product) => {
           <button onClick={minus} className="text-2xl transform hover:scale-125 motion-reduce:transform-none text-grey px-2 ">
             &minus;
           </button> 
-        </div>  <Modal />
+        </div>  
         <div className="self-start mt-4">
           <p className="text-red text-xl">
             Price:<span className="text-grey pl-1">{product.price}</span>
