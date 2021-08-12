@@ -10,7 +10,7 @@ const PopularList = ({ products }) => {
         .filter((data) => data.Category === "Other")
         .map((filteredProduct) => (
           <ShopListItem
-            id={filteredProduct.id}
+            key={filteredProduct.id}
             img={filteredProduct.img1}
             title={filteredProduct.Name}
             price={filteredProduct.Price}
