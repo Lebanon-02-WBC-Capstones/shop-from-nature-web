@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import API from "../../API";
-//import TabsRender from "./TabsRender";
+import TabsRender from "./TabsRender";
 
 const ProductDetailsItem = () => {
-  const {id} = useParams();
-  //console.log();
+  const id = useParams().id;
+  console.log(id);
   const [quantity, setQuantity] = useState(0);
   const [prdt, setProduct] = useState([]);
   let plus = () => {
@@ -17,24 +17,24 @@ const ProductDetailsItem = () => {
     }
   };
   useEffect(() => {
-    API.getProduct().then((product) => {
-     
+    API.getProducts().then((product) => {
       setProduct(product);
     });
   }, []);
+  let prd = prdt.find((item) => item.id == id);
 
-  let prd = prdt.find((product) => product.id == id);
   return (
     <div className="flex bg-mainbg">
-      {prd && 
-        
-          <div className=" pl-10 pt-10 ">{prd.Img}</div>}
+      {prd && (
+        <>
+          {prd && (
+            <div className=" pl-10 pt-10 ">
+              <img src={prd.img1} />
+            </div>
+          )}
 
           <div className="w-full w-x-auto mx-auto  mt-10 ml-10 flex flex-col">
-            <h1 className="text-2xl  text-red text-sans">
-              {" "}
-              Chapter Mips Helmet{" "}
-            </h1>
+            <h1 className="text-2xl  text-red text-sans">{prd.Name}</h1>
             <div className="border-t-2 border-opacity-75 border-red my-1  w-20" />
             <h4 className="text-xl text-left mt-5 mb-3 text-red">Quantity</h4>
             <div className="bg-white divide-x-2 divide-red divide-opacity-60 flex justify-between items-center max-w-2xs ">
@@ -53,12 +53,18 @@ const ProductDetailsItem = () => {
               </button>
             </div>
             <div className="self-start mt-4">
-             {prd && <p className="text-red text-xl">
-                Price:<span className="text-grey pl-1">{prd.Price}</span> 
-              </p> }
-            {prd &&  <p className="mb-4 mt-4 text-red text-sm">
-                Tags:<span className="text-grey pl-1">{prd.Tags}</span>{" "}
-              </p>}{" "}
+              {prd && (
+                <p className="text-red text-xl">
+                  Price:<span className="text-grey pl-1">{prd.Price}</span>
+                </p>
+              )}
+
+              {prd && (
+                <p className="mb-4 mt-4 text-red text-sm">
+                  Tags:<span className="text-grey pl-1">{prd.Tags}</span>{" "}
+                </p>
+              )}
+
               <button
                 class="transform hover:scale-110 motion-reduce:transform-none bg-green text-white  font-bold uppercase text-sm px-6 py-3 rounded-lg shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
@@ -66,10 +72,10 @@ const ProductDetailsItem = () => {
                 Add to cart
               </button>
             </div>
-            {/* <TabsRender description={prd.Description}/> */}
+            {prd && <TabsRender description={prd.Descprition} />}
           </div>
-       
-      
+        </>
+      )}
     </div>
   );
 };

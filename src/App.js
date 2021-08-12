@@ -21,11 +21,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route exact path="/blog" component={BlogPage} />
         <Route path="/blog/:id" component={BlogDetailsPage} />
-        <Route
-          exact
-          path="/productDetails/:id"
-          component={ProductDetailsPage}
-        />
+        <Route exact path="/productDetail/:id" component={ProductDetailsPage} />
       </Switch>
 
       <Footer />
