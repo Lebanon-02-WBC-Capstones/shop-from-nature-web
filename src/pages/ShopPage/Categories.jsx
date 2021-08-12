@@ -18,10 +18,10 @@ import API from "../../API";
 
   return (
     <div className="w-24 mr-12">
-     {catg.length !=0 && <Select
+     {/* {catg.length !=0 && <Select
             {... catg.map((category) => (
               <option key={category.id} value={category.value}>{category.value}</option>
-            ))} />}
+            ))} />} */}
     </div>
   );
 };
