@@ -9,7 +9,7 @@ const PopularList = ({ products }) => {
       {products
         .filter((data) => data.Category === "Other")
         .map((filteredProduct) => (
-          <Link to={`productDetail/${filteredProduct.id}`}>
+          <Link key ={filteredProduct.id} to={`productDetail/${filteredProduct.id}`}>
           <ShopListItem
             key={filteredProduct.id}
             img={filteredProduct.img1}
