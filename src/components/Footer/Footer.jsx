@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SocialMediaIcons from "../../Icons/SocialMediaIcons";
-const Footer = () => {
+const Footer = (props) => {
   return (
     <footer className="min-h-small bg-mainbg -mt-1">
       <div className="border-t-2 border-green mb-1 border-opacity-50" />
@@ -13,13 +13,19 @@ const Footer = () => {
         </Link>
         <div className="pr-2 text-lg flex items-center mb-2">
           <Link to="/shop">
-            <p className="text-olivegreen text-md pr-6 font-medium">Shop</p>
+            <p className="text-olivegreen text-md pr-6 font-medium">
+              {props.t("Shop")}
+            </p>
           </Link>
           <Link to="/blog">
-            <p className="text-olivegreen text-md font-medium pr-6">Blog</p>
+            <p className="text-olivegreen text-md font-medium pr-6">
+              {props.t("Blog")}
+            </p>
           </Link>
           <Link to="/about">
-            <p className="text-olivegreen text-md font-medium pr-6">About</p>
+            <p className="text-olivegreen text-md font-medium pr-6">
+              {props.t("About")}
+            </p>
           </Link>
         </div>
         <div className="pr-4">

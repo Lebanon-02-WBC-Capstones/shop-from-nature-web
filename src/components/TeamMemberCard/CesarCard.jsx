@@ -1,6 +1,8 @@
 import React from "react";
 import CesarPhoto from "../../images/CesarPhoto";
+import { LanguageContext } from "../../App";
 function Member3() {
+  const { t } = React.useContext(LanguageContext);
   return (
     <div className="flex justify-center flex-col m-auto p-4">
       <CesarPhoto />
