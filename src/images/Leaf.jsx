@@ -3,6 +3,7 @@ import * as React from "react";
 function Icon() {
   return (
     <svg
+      className="-ml-72"
       width="505"
       viewBox="0 0 476 500"
       fill="none"

@@ -26,9 +26,24 @@ class API {
   });
 };
 
+  static getBlogs = () => {
+    return new Promise((resolve) => {
+      db.collection("Blogs").onSnapshot((snapchot) => {
+        const allBlogs = snapchot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        resolve(allBlogs);
+      });
+    });
+  };
 }
 export default API;
 
 
   
 
+<<<<<<< HEAD
+=======
+export default API;
+>>>>>>> 691701cba16bad125638357e5771f30ea43858e5

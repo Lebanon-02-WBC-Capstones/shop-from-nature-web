@@ -1,38 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import BlogCard from "./BlogCard";
-
-const blogData = {
-  id: 1,
-  blogDate: "June 22th, 2021",
-  blogTitle: "Tumblr confirms 84 accounts linked to Kremlin trolls",
-  blogDescription:
-    "Tumblr has confirmed that Kremlin trolls were active on its platform during the 2016 US presidential elections…",
-};
+import API from "../../API";
 
 const BlogCardList = () => {
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    API.getBlogs().then((blogs) => {
+      setBlogs(blogs);
+    });
+  }, []);
+
   return (
-    <div className="flex flex-wrap m-20">
-      <div className=" m-2">
-        <BlogCard {...blogData} />
-      </div>
-      <div className=" m-2">
-        <BlogCard {...blogData} />
-      </div>
-      <div className=" m-2">
-        <BlogCard {...blogData} />
-      </div>
-      <div className=" m-2">
-        <BlogCard {...blogData} />
-      </div>
-      <div className=" m-2">
-        <BlogCard {...blogData} />
-      </div>
-      <div className=" m-2">
-        <BlogCard {...blogData} />
-      </div>
-      <div className=" m-2">
-        <BlogCard {...blogData} />
-      </div>
+    <div className="flex flex-wrap justify-center m-20">
+      {blogs.length !== 0 &&
+        blogs.map((blog) => (
+          <div className="m-2" key={blog.id}>
+            <BlogCard blog={blog} />
+          </div>
+        ))}
     </div>
   );
 };

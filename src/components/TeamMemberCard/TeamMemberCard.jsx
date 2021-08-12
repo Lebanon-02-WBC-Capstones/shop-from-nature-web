@@ -1,26 +1,33 @@
 import React from "react";
-import PropTypes from "prop-types";
-import TeamMemberIcon from "./../../Icons/TeamMemberIcon";
+import OsamaCard from "./OsamaCard";
+import ZiadCard from "./ZiadCard";
+import CesarCard from "./CesarCard";
+import MohamadCard from "./MohamadCard";
+import JanaCard from "./JanaCard";
+import MarwaCard from "./MarwaCard";
+import MiraCard from "./MiraCard";
 
-const TeamMemberCard = ({ id, name, title }) => {
+function TeamMemberCard() {
   return (
-    <div
-      id={id}
-      className="flex flex-col bg-mainbg place-items-center text-center p-10"
-    >
-      <TeamMemberIcon />
+    <div className="flex flex-col bg-mainbg mb-0 py-8">
+      <div className="flex flex-row justify-around">
+        <p className="text-bric font-sans text-center font-medium text-4xl mt-4">
+          People behind our success
+        </p>
+      </div>
       <div className="">
-        <h2 className="text-green font-sans font-medium ">{name}</h2>
-        <p className="text-green font-sans font-medium">{title}</p>
+        <OsamaCard />
+        <div className="grid grid-flow-col grid-rows-2 gap-x-px gap-y-4">
+          <ZiadCard />
+          <CesarCard />
+          <MohamadCard />
+          <JanaCard />
+          <MarwaCard />
+          <MiraCard />
+        </div>
       </div>
     </div>
   );
-};
-TeamMemberCard.propTypes = {
-  id: PropTypes.number,
-  name: PropTypes.string,
-  image: PropTypes.string,
-  title: PropTypes.string,
-};
+}
 
 export default TeamMemberCard;
