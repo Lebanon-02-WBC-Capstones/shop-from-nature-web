@@ -5,7 +5,7 @@ import TabsRender from "./TabsRender";
 
 const ProductDetailsItem = () => {
   const id = useParams().id;
-  console.log(id);
+  //console.log(id);
   const [quantity, setQuantity] = useState(0);
   const [prdt, setProduct] = useState([]);
   let plus = () => {
@@ -24,13 +24,16 @@ const ProductDetailsItem = () => {
   let prd = prdt.find((item) => item.id == id);
 
   return (
-    <div className="flex bg-mainbg">
+    <div className="flex  bg-mainbg">
       {prd && (
         <>
           {prd && (
-            <div className=" pl-10 pt-10 ">
-              <img src={prd.img1} />
-            </div>
+            <div>
+            <div className="ml-10 mt-10 border-gray-100 max-h-sm min-h-prdsh w-prd bg-white shadow-xl">
+            <img src={prd.img1}></img>
+          </div>
+          
+          </div>
           )}
 
           <div className="w-full w-x-auto mx-auto  mt-10 ml-10 flex flex-col">
@@ -66,13 +69,13 @@ const ProductDetailsItem = () => {
               )}
 
               <button
-                class="transform hover:scale-110 motion-reduce:transform-none bg-green text-white  font-bold uppercase text-sm px-6 py-3 rounded-lg shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="transform hover:scale-110 motion-reduce:transform-none bg-green text-white  font-bold uppercase text-sm px-6 py-3 rounded-lg shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
               >
                 Add to cart
               </button>
             </div>
-            {prd && <TabsRender description={prd.Descprition} />}
+            {prd && <TabsRender product={prd} />}
           </div>
         </>
       )}
