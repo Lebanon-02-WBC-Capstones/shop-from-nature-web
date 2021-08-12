@@ -1,6 +1,6 @@
 import React from "react";
 import ShopListItem from "../../components/ShopListItem/ShoptListItem";
-
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const FoodContainer = ({ products }) => {
@@ -11,15 +11,17 @@ const FoodContainer = ({ products }) => {
         <div className="border-t-2 border-red my-1  w-10" />
       </div>
       <div className="flex flex-wrap">
-        {products
+      {products
           .filter((data) => data.Category === "Container")
           .map((filteredProduct) => (
-            <ShopListItem
-              key={filteredProduct.id}
-              img={filteredProduct.img1}
-              title={filteredProduct.Name}
-              price={filteredProduct.Price}
-            />
+            <Link key ={filteredProduct.id} to={`productDetail/${filteredProduct.id}`}>
+              <ShopListItem
+                key={filteredProduct.id}
+                img={filteredProduct.img1}
+                title={filteredProduct.Name}
+                price={filteredProduct.Price}
+              />
+            </Link>
           ))}
       </div>
     </div>

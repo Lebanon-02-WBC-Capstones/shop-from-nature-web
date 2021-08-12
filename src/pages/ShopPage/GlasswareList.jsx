@@ -1,6 +1,6 @@
 import React from "react";
 import ShopListItem from "../../components/ShopListItem/ShoptListItem";
-
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 const GlasswareList = ({ products }) => {
@@ -14,12 +14,14 @@ const GlasswareList = ({ products }) => {
         {products
           .filter((data) => data.Category === "Glassware")
           .map((filteredProduct) => (
+            <Link to={`productDetail/${filteredProduct.id}`}>
             <ShopListItem
               key={filteredProduct.id}
               img={filteredProduct.img1}
               title={filteredProduct.Name}
               price={filteredProduct.Price}
             />
+             </Link>
           ))}
       </div>
     </div>

@@ -22,7 +22,7 @@ const MyCategories = () => {
   return (
     <>
       {array.length != 0 && (
-        <div className="w-24 mr-12">
+        <div className="w-32 mr-12">
           <Select options={array} />
         </div>
       )}
