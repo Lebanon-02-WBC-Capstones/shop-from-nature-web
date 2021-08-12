@@ -7,7 +7,7 @@ import LinesDown from "../../images/LinesDown.svg";
 import PopularList from "./PopularList";
 import GlasswareList from "./GlasswareList";
 import FoodContainerList from "./FoodContainerList";
-//import Prod from "./GetProduct";
+
 import API from "../../API";
 
 const shopPage = () => {
@@ -18,7 +18,7 @@ const shopPage = () => {
           setProducts(products);
         });
       }, []);
-     // let products = products[0];
+   
 
     return (
         <div className="bg-mainbg">
@@ -27,7 +27,7 @@ const shopPage = () => {
             <div className="flex justify-between mb-0">
                 <div className="text-red font-medium text-2xl  ml-11"><p>Popular</p>
                 <div className="border-t-2 border-red my-1  w-10" />
-</div>
+ </div>
                 <div><Categories/></div> 
             </div>
             <div ><PopularList products ={prdts} /></div>
