@@ -8,6 +8,13 @@ module.exports = {
       fontFamily: {
         sans: "Oswald",
       },
+      width: {
+        prd: "250px",
+      },
+      height: {
+        prd: "250px",
+      },
+
       colors: {
         transparent: "transparent",
         current: "currentColor",
@@ -22,6 +29,7 @@ module.exports = {
         dark: "#717771",
         tan: "#fcfbf9",
         bric: "#892E2E",
+        darkGreen:"#186717"
       },
       minHeight: {
         0: "0",
@@ -31,6 +39,7 @@ module.exports = {
         full: "100vh",
         "1/2": "50%",
         "3/4": "75%",
+        prdsh: "250px",
       },
       maxWidth: {
         "2xs": "5rem",
@@ -49,6 +58,6 @@ module.exports = {
     animation: ["motion-reduce"],
     padding: ["hover"],
     textColor: ["hover"],
-    backgroundOpacity: ["active"]
+    backgroundOpacity: ["active"],
   },
 };

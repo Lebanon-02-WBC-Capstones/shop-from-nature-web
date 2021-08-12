@@ -25,7 +25,6 @@ function App() {
       <Translation handleClick={handleClick} />
       <Navbar t={t}/>
       <Switch>
-        <Route path="/about" component={About}/>
         <Route exact path="/blog" component={BlogPage} />
         <Route path="/blog/:id" component={BlogDetailsPage} />
       </Switch>
@@ -33,6 +32,3 @@ function App() {
       </LanguageContext.Provider>
     </Router >
   );
-}
-
-export default App;

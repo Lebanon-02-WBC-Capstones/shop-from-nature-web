@@ -5,10 +5,10 @@ function Member2() {
     <div className="flex justify-center flex-col m-auto">
       <ZiadPhoto />
       <div className="block text-center">
-        <p className="text-green font-sans font-normal text-xl uppercase">
+        <p className="text-green font-sans font-normal text-lg uppercase">
           Ziad Baroudi
         </p>
-        <p className=" text-green font-sans font-normal text-xl">
+        <p className=" text-green font-sans font-normal text-lg">
           Front-end Web Developer
         </p>
       </div>
