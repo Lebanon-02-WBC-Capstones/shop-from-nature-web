@@ -48,7 +48,7 @@ const ArrivalItem = () => {
           className="flex items-center justify-center pb-24"
           {...settings}
         >
-          {arrivalItems.map((item, i) => (
+          {arrivalItems.slice(0, 7).map((item, i) => (
             <div key={item.id}>
               <div className="flex min-h-prdsh bg-white mr-2 justify-center items-center">
                 <div className="mr-9">
