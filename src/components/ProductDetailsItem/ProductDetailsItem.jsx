@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SampleProduct from "../../images/SampleProduct";
+import Modal from "../ThankYou";
+import TabsRender from "./TabsRender";
 
-
-const Cartitem = (product) => {
+const ProductDetailsItem = (product) => {
+ 
+  
   const [quantity, setQuantity] = useState(0);
   let plus = () => {
     setQuantity(quantity + 1);
@@ -16,11 +19,10 @@ const Cartitem = (product) => {
     img: <SampleProduct />,
     price: "19$",
   };
-
   return (
     <div className="flex bg-mainbg">
       <div className=" pl-10 pt-10 ">{product.img}</div>
-   
+  
       <div className="w-full w-x-auto mx-auto  mt-10 ml-10 flex flex-col">
         <h1 className="text-2xl  text-red text-sans"> Chapter Mips Helmet </h1>
         <div className="border-t-2 border-opacity-75 border-red my-1  w-20" />
@@ -33,7 +35,7 @@ const Cartitem = (product) => {
           <button onClick={minus} className="text-2xl transform hover:scale-125 motion-reduce:transform-none text-grey px-2 ">
             &minus;
           </button> 
-        </div>
+        </div>  <Modal />
         <div className="self-start mt-4">
           <p className="text-red text-xl">
             Price:<span className="text-grey pl-1">{product.price}</span>
@@ -49,4 +51,4 @@ const Cartitem = (product) => {
   );
 };
 
-export default Cartitem;
+export default ProductDetailsItem;
