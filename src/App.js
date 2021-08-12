@@ -22,13 +22,16 @@ function App() {
   return (
     <Router>
       <LanguageContext.Provider value={{ t, i18n }}>
-      <Translation handleClick={handleClick} />
-      <Navbar t={t}/>
-      <Switch>
-        <Route exact path="/blog" component={BlogPage} />
-        <Route path="/blog/:id" component={BlogDetailsPage} />
-      </Switch>
-      <Footer t={t}/>
+        <Translation handleClick={handleClick} />
+        <Navbar t={t} />
+        <Switch>
+        <Route exact path="/about" component={About} />
+          <Route exact path="/blog" component={BlogPage} />
+          <Route path="/blog/:id" component={BlogDetailsPage} />
+        </Switch>
+        <Footer t={t} />
       </LanguageContext.Provider>
     </Router >
   );
+}
+export default App;

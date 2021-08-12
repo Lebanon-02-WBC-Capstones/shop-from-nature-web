@@ -11,7 +11,7 @@ function Member3() {
           Jana Sanjakdar
         </p>
         <p className="text-green font-sans font-normal text-lg">
-          Front-end Web Developer
+          {t("Front-end Web Developer")}
         </p>
       </div>
     </div>
