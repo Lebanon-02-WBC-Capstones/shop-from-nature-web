@@ -24,6 +24,17 @@ class API {
       });
     });
   };
-}
 
+static getProduct = () => {
+  return new Promise((resolve) => {
+    db.collection("Product").onSnapshot((snapchot) => {
+      const allProduct = snapchot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      resolve(allProduct);
+    });
+  });
+};
+}
 export default API;

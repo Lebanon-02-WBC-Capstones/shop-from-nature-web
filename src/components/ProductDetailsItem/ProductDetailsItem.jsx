@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import API from "../../API";
-import TabsRender from "./TabsRender";
+//import TabsRender from "./TabsRender";
 
 const ProductDetailsItem = () => {
-  // const id = useParams();
-  console.log(useParams());
+  const {id} = useParams();
+  //console.log();
   const [quantity, setQuantity] = useState(0);
   const [prdt, setProduct] = useState([]);
   let plus = () => {
@@ -17,17 +17,18 @@ const ProductDetailsItem = () => {
     }
   };
   useEffect(() => {
-    API.getProducts().then((products) => {
-      setProduct(products);
+    API.getProduct().then((product) => {
+     
+      setProduct(product);
     });
   }, []);
 
-  const prd = prdt.find((prd) => prd.id === id);
+  let prd = prdt.find((product) => product.id == id);
   return (
     <div className="flex bg-mainbg">
-      {prdt.length != 0 && (
-        <>
-          <div className=" pl-10 pt-10 ">{product.img}</div>
+      {prd && 
+        
+          <div className=" pl-10 pt-10 ">{prd.Img}</div>}
 
           <div className="w-full w-x-auto mx-auto  mt-10 ml-10 flex flex-col">
             <h1 className="text-2xl  text-red text-sans">
@@ -52,12 +53,12 @@ const ProductDetailsItem = () => {
               </button>
             </div>
             <div className="self-start mt-4">
-              <p className="text-red text-xl">
-                Price:<span className="text-grey pl-1">{product.price}</span>
-              </p>
-              <p className="mb-4 mt-4 text-red text-sm">
-                Tags:<span className="text-grey pl-1">glass</span>{" "}
-              </p>{" "}
+             {prd && <p className="text-red text-xl">
+                Price:<span className="text-grey pl-1">{prd.Price}</span> 
+              </p> }
+            {prd &&  <p className="mb-4 mt-4 text-red text-sm">
+                Tags:<span className="text-grey pl-1">{prd.Tags}</span>{" "}
+              </p>}{" "}
               <button
                 class="transform hover:scale-110 motion-reduce:transform-none bg-green text-white  font-bold uppercase text-sm px-6 py-3 rounded-lg shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
@@ -65,10 +66,10 @@ const ProductDetailsItem = () => {
                 Add to cart
               </button>
             </div>
-            <TabsRender />
+            {/* <TabsRender description={prd.Description}/> */}
           </div>
-        </>
-      )}
+       
+      
     </div>
   );
 };

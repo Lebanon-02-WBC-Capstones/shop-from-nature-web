@@ -10,10 +10,11 @@ import BlogPage from "./pages/BlogsPage/BlogPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage/BlogDetailsPage";
 import ShopPage from "./pages/ShopPage/ShopPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailPage";
-
+import ThankYouModal from "./components/ThankYouModal";
 function App() {
   return (
     <Router>
+      <ThankYouModal />
       <Navbar />
       <Switch>
         <Route path="/shop" component={ShopPage} />
