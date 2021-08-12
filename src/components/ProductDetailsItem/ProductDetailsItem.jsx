@@ -32,7 +32,10 @@ const ProductDetailsItem = () => {
             <div className="ml-10 mt-10 border-gray-100 max-h-sm min-h-prdsh w-prd bg-white shadow-xl">
             <img src={prd.img1}></img>
           </div>
-          
+          <div className="ml-10 mt-10 border-gray-100  min-h-prdss w-prdss bg-white">
+            {prd && 
+            <img  src={prd.img2}></img>}
+          </div>
           </div>
           )}
 
