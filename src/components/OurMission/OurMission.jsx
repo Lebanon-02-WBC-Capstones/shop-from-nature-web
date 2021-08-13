@@ -24,7 +24,7 @@ const OurMission = () => {
             )}
             .{t("These products")}
             {t("are")} {t("all green")}, {t("default-free")}, {t("affordable")},
-            {t("and")} {t("sustainably sourced")}.
+            {t("and")} {t("sustainably sourced.")}
           </p>
         </div>
         <div className="relative right-20 pt-8">

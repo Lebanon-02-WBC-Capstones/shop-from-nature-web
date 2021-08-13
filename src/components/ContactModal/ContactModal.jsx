@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import API from "../../API";
+import { LanguageContext } from "../../App";
 export default function ContactModal() {
   const [showModal, setShowModal] = useState(false);
+  const { t } = React.useContext(LanguageContext);
   const [contactData, setContactData] = useState({
     name: "",
     email: "",
@@ -22,7 +24,7 @@ export default function ContactModal() {
         className="bg-red text-white text-center w-44 py-3 px-6 text-xl rounded-3xl mt-3 p-4 transform hover:scale-110 motion-reduce:transform-none inline-flex justify-center  shadow hover:shadow-lg outline-none focus:outline-none  ease-linear transition-all  duration-150"
         onClick={() => setShowModal(true)}
       >
-        Keep In Touch
+        {t("Keep In Touch")}
       </button>
       {showModal ? (
         <>
@@ -31,7 +33,7 @@ export default function ContactModal() {
               <div className="bg-mainbg pl-20 pr-20 border-0 rounded-lg shadow-lg relative flex flex-col w-full outline-none focus:outline-none">
                 <div className="flex items-start justify-between p-5 border-b border-solid border-red rounded-t">
                   <h3 className="w-full inline-flex justify-center text-2xl  leading-6 font-medium text-sans text-red">
-                    Just ask us anything
+                    {t("Just ask us anything")}
                   </h3>
                   <button
                     className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
@@ -45,7 +47,7 @@ export default function ContactModal() {
 
                 <form onSubmit={handleSubmit}>
                   <div className="relative w-full p-6 flex-auto">
-                    <p className="text-red text-sans text-xl">Name</p>
+                    <p className="text-red text-sans text-xl">{t("Name")}</p>
                     <input
                       onChange={handleChange}
                       name="name"
@@ -56,25 +58,19 @@ export default function ContactModal() {
                     />
                     <br />
                     <p className="text-red text-sans text-xl pr-4 pt-3">
-                      Email
+                      {t("Email")}
                     </p>
-<<<<<<< HEAD
-                    <textarea
-                      required
-                      type="text"
-=======
                     <input
                       required
                       onChange={handleChange}
                       name="email"
                       value={contactData.email}
                       type="email"
->>>>>>> main
                       className="border w-full border-transparent pr-1 pl-1 h-8 focus:outline-none shadow-lg"
                     />
                     <br />
                     <p className="text-red text-sans text-xl pr-4  pt-3">
-                      Message
+                      {t("Message")}
                     </p>
                     <textarea
                       onChange={handleChange}
@@ -92,14 +88,14 @@ export default function ContactModal() {
                       className="p-4 ml-3 transform hover:scale-110 motion-reduce:transform-none inline-flex justify-center bg-red text-white   uppercase  px-3 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all  duration-150"
                       type="submit"
                     >
-                      Submit
+                      {t("Submit")}
                     </button>
                     <button
                       className="p-4 ml-3 transform hover:scale-110 motion-reduce:transform-none  inline-flex justify-center bg-red text-white active:bg-olivegreen  uppercase  px-3 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all  duration-150"
                       type="button"
                       onClick={() => setShowModal(false)}
                     >
-                      Cancel
+                      {t("Cancel")}
                     </button>
                   </div>
                 </form>

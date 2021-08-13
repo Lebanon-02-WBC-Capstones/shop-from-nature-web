@@ -36,7 +36,7 @@ export const TRANSLATIONS_EN = {
     "default-free": "default-free",
     " affordable": " affordable",
     "and": "and",
-    "sustainably sourced": "sustainably sourced",
+    "sustainably sourced.": "sustainably sourced. ",
     "LivinVert team": "LivinVert team ",
     "works": "works",
     "with passion and excitement to exceed customer expectations; from the moment an order is placed to its arrival on your doorstep":"with passion and excitement to exceed customer expectations; from the moment an order is placed to its arrival on your doorstep",
@@ -45,8 +45,18 @@ export const TRANSLATIONS_EN = {
     "LivingVert presents you an eco-friendly lifestyle": "LivingVert presents you an eco-friendly lifestyle ",
     "People behind our success": "People behind our success",
     "Lead Engineer": "Lead Engineer",
-    "Front-end Web Developer":"Front-end Web Developer",
-    
-
+    "Front-end Web Developer": "Front-end Web Developer",
+    "Upcycle your information about us": "Upcycle your information about us!",
+    "Keep In Touch": "Keep In Touch",
+    "Name": "Name",
+    "Email": "Email",
+    "Message": "Message",
+    "Submit": "Submit",
+    "Cancel":"Cancel",
+    "Just ask us anything": "Just ask us anything",
+    "Home is behind, the world ahead":"Home is behind, the world ahead",
+    " and there are many paths to tread through shadows to the edge.":" and there are many paths to tread through shadows to the edge",
+    "Read More":"Read More",
+    "Jungle Straws":"Jungle Straws",
 
 };

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { LanguageContext } from "../../App";
 const BlogCard = ({ blog }) => {
+  const { t } = React.useContext(LanguageContext);
   return (
     <div className="flex flex-col justify-between items-center shadow-lg m-4 max-w-sm">
       <div className="text-left w-full px-8">
@@ -20,7 +21,7 @@ const BlogCard = ({ blog }) => {
           type="button"
           className=" bg-green text-center text-white text-sm w-28 h-12 rounded my-6"
         >
-          Read More
+          {t("Read More")}
         </button>
       </Link>
     </div>
