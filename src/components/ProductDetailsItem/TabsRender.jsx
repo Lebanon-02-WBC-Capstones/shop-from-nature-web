@@ -1,12 +1,12 @@
 // eslint-disable
 
-import React from "react";
-import PropTypes from "prop-types";
+import React,{useState} from "react";
 
-const TabsRender = ({ product }) => {
-  console.log(product);
-  const [openTab, setOpenTab] = React.useState(1);
 
+const TabsRender = ({ product,products }) => {
+  const [openTab, setOpenTab] = useState(1);
+  let prdCat=product.Category;
+  const suggestedPrd = products.filter((prod) => prod.Category == prdCat);
   return (
     <>
       <div className="flex flex-wrap">
@@ -63,8 +63,23 @@ const TabsRender = ({ product }) => {
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <div>
-                  {product && product.Tags.split(",")
-                  }
+                  <div className="flex flex-wrap justify-between content-start m-5 ">
+     
+    
+          {suggestedPrd && suggestedPrd.slice(0,3).map((suggested)=> 
+         
+          <div  className=" flex-col mt-10 ml-10 ">
+        <div className=" border-gray-100 min-h-prdsh w-prd bg-white shadow-xl">
+          <img src={suggested.img1}></img>
+        </div>
+        <h3 className="mt-5"> {suggested.Name} </h3>
+        
+      </div>
+         )}
+           
+                 
+        
+              </div>      
                   </div>
                 </div>
               </div>
@@ -78,9 +93,5 @@ const TabsRender = ({ product }) => {
 
  export default TabsRender;
 
-  // return (
-  //   <>
-  //   <Tabs color="white" />  
-  //   </>
-  // );
+  
 

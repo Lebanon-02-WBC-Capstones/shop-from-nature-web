@@ -24,18 +24,27 @@ const ProductDetailsItem = () => {
   let prd = prdt.find((item) => item.id == id);
 
   return (
-    <div className="flex  bg-mainbg">
+    <div className="flex   bg-mainbg">
+       
       {prd && (
         <>
           {prd && (
             <div>
             <div className="ml-10 mt-10 border-gray-100 max-h-sm min-h-prdsh w-prd bg-white shadow-xl">
-            <img src={prd.img1}></img>
+           <img src={prd.img1}></img>
           </div>
-          <div className="ml-10 mt-10 border-gray-100  min-h-prdss w-prdss bg-white">
+         <div className="flex flex-wrap" ><div className="ml-10 mt-10 border-gray-100  min-h-prdss w-prdss bg-white">
             {prd && 
             <img  src={prd.img2}></img>}
           </div>
+          <div className="ml-10 mt-10 border-gray-100  min-h-prdss w-prdss  ">
+            {prd && 
+            <img  src={prd.img3}></img>}
+          </div>
+          <div className="ml-10 mt-10 border-gray-100  min-h-prdss w-prdss ">
+            {prd.img4 && 
+            <img  src={prd.img4}></img>}
+          </div> </div>
           </div>
           )}
 
@@ -78,7 +87,7 @@ const ProductDetailsItem = () => {
                 Add to cart
               </button>
             </div>
-            {prd && <TabsRender product={prd} />}
+            {prd && <TabsRender products={prdt} product={prd} />}
           </div>
         </>
       )}
