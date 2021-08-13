@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import MainLogo from "../../Icons/MainLogo";
 import CardIcon from "../../Icons/CardIcon";
+import Corner from "../../images/Corner";
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between bg-mainbg">
+      <Corner />
       <Link to="/">
         <div className="flex items-center">
           <MainLogo />
@@ -28,7 +30,7 @@ const Navbar = () => {
           <p className="text-xl mr-6 text-red font-regular">About Us</p>
         </Link>
         <Link to="/card">
-          <CardIcon className="mr-8" />
+          <CardIcon className="mr-20" />
         </Link>
       </div>
     </nav>
