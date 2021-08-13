@@ -28,7 +28,7 @@ const shopPage = () => {
           <div className="border-t-2 border-red my-1  w-10" />
         </div>
         <div>
-          <Categories />
+          <Categories products={prdts}/>
         </div>
       </div>
       <div>
