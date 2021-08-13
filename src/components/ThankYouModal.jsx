@@ -5,13 +5,13 @@ export default function Modal() {
 
   return (
     <>
-      <button
+      {/* <button
         className="bg-red text-white  font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
         onClick={() => setShowModal(true)}
       >
         Submit
-      </button>
+      </button> */}
       {showModal ? (
         <>
           <div onClick={() => setShowModal(false)}
