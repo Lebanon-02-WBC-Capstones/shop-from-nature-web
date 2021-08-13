@@ -7,6 +7,7 @@ import PopularList from "./PopularList";
 import GlasswareList from "./GlasswareList";
 import FoodContainerList from "./FoodContainerList";
 import API from "../../API";
+import EcoFriendlyList from "./EcoFriendlyList";
 
 const shopPage = () => {
   const [prdts, setProducts] = useState([]);
@@ -38,6 +39,9 @@ const shopPage = () => {
       </div>
       <div>
         <FoodContainerList products={prdts} />
+      </div>
+      <div>
+        <EcoFriendlyList products={prdts} />
       </div>
       <div className="relative">
         <div>
