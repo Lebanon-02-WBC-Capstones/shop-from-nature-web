@@ -71,13 +71,13 @@ const TabsRender = ({ product,products }) => {
         <div className=" border-gray-100 min-h-prdsp w-prdsp bg-white shadow-md">
           <img src={suggested.img1}></img>
         </div>
-        <h3 className="mt-5"> {suggested.Name} </h3>
-        <h3 className="mt-5"> {suggested.Price} </h3>
+        <div className="flex ">
+        <h3 className="mt-5 mr-5 "> {suggested.Name} </h3>
+        <h3 className="mt-5 text-red "> {suggested.Price} </h3>
+       </div>
       </div>
+      
          )}
-           
-                 
-        
               </div>      
                   </div>
                 </div>
