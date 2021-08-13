@@ -12,9 +12,6 @@ const ShopListItem = ({id,img,title,price}) => {
            <h3 className="mt-5  font-medium"> {title}  </h3>
           <h3 className="mb-6  text-red font-regular"> {price} </h3>
         </div>
-       
-        <h3 className="mt-5  font-medium"> {title} </h3>
-        <h3 className="mb-6  text-red font-regular"> {price} </h3>
       </div>
   );
 };
