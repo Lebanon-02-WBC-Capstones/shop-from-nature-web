@@ -48,6 +48,7 @@ module.exports = {
       },
       maxHeight: {
         lg: "200px",
+        prdsh: "250px",
       },
       boxShadow: {
         xl: "-15px -15px #7EAC8A",

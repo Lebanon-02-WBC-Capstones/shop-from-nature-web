@@ -50,14 +50,14 @@ const ArrivalItem = () => {
         >
           {arrivalItems.slice(0, 7).map((item, i) => (
             <div key={item.id}>
-              <div className="flex min-h-prdsh bg-white mr-2 justify-center items-center">
-                <div className="mr-9">
+              <div className="flex min-h-prdsh max-h-prdsh bg-white mr-2 content-evenly items-center">
+                <div className="px-6">
                   <img src={item.img1} />
                 </div>
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex items-center mx-3">
-                  <p className="text-grey mr-12 text-lg">{item.Name}</p>
+                  <p className="text-grey mr-12 text-md">{item.Name}</p>
                   <p className="text-grey">{item.Price}</p>
                 </div>
                 <button
