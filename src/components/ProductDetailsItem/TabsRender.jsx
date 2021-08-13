@@ -72,7 +72,7 @@ const TabsRender = ({ product,products }) => {
           <img src={suggested.img1}></img>
         </div>
         <h3 className="mt-5"> {suggested.Name} </h3>
-        
+        <h3 className="mt-5"> {suggested.Price} </h3>
       </div>
          )}
            
