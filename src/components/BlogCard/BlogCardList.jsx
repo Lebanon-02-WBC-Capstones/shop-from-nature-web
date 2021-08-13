@@ -15,7 +15,7 @@ const BlogCardList = () => {
     <div className="flex flex-wrap justify-center m-20">
       {blogs.length !== 0 &&
         blogs.map((blog) => (
-          <div className="m-2">
+          <div className="m-2" key={blog.id}>
             <BlogCard blog={blog} />
           </div>
         ))}

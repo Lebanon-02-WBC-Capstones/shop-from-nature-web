@@ -10,6 +10,7 @@ function Member1() {
         y="0px"
         width="220px"
         height="220px"
+
         viewBox="0 0 176 162"
         enablebackground="new 0 0 176 162"
         xmlSpace="preserve"

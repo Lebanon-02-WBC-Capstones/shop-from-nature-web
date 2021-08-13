@@ -1,5 +1,6 @@
 import React from "react";
 import CesarPhoto from "../../images/CesarPhoto";
+
 function CesarCard() {
   return (
     <div className="flex justify-center flex-col m-auto p-4">
@@ -17,3 +18,4 @@ function CesarCard() {
 }
 
 export default CesarCard;
+
