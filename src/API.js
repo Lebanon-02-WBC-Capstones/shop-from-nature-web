@@ -50,7 +50,7 @@ class API {
   };
   
   static setContactData = (data) => {
-    db.collection("Contact-us").add(data).then(console.log("success"));
+    db.collection("Contact-us").add(data).then(console.log("data added"));
   }
   
   static setCart = (data) => {

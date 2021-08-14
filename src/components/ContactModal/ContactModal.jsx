@@ -60,8 +60,7 @@ export default function ContactModal() {
                     </span>
                   </button>
                 </div>
-
-                <form onSubmit={handleSubmit} id="contact-form">
+                <form onSubmit={handleSubmit}>
                   <div className="relative w-full p-6 flex-auto">
                     <p className="text-red text-sans text-xl">Name</p>
                     <input
@@ -82,6 +81,7 @@ export default function ContactModal() {
                       name="email"
                       value={contactData.email}
                       type="email"
+
                       className="border w-full border-transparent pr-1 pl-1 h-8 focus:outline-none shadow-lg"
                     />
                     <br />
