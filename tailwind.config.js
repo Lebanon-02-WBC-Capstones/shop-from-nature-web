@@ -14,7 +14,6 @@ module.exports = {
       height: {
         prd: "250px",
       },
-
       colors: {
         transparent: "transparent",
         current: "currentColor",
@@ -44,7 +43,13 @@ module.exports = {
       },
       maxWidth: {
         "2xs": "5rem",
+        xs: "18vw",
         md: "50%",
+        maxp: "65%",
+      },
+      maxHeight: {
+        lg: "200px",
+        prdsh: "250px",
       },
       boxShadow: {
         xl: "-15px -15px #7EAC8A",
