@@ -1,8 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { db } from "../../firebase";
 import API from "../../API";
 
 const Cartitem = ({ product }) => {
-  console.log(product.id);
+  const [doc, setDoc] = useState({});
+  useEffect(() => {
+    db.collection("Cart")
+      .get()
+      .then((snapshot) => {
+        snapshot.docs.forEach((doc) => {
+          setDoc(doc);
+        });
+      });
+  }, []);
   const [quantity, setQuantity] = useState(1);
   let plus = () => {
     setQuantity(quantity + 1);
@@ -14,7 +24,7 @@ const Cartitem = ({ product }) => {
   };
 
   const handleDelete = () => {
-    API.deleteProduct(product.id);
+    API.deleteProduct(doc.id);
   };
 
   return (
