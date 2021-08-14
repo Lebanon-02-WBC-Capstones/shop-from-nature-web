@@ -19,10 +19,10 @@ function TeamMemberCard() {
         <OsamaCard />
         <div className="grid grid-flow-col grid-rows-2 gap-x-px gap-y-4">
           <ZiadCard />
-          <CesarCard />
+          <MarwaCard />
           <MohamadCard />
           <JanaCard />
-          <MarwaCard />
+          <CesarCard />
           <MiraCard />
         </div>
       </div>
