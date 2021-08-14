@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const BlogCard = ({ blog }) => {
   return (
-    <div className="flex flex-col justify-between items-center shadow-lg m-4 max-w-sm">
+    <div className="flex flex-col justify-between items-center shadow-lg m-4 max-w-sm bg-white">
       <div className="text-left w-full px-8">
         <p className="text-red text-sm font-regular leading-5 pt-6">
           {blog.Date}
@@ -12,7 +12,7 @@ const BlogCard = ({ blog }) => {
           {blog.title}
         </h1>
         <p className="text-red text-lg font-regular leading-7 pb-8">
-          {blog.descp1}
+          {blog.descp1.substring(0, 650)}...
         </p>
       </div>
       <Link to={`/blog/${blog.id}`}>
