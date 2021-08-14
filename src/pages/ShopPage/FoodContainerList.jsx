@@ -14,7 +14,10 @@ const FoodContainer = ({ products }) => {
         {products
           .filter((data) => data.Category === "Container")
           .map((filteredProduct) => (
-            <Link key ={filteredProduct.id} to={`productDetail/${filteredProduct.id}`}>
+            <Link
+              key={filteredProduct.id}
+              to={`productDetail/${filteredProduct.id}`}
+            >
               <ShopListItem
                 key={filteredProduct.id}
                 img={filteredProduct.img1}

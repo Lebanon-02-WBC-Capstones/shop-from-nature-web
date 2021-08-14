@@ -1,11 +1,10 @@
 // eslint-disable
 
-import React,{useState} from "react";
+import React, { useState } from "react";
 
-
-const TabsRender = ({ product,products }) => {
+const TabsRender = ({ product, products }) => {
   const [openTab, setOpenTab] = useState(1);
-  let prdCat=product.Category;
+  let prdCat = product.Category;
   const suggestedPrd = products.filter((prod) => prod.Category == prdCat);
   return (
     <>
@@ -14,14 +13,15 @@ const TabsRender = ({ product,products }) => {
           <ul
             className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row"
             role="tablist"
-          > 
+          >
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
               <a
                 className={
                   "text-lg  uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 1
-                    ? "text-red bg-white"             : "text-white bg-olivegreen")
-                } 
+                    ? "text-red bg-white"
+                    : "text-white bg-olivegreen")
+                }
                 onClick={(e) => {
                   e.preventDefault();
                   setOpenTab(1);
@@ -38,7 +38,7 @@ const TabsRender = ({ product,products }) => {
                 className={
                   "text-lg  uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
                   (openTab === 2
-                    ? "text-red bg-white" 
+                    ? "text-red bg-white"
                     : "text-white bg-olivegreen")
                 }
                 onClick={(e) => {
@@ -58,27 +58,28 @@ const TabsRender = ({ product,products }) => {
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
                   <p className="text-grey text-sm">
-                  {product && product.Description}
+                    {product && product.Description}
                   </p>
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <div>
-                  <div className="flex flex-wrap justify-around  content-start m-5 ">
-     
-          {suggestedPrd && suggestedPrd.slice(0,3).map((suggested)=> 
-         
-          <div  className=" justify-around flex-col mt-5 ml-5">
-        <div className=" border-gray-100 min-h-prdsp w-prdsp bg-white shadow-md">
-          <img src={suggested.img1}></img>
-        </div>
-        <div className="flex ">
-        <h3 className="mt-5 mr-5 "> {suggested.Name} </h3>
-        <h3 className="mt-5 text-red "> {suggested.Price} </h3>
-       </div>
-      </div>
-      
-         )}
-              </div>      
+                    <div className="flex flex-wrap justify-around  content-start m-5 ">
+                      {suggestedPrd &&
+                        suggestedPrd.slice(0, 3).map((suggested) => (
+                          <div className=" justify-around flex-col mt-5 ml-5">
+                            <div className=" border-gray-100 min-h-prdsp w-prdsp bg-white shadow-md">
+                              <img src={suggested.img1}></img>
+                            </div>
+                            <div className="flex ">
+                              <h3 className="mt-5 mr-5 "> {suggested.Name} </h3>
+                              <h3 className="mt-5 text-red ">
+                                {" "}
+                                {suggested.Price}{" "}
+                              </h3>
+                            </div>
+                          </div>
+                        ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -90,7 +91,4 @@ const TabsRender = ({ product,products }) => {
   );
 };
 
- export default TabsRender;
-
-  
-
+export default TabsRender;

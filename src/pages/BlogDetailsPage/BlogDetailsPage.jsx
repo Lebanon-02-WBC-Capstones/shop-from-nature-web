@@ -10,7 +10,7 @@ const BlogDetailsPage = () => {
       setBlogDetails(blogs);
     });
   }, []);
-  
+
   let blogData = blogsData.find((blog) => blog.id == id);
 
   return (

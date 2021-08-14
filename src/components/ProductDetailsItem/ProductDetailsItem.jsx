@@ -5,7 +5,6 @@ import TabsRender from "./TabsRender";
 
 const ProductDetailsItem = () => {
   const id = useParams().id;
-  //console.log(id);
   const [quantity, setQuantity] = useState(0);
   const [prdt, setProduct] = useState([]);
   let plus = () => {
@@ -25,29 +24,33 @@ const ProductDetailsItem = () => {
 
   return (
     <div className="flex   bg-mainbg">
-       
       {prd && (
         <>
           {prd && (
             <div>
-            <div className="ml-10 mt-10 border-gray-100 max-h-sm min-h-prdsh w-prd bg-white shadow-xl">
-           <img src={prd.img1}></img>
-          </div>
-         <div className="flex flex-wrap justify-around w-50 mt-5 ml-6 " >
-           
-            {prd.img2 && 
-            <div className= "border-gray-100  min-h-prdss w-prdss ">
-            <img  src={prd.img2}></img>    </div>}
-       
-            {prd.img3 && 
-            <div className=" border-gray-100  min-h-prdss w-prdss  ">
-            <img  src={prd.img3}></img> </div>}
-          
-            {prd.img4 && 
-            <div className=" border-gray-100  min-h-prdss w-prdss ">
-            <img  src={prd.img4}></img> </div>}
-          </div> 
-          </div>
+              <div className="ml-10 mt-10 border-gray-100 max-h-sm min-h-prdsh w-prd bg-white shadow-xl">
+                <img src={prd.img1}></img>
+              </div>
+              <div className="flex flex-wrap justify-around w-50 mt-5 ml-6 ">
+                {prd.img2 && (
+                  <div className="border-gray-100  min-h-prdss w-prdss ">
+                    <img src={prd.img2}></img>{" "}
+                  </div>
+                )}
+
+                {prd.img3 && (
+                  <div className=" border-gray-100  min-h-prdss w-prdss  ">
+                    <img src={prd.img3}></img>{" "}
+                  </div>
+                )}
+
+                {prd.img4 && (
+                  <div className=" border-gray-100  min-h-prdss w-prdss ">
+                    <img src={prd.img4}></img>{" "}
+                  </div>
+                )}
+              </div>
+            </div>
           )}
 
           <div className="w-full w-x-auto mx-auto  mt-10 ml-10 flex flex-col">
