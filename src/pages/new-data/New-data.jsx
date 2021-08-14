@@ -108,7 +108,7 @@ export const NewData = [
     img1: "https://cdn.shopify.com/s/files/1/1301/9399/products/BoieUSA_FTB_Blue_Square_99c46930-766a-47be-931a-3104f639dc0b_593x470_crop_center.jpg?v=1627463400",
     img2: "https://cdn.shopify.com/s/files/1/1301/9399/products/BoieUSA_FTB_Pink_Square_192606e7-6b90-4894-a2c2-f73f45da18c9_593x470_crop_center.jpg?v=1627463400",
     img3: "https://cdn.shopify.com/s/files/1/1301/9399/products/BoieUSA_FTB_Green_Square_6acbd7cf-671b-4af1-a2ca-896abdef8475_593x470_crop_center.jpg?v=1627463400",
-    img4: "https://cdn.shopify.com/s/files/1/1301/9399/products/BoieUSA_FTB_Yellow_Square_e62ed5ec-c438-48e4-a2aa-a071f28416c0_593x470_crop_center.jpg?v=1627463400"
+    img4: "https://cdn.shopify.com/s/files/1/1301/9399/products/BoieUSA_FTB_Yellow_Square_e62ed5ec-c438-48e4-a2aa-a071f28416c0_593x470_crop_center.jpg?v=1627463400",
   },
 
   {
@@ -121,7 +121,7 @@ export const NewData = [
     img1: "https://cdn.shopify.com/s/files/1/0181/8445/products/black_720x.png?v=1606833145",
     img2: "https://cdn.shopify.com/s/files/1/0181/8445/products/Untitled_1713c567-b8be-43c1-9996-7a74b8e8c282_720x.png?v=1606831735",
     img3: "https://cdn.shopify.com/s/files/1/0181/8445/products/navy_720x.png?v=1606833501",
-    img4: "https://cdn.shopify.com/s/files/1/0181/8445/products/thousandchapterhelmetblackback_720x.jpg?v=1602584763"
+    img4: "https://cdn.shopify.com/s/files/1/0181/8445/products/thousandchapterhelmetblackback_720x.jpg?v=1602584763",
   },
 
   {
@@ -134,8 +134,7 @@ export const NewData = [
     img1: "https://m.media-amazon.com/images/I/71b5Di328JL._AC_UL320_.jpg",
     img2: "https://m.media-amazon.com/images/I/51j2yI65esL._AC_UL320_.jpg",
     img3: "https://m.media-amazon.com/images/I/61HzyiwLOqL._AC_UL320_.jpg",
-    img4: "https://m.media-amazon.com/images/I/81lb03ztQhL._AC_UL320_.jpg"
-
+    img4: "https://m.media-amazon.com/images/I/81lb03ztQhL._AC_UL320_.jpg",
   },
 
   {
@@ -147,7 +146,7 @@ export const NewData = [
     Tags: "Books, pen, Rocketbook ,note book",
     img1: "https://i.ebayimg.com/images/g/2LYAAOSwrMdbYkL4/s-l300.jpg",
     img2: "https://i.ebayimg.com/images/g/Q5sAAOSwfk9bYkL5/s-l1600.jpg",
-    img3: "https://i.ebayimg.com/images/g/SGAAAOSwHp5bYkL5/s-l1600.jpg"
+    img3: "https://i.ebayimg.com/images/g/SGAAAOSwHp5bYkL5/s-l1600.jpg",
   },
 
   {
@@ -159,7 +158,7 @@ export const NewData = [
     Tags: "Bathroom Cleaner, Glass, Foaming Hand Soap, Mirror Cleane ",
     img1: "https://cdn.sanity.io/images/d864s8gp/production/644241379f23d23cdb4a836664fb9ee088a0b74b-1720x1590.jpg?rect=22,0,1675,1590&w=1536&h=1458&q=80&fit=max&auto=format",
     img2: "https://cdn.sanity.io/images/d864s8gp/production/2350573f482a079f48e026dfc5317ec21df9d648-1720x1590.jpg?rect=22,0,1675,1590&w=1536&h=1458&q=80&fit=max&auto=format",
-    img3: "https://cdn.sanity.io/images/d864s8gp/production/2c2ece28c0099fe5fd7fa2d9af11b0dc14e7530c-1720x1590.jpg?rect=22,0,1675,1590&w=1536&h=1458&q=80&fit=max&auto=format"
+    img3: "https://cdn.sanity.io/images/d864s8gp/production/2c2ece28c0099fe5fd7fa2d9af11b0dc14e7530c-1720x1590.jpg?rect=22,0,1675,1590&w=1536&h=1458&q=80&fit=max&auto=format",
   },
 
   {
@@ -172,7 +171,7 @@ export const NewData = [
     img1: "https://m.media-amazon.com/images/I/51PC1pUk0cL._AC_SR180,120_QL70_.jpg",
     img2: "https://m.media-amazon.com/images/I/71fLoiZXT2L._AC_SX480_SY360_.jpg",
     img3: "https://m.media-amazon.com/images/I/51e5t9-npmL._AC_SX480_SY360_.jpg",
-    img4: "https://m.media-amazon.com/images/I/51zgmZr0+XL._AC_SX480_SY360_.jpg"
+    img4: "https://m.media-amazon.com/images/I/51zgmZr0+XL._AC_SX480_SY360_.jpg",
   },
 
   {
@@ -186,8 +185,7 @@ export const NewData = [
     img2: "https://assets.pcna.com/t_560,f_auto,q_auto/Images/1628-46BG_D_FR_9705.png",
     img3: "https://sc04.alicdn.com/kf/Ud620a21db5514c838ff11dc1b44891a1c.jpg",
     img4: "https://media.asicdn.com/images/jpgo/39190000/39191264.jpg",
-    img5: "https://cdn.shopify.com/s/files/1/0359/1913/4855/products/1628-461_1024x1024.png?v=1586869461"
-
+    img5: "https://cdn.shopify.com/s/files/1/0359/1913/4855/products/1628-461_1024x1024.png?v=1586869461",
   },
 
   {
@@ -200,7 +198,7 @@ export const NewData = [
     img1: "https://m.media-amazon.com/images/I/519-E15nVAL.jpg",
     img2: "https://m.media-amazon.com/images/I/71+J48q9FDL._SL1500_.jpg",
     img3: "https://m.media-amazon.com/images/I/61h5QTv8lnL._AC_SR146,118_QL70_.jpg",
-    img4: "https://m.media-amazon.com/images/I/71DWnelZN7L._AC_SR146,118_QL70_.jpg"
+    img4: "https://m.media-amazon.com/images/I/71DWnelZN7L._AC_SR146,118_QL70_.jpg",
   },
 
   {
@@ -214,9 +212,9 @@ export const NewData = [
     img2: "https://mec.imgix.net/medias/sys_master/high-res/high-res/9072440901662/6002215-BK000-ALT-PACKED.jpg?w=600&h=600&auto=format&q=40&fit=fill&bg=FFF",
     img3: "https://mec.imgix.net/medias/sys_master/high-res/high-res/9072944840734/6002215-BK000-ALT-BACK.jpg?w=600&h=600&auto=format&q=40&fit=fill&bg=FFF",
     img4: "https://mec.imgix.net/medias/sys_master/high-res/high-res/9072660021278/6002215-RNF00.jpg?w=2500&h=2500&auto=format&q=40&fit=fill&bg=FFF",
-    img5: "https://mec.imgix.net/medias/sys_master/high-res/high-res/9072659628062/6002215-NAV44.jpg?w=600&h=600&auto=format&q=40&fit=fill&bg=FFF"
+    img5: "https://mec.imgix.net/medias/sys_master/high-res/high-res/9072659628062/6002215-NAV44.jpg?w=600&h=600&auto=format&q=40&fit=fill&bg=FFF",
   },
-  
+
   {
     Category: "Stainless Steel",
     Description:
@@ -225,21 +223,24 @@ export const NewData = [
     Price: "261$",
     Tags: "Lunch Box, kitchen & Dining",
     img1: "https://m.media-amazon.com/images/I/71TAjdeCLrL._SL1500_.jpg",
-    img2: "https://m.media-amazon.com/images/I/71WI0wf+1CL._SL1500_.jpg"
+    img2: "https://m.media-amazon.com/images/I/71WI0wf+1CL._SL1500_.jpg",
   },
 
   {
-    fact1: "We use 5 trillion plastic bags a year That’s about 160,000 bags a second",
+    fact1:
+      "We use 5 trillion plastic bags a year That’s about 160,000 bags a second",
     img1: "https://asez.org/wp-content/uploads/2021/06/shutterstock_1136741741-scaled-uai-2064x1376.jpg",
-    fact2: "Cotton production requires so much water that it emptied a whole sea (the Aral Sea in Uzbekistan). It has been called one of the worst environmental disasters in history.",
+    fact2:
+      "Cotton production requires so much water that it emptied a whole sea (the Aral Sea in Uzbekistan). It has been called one of the worst environmental disasters in history.",
     img2: "https://smartwatermagazine.com/sites/default/files/styles/thumbnail-1180x647/public/aral_sea_we_are_water.jpg?itok=lwpEjlUi",
-    fact3: "Aluminum can be recycled continuously, as in forever. Recycling 1 aluminum can save enough energy to run our TVs for at least 3 hours. 80 trillion aluminum cans are used by humans every year.",
+    fact3:
+      "Aluminum can be recycled continuously, as in forever. Recycling 1 aluminum can save enough energy to run our TVs for at least 3 hours. 80 trillion aluminum cans are used by humans every year.",
     img3: "https://clubrunner.blob.core.windows.net/00000006144/Images/cans.jpg",
-    fact4: "By 2050, there could be more plastic than fish in the world’s oceans",
+    fact4:
+      "By 2050, there could be more plastic than fish in the world’s oceans",
     img4: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/07/23/20/istock-962590716.jpg?width=982&height=726&auto=webp&quality=75",
-    fact5: "Mining is considered the world’s Number One Toxic Polluter. Steel production, for example, results in 80 tons of toxic wastewater for each ton of steel produced.",
-    img5: "https://upload.wikimedia.org/wikipedia/commons/2/29/PulpAndPaperMill.jpg"
-  }
-
-
+    fact5:
+      "Mining is considered the world’s Number One Toxic Polluter. Steel production, for example, results in 80 tons of toxic wastewater for each ton of steel produced.",
+    img5: "https://upload.wikimedia.org/wikipedia/commons/2/29/PulpAndPaperMill.jpg",
+  },
 ];
