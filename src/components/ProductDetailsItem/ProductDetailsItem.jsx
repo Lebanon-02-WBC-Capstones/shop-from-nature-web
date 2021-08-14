@@ -33,18 +33,20 @@ const ProductDetailsItem = () => {
             <div className="ml-10 mt-10 border-gray-100 max-h-sm min-h-prdsh w-prd bg-white shadow-xl">
            <img src={prd.img1}></img>
           </div>
-         <div className="flex flex-wrap" ><div className="ml-10 mt-10 border-gray-100  min-h-prdss w-prdss bg-white">
-            {prd && 
-            <img  src={prd.img2}></img>}
-          </div>
-          <div className="ml-10 mt-10 border-gray-100  min-h-prdss w-prdss  ">
-            {prd && 
-            <img  src={prd.img3}></img>}
-          </div>
-          <div className="ml-10 mt-10 border-gray-100  min-h-prdss w-prdss ">
+         <div className="flex flex-wrap justify-around w-50 mt-5 ml-6 " >
+           
+            {prd.img2 && 
+            <div className= "border-gray-100  min-h-prdss w-prdss ">
+            <img  src={prd.img2}></img>    </div>}
+       
+            {prd.img3 && 
+            <div className=" border-gray-100  min-h-prdss w-prdss  ">
+            <img  src={prd.img3}></img> </div>}
+          
             {prd.img4 && 
-            <img  src={prd.img4}></img>}
-          </div> </div>
+            <div className=" border-gray-100  min-h-prdss w-prdss ">
+            <img  src={prd.img4}></img> </div>}
+          </div> 
           </div>
           )}
 

@@ -10,7 +10,8 @@ module.exports = {
       },
       width: {
         prd: "250px",
-        prdss: "60px"
+        prdsp:"180px",
+        prdss: "70px"
       },
       height: {
         prd: "250px",
@@ -41,14 +42,15 @@ module.exports = {
         "1/2": "50%",
         "3/4": "75%",
         prdsh: "250px",
-        prdss: "60px"
+        prdsp: "180px",
+        prdss: "70px"
       },
       maxWidth: {
         "2xs": "5rem",
         md: "50%",
       },
       boxShadow: {
-        md: ' -4px -4px  #7EAC8A',
+        md: ' -6px -6px  #7EAC8A',
         xl: "-15px -15px #7EAC8A",
         xxl: "-40px -35px #7EAC8A",
         ll: "-35px 20px #9F6544",

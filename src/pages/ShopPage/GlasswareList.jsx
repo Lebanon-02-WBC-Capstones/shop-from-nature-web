@@ -14,12 +14,14 @@ const GlasswareList = ({ products }) => {
         {products
           .filter((data) => data.Category === "Glassware")
           .map((filteredProduct) => (
+    
             <ShopListItem
               key={filteredProduct.id}
               img={filteredProduct.img1}
               title={filteredProduct.Name}
               price={filteredProduct.Price}
             />
+           
           ))}
       </div>
     </div>

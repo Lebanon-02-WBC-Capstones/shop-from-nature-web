@@ -63,22 +63,21 @@ const TabsRender = ({ product,products }) => {
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                   <div>
-                  <div className="flex flex-wrap justify-between content-start m-5 ">
+                  <div className="flex flex-wrap justify-around  content-start m-5 ">
      
-    
           {suggestedPrd && suggestedPrd.slice(0,3).map((suggested)=> 
          
-          <div  className=" flex-col mt-10 ml-10 ">
-        <div className=" border-gray-100 min-h-prdsh w-prd bg-white shadow-xl">
+          <div  className=" justify-around flex-col mt-5 ml-5">
+        <div className=" border-gray-100 min-h-prdsp w-prdsp bg-white shadow-md">
           <img src={suggested.img1}></img>
         </div>
-        <h3 className="mt-5"> {suggested.Name} </h3>
-        
+        <div className="flex ">
+        <h3 className="mt-5 mr-5 "> {suggested.Name} </h3>
+        <h3 className="mt-5 text-red "> {suggested.Price} </h3>
+       </div>
       </div>
+      
          )}
-           
-                 
-        
               </div>      
                   </div>
                 </div>
