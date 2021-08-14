@@ -14,7 +14,7 @@ function NewsletterInput() {
       className="flex flex-row space-x-3 justify-center tracking-wide"
     >
       <input
-        type="text"
+        type="email"
         value={email}
         placeholder="Enter your email"
         className="text-black bg-gray w-60 py-2 px-2 placeholder-dark border-none rounded"
