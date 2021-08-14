@@ -1,5 +1,4 @@
 import { db } from "./firebase";
-import firebase from "firebase";
 
 class API {
   static getProducts = () => {
@@ -56,6 +55,18 @@ class API {
 
   static setCart = (data) => {
     db.collection("Cart").add(data).then(console.log("added data"));
+  };
+
+  static getCart = () => {
+    return new Promise((resolve) => {
+      db.collection("Cart").onSnapshot((snapchot) => {
+        const Items = snapchot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        resolve(Items);
+      });
+    });
   };
 }
 

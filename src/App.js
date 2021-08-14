@@ -10,6 +10,7 @@ import BlogPage from "./pages/BlogsPage/BlogPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage/BlogDetailsPage";
 import ShopPage from "./pages/ShopPage/ShopPage";
 import About from "./pages/About/About";
+import CartPage from "./pages/CartPage/CartPage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -25,6 +26,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route exact path="/blog" component={BlogPage} />
           <Route path="/blog/:id" component={BlogDetailsPage} />
+          <Route path="/card" component={CartPage} />
         </Switch>
         <Footer />
       </AuthProvider>

@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import API from "../../API";
 import ArrowForward from "../../Icons/ArrowForward";
 import ArrowBack from "../../Icons/ArrowBack";
+import SignInModal from "../SignInModal/SignInModal";
 import Slider from "react-slick";
+import { useAuth } from "../../AuthProvider/AuthContext";
 
 const ArrivalItem = () => {
+  const [showModal, setShowModal] = useState(false);
   const [arrivalItems, setArrivalItems] = useState([]);
+  const { currentUser } = useAuth();
   useEffect(() => {
     API.getProducts().then((products) => {
       setArrivalItems(products);
@@ -62,12 +66,21 @@ const ArrivalItem = () => {
                 </div>
                 <button
                   onClick={() => {
-                    API.setCart(item);
+                    if (currentUser) {
+                      let payload = { ...item, uid: currentUser.uid };
+                      API.setCart(payload);
+                    } else {
+                      setShowModal(true);
+                    }
                   }}
                   className="text-md text-red font-regular border-2 border-grey px-2 mt-2 "
                 >
                   Add To Bag
                 </button>
+                <SignInModal
+                  showModal={showModal}
+                  setShowModal={setShowModal}
+                />
               </div>
             </div>
           ))}
