@@ -14,8 +14,7 @@ import { useTranslation } from "react-i18next";
 export const LanguageContext = React.createContext();
 import ShopPage from "./pages/ShopPage/ShopPage";
 import About from "./pages/About/About";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
   const { t, i18n } = useTranslation();

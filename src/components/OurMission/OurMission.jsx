@@ -36,18 +36,12 @@ const OurMission = () => {
       </section>
       <div className="justify-self-auto pt-0 mt-0 px-10">
         <p className="text-3xl ml-6 pt-0 text-green text-medium pt-0 text-center -mt-20">
-<<<<<<< HEAD
           {t("LivinVert team")}
           {t("works")}
           {t(
             "with passion and excitement to exceed customer expectations; from the moment an order is placed to its arrival on your doorstep"
           )}
           .
-=======
-          LivingVert team works with passion and excitement to exceed customer
-          expectations; from the moment an order is placed to its arrival on
-          your doorstep.
->>>>>>> main
         </p>
       </div>
     </div>

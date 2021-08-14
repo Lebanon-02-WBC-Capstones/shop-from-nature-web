@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import API from "../../API";
-<<<<<<< HEAD
 import { LanguageContext } from "../../App";
-=======
-import emailjs from "emailjs-com";
-import { init } from "emailjs-com";
+import emailjs, { init } from "emailjs-com";
 init("user_OFs54Rn8o7nmderUPBxSC");
->>>>>>> main
 export default function ContactModal() {
   const [showModal, setShowModal] = useState(false);
   const { t } = React.useContext(LanguageContext);

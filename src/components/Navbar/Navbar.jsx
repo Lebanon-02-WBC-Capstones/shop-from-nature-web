@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MainLogo from "../../Icons/MainLogo";
 import CardIcon from "../../Icons/CardIcon";
-<<<<<<< HEAD
-
-const Navbar = (props) => {
-=======
 import Corner from "../../images/Corner";
 import { useAuth } from "../../AuthProvider/AuthContext";
 import SignInModal from "../SignInModal/SignInModal";
+import { LanguageContext } from "../../App";
 
 const Navbar = () => {
+  const { t } = React.useContext(LanguageContext);
   const { logout, currentUser } = useAuth();
   const [showModal, setShowModal] = useState(false);
   const handleSignIn = () => {
@@ -21,7 +19,6 @@ const Navbar = () => {
     await logout();
   };
 
->>>>>>> main
   return (
     <nav className="flex items-center justify-between bg-mainbg">
       <Corner />
@@ -36,24 +33,16 @@ const Navbar = () => {
       </Link>
       <div className="flex items-center">
         <Link to="/">
-          <p className="text-xl mr-6 text-red font-regular">
-            {props.t("Home")}
-          </p>
+          <p className="text-xl mr-6 text-red font-regular">{t("Home")}</p>
         </Link>
         <Link to="/shop">
-          <p className="text-xl mr-6 text-red font-regular">
-            {props.t("Shop")}
-          </p>
+          <p className="text-xl mr-6 text-red font-regular">{t("Shop")}</p>
         </Link>
         <Link to="/blog">
-          <p className="text-xl mr-6 text-red font-regular">
-            {props.t("Blog")}
-          </p>
+          <p className="text-xl mr-6 text-red font-regular">{t("Blog")}</p>
         </Link>
         <Link to={"/about"}>
-          <p className="text-xl mr-6 text-red font-regular">
-            {props.t("About Us")}
-          </p>
+          <p className="text-xl mr-6 text-red font-regular">{t("About Us")}</p>
         </Link>
         <Link to="/card">
           <CardIcon className="mr-20" />
