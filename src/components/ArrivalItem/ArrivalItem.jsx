@@ -1,36 +1,80 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useState, useEffect } from "react";
+import API from "../../API";
+import ArrowForward from "../../Icons/ArrowForward";
+import ArrowBack from "../../Icons/ArrowBack";
+import Slider from "react-slick";
 
-const ArrivalItem = ({ id, Image, title, price }) => {
+const ArrivalItem = () => {
+  const [arrivalItems, setArrivalItems] = useState([]);
+  useEffect(() => {
+    API.getProducts().then((products) => {
+      setArrivalItems(products);
+    });
+  }, []);
+
+  function SampleNextArrow(props) {
+    const { onClick } = props;
+    return (
+      <button onClick={onClick} className=" mb-11 ml-10">
+        <ArrowForward />
+      </button>
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { onClick } = props;
+    return (
+      <button onClick={onClick} className="mr-10 mb-20">
+        <ArrowBack />
+      </button>
+    );
+  }
+
+  const settings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
   return (
-    <div className="mt-8">
-      <div className="container max-w-sm ">
-        <div id={id}>
-          <div className="mx-14">
-            <img src={Image} alt={title + " image "} />
-          </div>
-          <div className="flex space-x-20">
-            <h1 className="text-xl ml-16 mr-6 text-olivegreen font-regular">
-              {title}
-            </h1>
-            <h3 className="text-xl mr-6 text-olivegreen font-regular">
-              {price}
-            </h3>
-          </div>
-          <button className="text-xl mr-6 text-red font-regular border-2 border-grey mt-4 mb-4 ml-36 p-2">
-            Add To Bag
-          </button>
-        </div>
-      </div>
+    <div className="">
+      <h2 className="text-center text-4xl text-grey py-16 font-medium">
+        New Arrivals
+      </h2>
+      {arrivalItems.length != 0 && (
+        <Slider
+          className="flex items-center justify-center pb-24"
+          {...settings}
+        >
+          {arrivalItems.slice(0, 7).map((item, i) => (
+            <div key={item.id}>
+              <div className="flex min-h-prdsh max-h-prdsh bg-white mr-2 content-evenly items-center">
+                <div className="px-6">
+                  <img src={item.img1} />
+                </div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center mx-3">
+                  <p className="text-grey mr-12 text-md">{item.Name}</p>
+                  <p className="text-grey">{item.Price}</p>
+                </div>
+                <button
+                  onClick={() => {
+                    API.setCart(item);
+                  }}
+                  className="text-md text-red font-regular border-2 border-grey px-2 mt-2 "
+                >
+                  Add To Bag
+                </button>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      )}
     </div>
   );
-};
-
-ArrivalItem.propTypes = {
-  id: PropTypes.number,
-  Image: PropTypes.string,
-  title: PropTypes.string,
-  price: PropTypes.string,
 };
 
 export default ArrivalItem;

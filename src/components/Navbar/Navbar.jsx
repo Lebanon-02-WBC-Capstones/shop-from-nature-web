@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MainLogo from "../../Icons/MainLogo";
 import CardIcon from "../../Icons/CardIcon";
+<<<<<<< HEAD
 
 const Navbar = (props) => {
+=======
+import Corner from "../../images/Corner";
+import { useAuth } from "../../AuthProvider/AuthContext";
+import SignInModal from "../SignInModal/SignInModal";
+
+const Navbar = () => {
+  const { logout, currentUser } = useAuth();
+  const [showModal, setShowModal] = useState(false);
+  const handleSignIn = () => {
+    setShowModal(true);
+  };
+
+  const handleLogout = async () => {
+    await logout();
+  };
+
+>>>>>>> main
   return (
     <nav className="flex items-center justify-between bg-mainbg">
+      <Corner />
       <Link to="/">
         <div className="flex items-center">
           <MainLogo />
@@ -37,8 +56,15 @@ const Navbar = (props) => {
           </p>
         </Link>
         <Link to="/card">
-          <CardIcon className="mr-8" />
+          <CardIcon className="mr-20" />
         </Link>
+        <button
+          className="bg-green px-2 py-1 text-xl mr-6 text-white rounded-sm font-regular "
+          onClick={currentUser ? handleLogout : handleSignIn}
+        >
+          {currentUser ? "Logout" : "Login"}
+        </button>
+        <SignInModal showModal={showModal} setShowModal={setShowModal} />
       </div>
     </nav>
   );

@@ -4,16 +4,16 @@ import { LanguageContext } from "../../App";
 const BlogCard = ({ blog }) => {
   const { t } = React.useContext(LanguageContext);
   return (
-    <div className="flex flex-col justify-between items-center shadow-lg m-4 max-w-sm">
+    <div className="flex flex-col justify-between items-center shadow-lg m-4 max-w-sm bg-white">
       <div className="text-left w-full px-8">
         <p className="text-red text-sm font-regular leading-5 pt-6">
-          {blog.Date}
+          {t(blog.Date)}
         </p>
         <h1 className="text-green text-2xl font-medium leading-7 py-3">
           {t(blog.title)}
         </h1>
         <p className="text-red text-lg font-regular leading-7 pb-8">
-          {t(blog.descp1)}
+          {t(blog.descp1.substring(0, 650))}...
         </p>
       </div>
       <Link to={`/blog/${blog.id}`}>

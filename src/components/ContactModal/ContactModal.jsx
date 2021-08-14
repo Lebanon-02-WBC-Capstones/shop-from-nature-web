@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import API from "../../API";
+<<<<<<< HEAD
 import { LanguageContext } from "../../App";
+=======
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
+init("user_OFs54Rn8o7nmderUPBxSC");
+>>>>>>> main
 export default function ContactModal() {
   const [showModal, setShowModal] = useState(false);
   const { t } = React.useContext(LanguageContext);
@@ -15,6 +21,21 @@ export default function ContactModal() {
   const handleSubmit = (e) => {
     e.preventDefault();
     API.setContactData(contactData);
+    emailjs
+      .sendForm(
+        "service_ia0wvrl",
+        "template_nkvmjft",
+        e.target,
+        "user_OFs54Rn8o7nmderUPBxSC"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
     setShowModal(false);
   };
 
@@ -44,7 +65,6 @@ export default function ContactModal() {
                     </span>
                   </button>
                 </div>
-
                 <form onSubmit={handleSubmit}>
                   <div className="relative w-full p-6 flex-auto">
                     <p className="text-red text-sans text-xl">{t("Name")}</p>

@@ -1,4 +1,5 @@
 import { db } from "./firebase";
+import firebase from "firebase";
 
 class API {
   static getProducts = () => {
@@ -25,7 +26,6 @@ class API {
     });
   };
 
-
   static getCategories = () => {
     return new Promise((resolve) => {
       db.collection("Categories").onSnapshot((snapchot) => {
@@ -37,7 +37,7 @@ class API {
       });
     });
   };
-  
+
   static getFacts = () => {
     return new Promise((resolve) => {
       db.collection("Facts").onSnapshot((snapchot) => {
@@ -48,10 +48,14 @@ class API {
         resolve(Facts);
       });
     });
-  }
+  };
+
   static setContactData = (data) => {
     db.collection("Contact-us").add(data).then(console.log("data added"));
+  };
 
+  static setCart = (data) => {
+    db.collection("Cart").add(data).then(console.log("added data"));
   };
 }
 

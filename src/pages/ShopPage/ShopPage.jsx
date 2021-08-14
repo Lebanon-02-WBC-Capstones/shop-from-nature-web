@@ -42,7 +42,7 @@ const shopPage = () => {
       <div className="relative">
         <div>
           <img width="400" height="400" src={LinesDown} />
-          <div className="absolute ml-40 bottom-20 left-20">
+          <div className="absolute bottom-10 w-full">
             <NewsLetter />
           </div>
         </div>
