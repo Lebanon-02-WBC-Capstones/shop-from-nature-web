@@ -17,13 +17,13 @@ const CartPage = () => {
   }, [currentUser]);
 
   return (
-    <>
+    <div className="flex flex-col justify-center bg-mainbg">
       <div>
         <h1>Shopping Cart</h1>
       </div>
       {items.length != 0 &&
         items.map((product) => <Cartitem product={product} />)}
-    </>
+    </div>
   );
 };
 

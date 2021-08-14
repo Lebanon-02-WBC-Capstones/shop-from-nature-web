@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import SampleProduct from "../../images/SampleProduct";
-const Cartitem = (product) => {
-  const [quantity, setQuantity] = useState(0);
+import API from "../../API";
+
+const Cartitem = ({ product }) => {
+  console.log(product.id);
+  const [quantity, setQuantity] = useState(1);
   let plus = () => {
     setQuantity(quantity + 1);
   };
@@ -10,31 +12,34 @@ const Cartitem = (product) => {
       setQuantity(quantity - 1);
     }
   };
-  product = {
-    img: <SampleProduct />,
-    price: "19$",
+
+  const handleDelete = () => {
+    API.deleteProduct(product.id);
   };
 
   return (
-    <div className="flex">
-      <div className=" mt-3 ml-5">{product.img}</div>
-      <div className="ml-4 flex flex-col">
-        <h3 className="text-2xl"> Chapter Mips Helmet </h3>
+    <div className="flex ml-6 my-7">
+      <div className=" shadow-xl w-prd h-prd min-h-prdsh max-w-prdsh max-h-prdsh bg-white">
+        <img src={product.img1} />
+      </div>
+      <div className="ml-10 flex flex-col">
+        <h3 className="text-2xl"> {product.Title} </h3>
         <h4 className="text-xl text-left mt-5 text-red">Quantity</h4>
         <div className="bg-white mt-4 divide-x-2 divide-red divide-opacity-60 flex justify-between items-center max-w-2xs ">
-          <button onClick={plus} className="text-2xl pl-2">
+          <button onClick={plus} className="text-2xl px-2">
             +
           </button>
-          <div className="min-h-full text-2xl  pl-2">{quantity}</div>
+          <div className=" text-2xl px-1">{quantity}</div>
           <button onClick={minus} className="text-2xl px-2 ">
             &minus;
           </button>
         </div>
         <div className="self-start mt-4">
           <p className="text-red text-xl">
-            Price:<span className="text-black pl-1">{product.price}</span>
+            Price:<span className="text-black pl-1">{product.Price}</span>
           </p>
         </div>
+        <button onClick={handleDelete}>Delete</button>
       </div>
     </div>
   );

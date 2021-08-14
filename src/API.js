@@ -68,6 +68,18 @@ class API {
       });
     });
   };
-}
 
+  static deleteProduct = async (id) => {
+    console.log(db.collection("Cart").doc(id));
+    db.collection("Cart")
+      .doc(id)
+      .delete()
+      .then(() => {
+        console.log("Document successfully deleted!");
+      })
+      .catch((error) => {
+        console.error("Error removing document: ", error);
+      });
+  };
+}
 export default API;
