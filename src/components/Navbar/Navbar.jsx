@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MainLogo from "../../Icons/MainLogo";
 import CardIcon from "../../Icons/CardIcon";
+import Corner from "../../images/Corner";
 import { useAuth } from "../../AuthProvider/AuthContext";
 import SignInModal from "../SignInModal/SignInModal";
+
 const Navbar = () => {
   const { logout, currentUser } = useAuth();
   const [showModal, setShowModal] = useState(false);
@@ -16,7 +18,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between bg-mainbg z-0">
+    <nav className="flex items-center justify-between bg-mainbg">
+      <Corner />
       <Link to="/">
         <div className="flex items-center">
           <MainLogo />
@@ -40,7 +43,7 @@ const Navbar = () => {
           <p className="text-xl mr-6 text-red font-regular">About Us</p>
         </Link>
         <Link to="/card">
-          <CardIcon className="mr-6" />
+          <CardIcon className="mr-20" />
         </Link>
         <button
           className="bg-green px-2 py-1 text-xl mr-6 text-white rounded-sm font-regular "
