@@ -1,4 +1,5 @@
 import { db } from "./firebase";
+import firebase from "firebase";
 
 class API {
   static getProducts = () => {

@@ -38,6 +38,7 @@ module.exports = {
         full: "100vh",
         "1/2": "50%",
         "3/4": "75%",
+        "1/1": "100%",
         prdsh: "250px",
       },
       maxWidth: {
