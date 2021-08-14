@@ -12,7 +12,10 @@ const OurMission = () => {
               {t("Our mission")}
             </h1>
           </header>
-          <p className="justify-self-auto text-center text-2xl ml-6 pt-3 text-green text-medium leading-loose w-2/3">
+          <p
+            className="justify-self-auto text-center text-2xl ml-6 pt-3 text-green text-medium leading-loose w-2/3"
+            style={{ textAlign: t === "arab" ? "right" : "left" }}
+          >
             {t("Our mission is to provide")}
             <span className="text-red">{t("sustainable solutions")}</span>
             {t("that save our mother earth")}.

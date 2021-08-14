@@ -10,10 +10,10 @@ const BlogCard = ({ blog }) => {
           {blog.Date}
         </p>
         <h1 className="text-green text-2xl font-medium leading-7 py-3">
-          {blog.title}
+          {t(blog.title)}
         </h1>
         <p className="text-red text-lg font-regular leading-7 pb-8">
-          {blog.descp1}
+          {t(blog.descp1)}
         </p>
       </div>
       <Link to={`/blog/${blog.id}`}>
