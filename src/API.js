@@ -1,4 +1,5 @@
 import { db } from "./firebase";
+import firebase from "firebase";
 
 class API {
   static getProducts = () => {
@@ -51,7 +52,7 @@ class API {
   
   static setContactData = (data) => {
     db.collection("Contact-us").add(data).then(console.log("data added"));
-  }
+  };
   
   static setCart = (data) => {
     db.collection("Cart").add(data).then(console.log("added data"));
