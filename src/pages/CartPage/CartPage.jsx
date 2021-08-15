@@ -10,7 +10,6 @@ const CartPage = () => {
     if (currentUser) {
       API.getCart().then((data) => {
         let userData = data.filter((item) => item.uid === currentUser.uid);
-        console.log(userData);
         setItems(userData);
       });
     }
@@ -19,10 +18,16 @@ const CartPage = () => {
   return (
     <div className="flex flex-col justify-center bg-mainbg">
       <div>
-        <h1>Shopping Cart</h1>
+        <h1 className="text-4xl mt-20 text-grey mb-10 font-medium mx-5 ">
+          Shopping Cart
+        </h1>
+        <div className="border-t-2 border-red mb-1 border-opacity-60" />
       </div>
-      {items.length != 0 &&
-        items.map((product) => <Cartitem product={product} />)}
+      <div>
+        {items.length != 0
+          ? items.map((product) => <Cartitem product={product} />)
+          : "You did not add any items"}
+      </div>
     </div>
   );
 };

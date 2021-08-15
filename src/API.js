@@ -50,11 +50,11 @@ class API {
   };
 
   static setContactData = (data) => {
-    db.collection("Contact-us").add(data).then(console.log("data added"));
+    db.collection("Contact-us").add(data);
   };
 
   static setCart = (data) => {
-    db.collection("Cart").add(data).then(console.log("added data"));
+    db.collection("Cart").add(data);
   };
 
   static getCart = () => {
@@ -70,16 +70,7 @@ class API {
   };
 
   static deleteProduct = async (id) => {
-    console.log(db.collection("Cart").doc(id));
-    db.collection("Cart")
-      .doc(id)
-      .delete()
-      .then(() => {
-        console.log("Document successfully deleted!");
-      })
-      .catch((error) => {
-        console.error("Error removing document: ", error);
-      });
+    db.collection("Cart").doc(id).delete();
   };
 }
 export default API;
