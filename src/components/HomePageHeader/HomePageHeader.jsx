@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../../App";
 export default function HomePageHeader() {
+  const { t } = React.useContext(LanguageContext);
   return (
     <div className="flex bg-pink py-20" style={{ minHeight: "70vh" }}>
       <div className="relative h-full w-1/2 left-40">
@@ -22,31 +24,29 @@ export default function HomePageHeader() {
       </div>
       <div className="flex flex-col justify-center w-1/2">
         <h1 className="text-oswald text-3xl font-medium text-red text-center mb-5">
-          DON’T PANIC, IT’S ORGANIC!
+          {t("DON’T PANIC, IT’S ORGANIC!")}
         </h1>
         <br />
         <p className="text-oswald text-2xl text-grey font-regular text-center">
-          The more we talk about environmental issues,
+          {t("The more we talk about environmental issues,")}
           <br />
-          the more we normalize them. <br />
-          Make a Change NOW!
+          {t("the more we normalize them.")} <br />
+          {t("Make a Change NOW!")}
           <br />
-          Buy our
+          {t("Buy our ")}
           <span className="text-oswald text-2xl font-regular text-center text-red">
-            {" "}
-            eco-friendly{" "}
+            {t("eco-friendly")}
           </span>
-          and
+          {t("and")}
           <span className="text-oswald text-red text-2xl font-regular text-center">
-            {" "}
-            recyclable{" "}
+            {t("recyclable")}
           </span>
-          items.
+          {t("items.")}
         </p>
         <div className="w-auto mx-auto pt-12">
           <Link to="/shop">
             <button className="h-16 text-center text-xl border-b-2 border-red text text-red hover:pb-4 hover:text-olivegreen hover:border-olivegreen transition-all">
-              Start Shopping
+              {t("Start Shopping")}
             </button>
           </Link>
         </div>

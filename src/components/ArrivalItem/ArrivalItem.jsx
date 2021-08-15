@@ -3,7 +3,7 @@ import API from "../../API";
 import ArrowForward from "../../Icons/ArrowForward";
 import ArrowBack from "../../Icons/ArrowBack";
 import Slider from "react-slick";
-
+import { LanguageContext } from "../../App";
 const ArrivalItem = () => {
   const [arrivalItems, setArrivalItems] = useState([]);
   useEffect(() => {
@@ -20,7 +20,7 @@ const ArrivalItem = () => {
       </button>
     );
   }
-
+  const { t } = React.useContext(LanguageContext);
   function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
@@ -41,7 +41,7 @@ const ArrivalItem = () => {
   return (
     <div className="">
       <h2 className="text-center text-4xl text-grey py-16 font-medium">
-        New Arrivals
+        {t("New Arrivals")}
       </h2>
       {arrivalItems.length != 0 && (
         <Slider
@@ -57,7 +57,7 @@ const ArrivalItem = () => {
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex items-center mx-3">
-                  <p className="text-grey mr-12 text-md">{item.Name}</p>
+                  <p className="text-grey mr-12 text-md">{t(item.Name)}</p>
                   <p className="text-grey">{item.Price}</p>
                 </div>
                 <button
@@ -66,7 +66,7 @@ const ArrivalItem = () => {
                   }}
                   className="text-md text-red font-regular border-2 border-grey px-2 mt-2 "
                 >
-                  Add To Bag
+                  {t("Add To Bag")}
                 </button>
               </div>
             </div>
