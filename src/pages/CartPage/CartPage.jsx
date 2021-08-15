@@ -24,9 +24,13 @@ const CartPage = () => {
         <div className="border-t-2 border-red mb-1 border-opacity-60" />
       </div>
       <div>
-        {items.length != 0
-          ? items.map((product) => <Cartitem product={product} />)
-          : "You did not add any items"}
+        {items.length != 0 ? (
+          items.map((product) => <Cartitem product={product} />)
+        ) : (
+          <p className="m-10 text-xl font-sans text-red">
+            You did not add any products to your cart!
+          </p>
+        )}
       </div>
     </div>
   );
