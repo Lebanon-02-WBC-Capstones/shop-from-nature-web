@@ -51,7 +51,12 @@ const Cartitem = ({ product }) => {
               Price:<span className="text-black pl-1">{product.Price}</span>
             </p>
           </div>
-          <button onClick={handleDelete}>Delete</button>
+          <button
+            className="text-md text-red font-regular border-2 border-grey p-2 mt-2 "
+            onClick={handleDelete}
+          >
+            Delete
+          </button>
         </div>
       </div>
       <div className="border-t-2 max-w-md border-red mb-1 border-opacity-60" />
