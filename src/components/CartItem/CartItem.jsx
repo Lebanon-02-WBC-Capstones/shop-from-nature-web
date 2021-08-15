@@ -4,7 +4,6 @@ import API from "../../API";
 
 const Cartitem = ({ product }) => {
   const [doc, setDoc] = useState({});
-  const [rerun, setRerun] = useState(false);
   useEffect(() => {
     db.collection("Cart")
       .get()
@@ -13,7 +12,7 @@ const Cartitem = ({ product }) => {
           setDoc(doc);
         });
       });
-  }, [rerun]);
+  }, []);
   const [quantity, setQuantity] = useState(1);
   let plus = () => {
     setQuantity(quantity + 1);
