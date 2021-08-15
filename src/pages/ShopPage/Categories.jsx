@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import API from "../../API";
-
+import ShopListItem from "../../components/ShopListItem/ShoptListItem";
 
 const MyCategories = ({products}) => {
   const [catg, setCategories] = useState([]);
@@ -19,30 +19,22 @@ const MyCategories = ({products}) => {
       array.push({ value: catg[i].value, label: catg[i].value });
     }
   }
-//   const categoryItems = () => {
-//    {
-//     products
-//     .filter((prod) => prod.Category == selectedCategory)
-//     .map((filteredProduct) => (
-//       <Link key ={filteredProduct.id} to={`productDetail/${filteredProduct.id}`}>
-//         <ShopListItem
+
+  const [result, selectedCategory]= useState(array.label);
+  const categoryPrds = products.filter((prod) => prod.Category == result);
+
+// .map((filteredProduct)=>(
+//   <ShopListItem
 //           key={filteredProduct.id}
 //           img={filteredProduct.img1}
 //           title={filteredProduct.Name}
 //           price={filteredProduct.Price}
 //         />
-//       </Link>
-//     ))
-//    }
-  
-//}
-
-const [result, selectedCategory]= useState(array.label);
-const catPrds = products.filter((prod) => prod.Category == result);
-const catHandler =(e) => {
-  selectedCategory(e.label);
-  console.log (catPrds);
-}
+// ));
+  const catHandler =(e) => {
+   selectedCategory(e.label);
+   console.log (categoryPrds);
+   }
 
   return (
     <>
