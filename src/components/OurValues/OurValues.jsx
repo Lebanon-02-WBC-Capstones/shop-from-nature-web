@@ -13,7 +13,7 @@ function OurValues() {
       <p className="font-normal text-left ml-60 mb-9 text-4xl tracking-tighter text-bric">
         Our Values
       </p>
-      <div className="flex flex-nowrap justify-evenly">
+      <div className="flex flex-nowrap justify-evenly text-2xl">
         <div className="justify-evenly">
           <div className="flex items-center">
             <ConsumeIcon />

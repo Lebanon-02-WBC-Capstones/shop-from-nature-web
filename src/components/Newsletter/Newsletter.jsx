@@ -4,9 +4,9 @@ import NewsletterIcon from "../../Icons/NewsletterIcon";
 
 function Newsletter() {
   return (
-    <div className="bg-tan py-10 px-80">
+    <div className=" flex flex-col items-center mt-20 mb-16 pb-9 bg-white max-w-md mx-auto">
       <NewsletterIcon />
-      <p className="text-29 mb-4 text-dark">
+      <p className="flex justify-center mb-4 text-dark">
         Subscribe to our newsletter and stay updated!{" "}
       </p>
       <NewsletterInput />
