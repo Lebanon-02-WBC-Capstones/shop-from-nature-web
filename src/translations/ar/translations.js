@@ -156,6 +156,7 @@ export const TRANSLATIONS_AR = {
     "Price:": "السعر",
     "Choose how you want to Sign In": "إختر كيف تريد تسجيل الدخول",   
     " the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch.":"أسلوب الحياة الخالية من النفايات هو رحلة. لذا شارك بأفكارك أدناه ، وأخبرني ما الذي يتناسب مع مخطط فان الخاص بك . هل تكافح من أجل إيجاد توازن بين البساطة والعيش بأسلوب حياة خالٍ من النفايات؟ أخبرنا وربما يكون لدى عضو آخر في مجتمع قش الغابة مقايضة مثالية خالية من النفايات ولكن بسيطة! نود أيضًا أن نسمع عن أي منتجات مستدامة ترغب في إطلاق نشاط تجاري مثلنا",
-
+    "Add to cart": "أضف إلى السلة",
+    "Suggested products":"منتجات مقترحة",
 
 };

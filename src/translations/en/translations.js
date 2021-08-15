@@ -158,7 +158,7 @@ export const TRANSLATIONS_EN = {
     "Price:": "Price:",
     "Choose how you want to Sign In": "Choose how you want to Sign In",
     " the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch.":" the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch.",
-
-
+    "Add to cart":"Add to cart",
+    "Suggested products":"Suggested products",
 
 };
