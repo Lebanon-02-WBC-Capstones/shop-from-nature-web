@@ -35,7 +35,7 @@ export const TRANSLATIONS_EN = {
     "all green": "all green",
     "default-free": "default-free",
     " affordable": " affordable",
-    "and": "and",
+    "and": " and ",
     "sustainably sourced.": "sustainably sourced. ",
     "LivinVert team": "LivinVert team ",
     "works": "works",
@@ -87,8 +87,7 @@ export const TRANSLATIONS_EN = {
     "Bamboo Straws?":"Bamboo Straws?",
     "If you pack smart, a small kit like this will be tiny, and super easily to fit into your luggage. It gives you somewhere to easily put left-over food and you’ll never need to hold a street food container again. Simple. Easy. Zero-Waste!":"If you pack smart, a small kit like this will be tiny, and super easily to fit into your luggage. It gives you somewhere to easily put left-over food and you’ll never need to hold a street food container again. Simple. Easy. Zero-Waste!",
     "My biggest tip…. Travel water purifiers. The one I carry with me is by a company called ‘LifeStraw’ It is extremely portable and it literally allows you to drink from a pond (if you wanted to!). I do a lot of trekking, so it’s the perfect companion for me. There are many variants available, so if you are going to be in a country where you know tap water is potentially ‘diarrhoea threatening’, buy a water purifier in the form of a bottle! They are compact, travel friendly and don’t cost a lot. If you consider that you’ll otherwise be spending at least £1 a day on water from local stores and wasting tons of plastic bottles in the meantime, then buying one goes a long way in reducing your single-use plastic consumption.":"My biggest tip…. Travel water purifiers. The one I carry with me is by a company called ‘LifeStraw’ It is extremely portable and it literally allows you to drink from a pond (if you wanted to!). I do a lot of trekking, so it’s the perfect companion for me. There are many variants available, so if you are going to be in a country where you know tap water is potentially ‘diarrhoea threatening’, buy a water purifier in the form of a bottle! They are compact, travel friendly and don’t cost a lot. If you consider that you’ll otherwise be spending at least £1 a day on water from local stores and wasting tons of plastic bottles in the meantime, then buying one goes a long way in reducing your single-use plastic consumption.",
-    
-"But as I said before: the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch.": "the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch.",
+    "But as I said before: the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch.": "the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch.",
     "Save The World!": "Save The World!",
     "Popular": "Popular",
     "Glassware": "Glassware",
@@ -157,7 +156,8 @@ export const TRANSLATIONS_EN = {
     "Chapter Mips Helmet": "Chapter Mips Helmet",
     "Quantity": "Quantity",
     "Price:": "Price:",
-    "Choose how you want to Sign In":"Choose how you want to Sign In",
+    "Choose how you want to Sign In": "Choose how you want to Sign In",
+    " the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch.":" the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch.",
 
 
 

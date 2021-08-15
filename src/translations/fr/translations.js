@@ -102,9 +102,9 @@ export const TRANSLATIONS_FR = {
     "Subscribe to our newsletter and stay updated!": "Abonnez-vous à notre newsletter et restez informé !",
     "Subscribe!": "S'abonner!",
     "R":"R",
-    "Reuse": "Réutilise",
-    "Reduce": "Réduit",
-    "Recycle": "Recycle",
+    "euse": "éutilise",
+    "educe": "éduit",
+    "ecycle": "ecycle",
     "Keep Reading": "Continue de lire",
     "Enter your email": "Ecrit votre mail",
     "Wood": "Bois",
@@ -154,7 +154,8 @@ export const TRANSLATIONS_FR = {
     "Chapter Mips Helmet": "Chapitre Mips Casque",
     "Quantity": "Quantité",
     "Price:": "Prix:",
-    "Choose how you want to Sign In":"Choisissez comment vous voulez vous connecter",
+    "Choose how you want to Sign In": "Choisissez comment vous voulez vous connecter",
+    " the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch.":"le mode de vie zéro déchet est un voyage. Alors partagez vos idées ci-dessous et dites-moi ce qui correspond à votre « diagramme de Venn ». Avez-vous du mal à trouver un équilibre entre le minimalisme et un mode de vie zéro déchet ? Faites-le nous savoir et peut-être qu'un autre membre de la communauté Jungle Straws a le parfait échange zéro déchet mais minimaliste ! Nous aimerions également connaître les produits durables que vous aimeriez voir lancer une entreprise comme la nôtre.",
 
 
 

@@ -85,7 +85,7 @@ export const TRANSLATIONS_AR = {
     "Bamboo Straws?":"قش الخيزران؟",
     "If you pack smart, a small kit like this will be tiny, and super easily to fit into your luggage. It gives you somewhere to easily put left-over food and you’ll never need to hold a street food container again. Simple. Easy. Zero-Waste!": "إذا كنت تحزم حقيبة ذكية ، فستكون مجموعة صغيرة مثل هذه صغيرة جدًا ويمكن وضعها بسهولة في أمتعتك. يمنحك مكانًا لوضع الطعام المتبقي بسهولة ولن تحتاج أبدًا إلى حمل حاوية طعام الشارع مرة أخرى. بسيط. سهل. لا تهدير",
     "My biggest tip…. Travel water purifiers. The one I carry with me is by a company called ‘LifeStraw’ It is extremely portable and it literally allows you to drink from a pond (if you wanted to!). I do a lot of trekking, so it’s the perfect companion for me. There are many variants available, so if you are going to be in a country where you know tap water is potentially ‘diarrhoea threatening’, buy a water purifier in the form of a bottle! They are compact, travel friendly and don’t cost a lot. If you consider that you’ll otherwise be spending at least £1 a day on water from local stores and wasting tons of plastic bottles in the meantime, then buying one goes a long way in reducing your single-use plastic consumption.":"أكبر نصيحتي…. أجهزة تنقية المياه للسفر. الذي أحمله معي وهو سهل الحمل للغاية ويسمح لك حرفيًا بالشرب من البركة (إذا أردت ذلك!). أقوم بالكثير من الرحلات ، لذا فهي الرفيق المثالي لي. هناك العديد من المتغيرات المتاحة ، لذلك إذا كنت ستنتقل إلى بلد تعرف أن مياه الصنبور من المحتمل أن تهدد الإسهال ، فاشتر جهازًا لتنقية المياه على شكل زجاجة! فهي صغيرة الحجم وسهلة السفر ولا تكلف الكثير. إذا كنت تعتقد أنك ستنفق على الأقل جنيهًا إسترلينيًا واحدًا يوميًا على المياه من المتاجر المحلية وتضيع أطنانًا من الزجاجات البلاستيكية في هذه الأثناء ، فإن شراء واحدة يقطع شوطًا طويلاً في تقليل استهلاك البلاستيك الذي يستخدم لمرة واحدة",
-    "the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch. ":"أسلوب الحياة الخالية من النفايات هو رحلة. لذا شارك بأفكارك أدناه ، وأخبرني ما الذي يتناسب مع مخطط فان الخاص بك . هل تكافح من أجل إيجاد توازن بين البساطة والعيش بأسلوب حياة خالٍ من النفايات؟ أخبرنا وربما يكون لدى عضو آخر في مجتمع قش الغابة مقايضة مثالية خالية من النفايات ولكن بسيطة! نود أيضًا أن نسمع عن أي منتجات مستدامة ترغب في إطلاق نشاط تجاري مثلنا",
+    
     "Save The World!": "!أنقذوا العالم",
     "Popular": "الأكثر رواجاً",
     "Glassware": "الأواني الزجاجية",
@@ -154,8 +154,8 @@ export const TRANSLATIONS_AR = {
     "Chapter Mips Helmet": "خوذة من شابتر",
     "Quantity": "الكمية",
     "Price:": "السعر",
-    "Choose how you want to Sign In":"إختر كيف تريد تسجيل الدخول",
-
+    "Choose how you want to Sign In": "إختر كيف تريد تسجيل الدخول",   
+    " the zero-waste lifestyle is a journey. So share your ideas below, and tell me what fits into your ‘Venn diagram.’ Are you struggling with finding a balance between minimalism and living a zero-waste lifestyle? Let us know and perhaps another member of the Jungle Straws community has the perfect zero-waste yet minimalist swap! We’d also love to hear of any sustainable products that you’d like to see a business such as us launch.":"أسلوب الحياة الخالية من النفايات هو رحلة. لذا شارك بأفكارك أدناه ، وأخبرني ما الذي يتناسب مع مخطط فان الخاص بك . هل تكافح من أجل إيجاد توازن بين البساطة والعيش بأسلوب حياة خالٍ من النفايات؟ أخبرنا وربما يكون لدى عضو آخر في مجتمع قش الغابة مقايضة مثالية خالية من النفايات ولكن بسيطة! نود أيضًا أن نسمع عن أي منتجات مستدامة ترغب في إطلاق نشاط تجاري مثلنا",
 
 
 };
