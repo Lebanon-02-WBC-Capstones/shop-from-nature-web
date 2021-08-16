@@ -8,13 +8,13 @@ function ArrowForward() {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0)">
+      <g clipPath="url(#clip0)">
         <path
           d="M0.75 59.75L21 39.5L0.75 19.25"
           stroke="black"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokelnecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>

@@ -6,23 +6,25 @@ import MohamadCard from "./MohamadCard";
 import JanaCard from "./JanaCard";
 import MarwaCard from "./MarwaCard";
 import MiraCard from "./MiraCard";
+import { LanguageContext } from "../../App";
 
 function TeamMemberCard() {
+  const { t } = React.useContext(LanguageContext);
   return (
     <div className="flex flex-col bg-mainbg mb-0 py-8">
       <div className="flex flex-row justify-around">
         <p className="text-bric font-sans text-center font-medium text-4xl mt-4">
-          People behind our success
+          {t("People behind our success")}
         </p>
       </div>
       <div className="">
         <OsamaCard />
         <div className="grid grid-flow-col grid-rows-2 gap-x-px gap-y-4">
           <ZiadCard />
-          <CesarCard />
+          <MarwaCard />
           <MohamadCard />
           <JanaCard />
-          <MarwaCard />
+          <CesarCard />
           <MiraCard />
         </div>
       </div>

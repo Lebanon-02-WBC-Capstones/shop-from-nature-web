@@ -7,6 +7,7 @@ import PopularList from "./PopularList";
 import GlasswareList from "./GlasswareList";
 import FoodContainerList from "./FoodContainerList";
 import API from "../../API";
+import { LanguageContext } from "../../App";
 
 const shopPage = () => {
   const [prdts, setProducts] = useState([]);
@@ -15,7 +16,7 @@ const shopPage = () => {
       setProducts(products);
     });
   }, []);
-
+  const { t } = React.useContext(LanguageContext);
   return (
     <div className="bg-mainbg">
       <div>
@@ -23,7 +24,7 @@ const shopPage = () => {
       </div>
       <div className="flex justify-between mb-0">
         <div className="text-red font-medium text-2xl  ml-11">
-          <p>Popular</p>
+          <p>{t("Popular")}</p>
           <div className="border-t-2 border-red my-1  w-10" />
         </div>
         <div>
@@ -42,7 +43,7 @@ const shopPage = () => {
       <div className="relative">
         <div>
           <img width="400" height="400" src={LinesDown} />
-          <div className="absolute ml-40 bottom-20 left-20">
+          <div className="absolute bottom-10 w-full">
             <NewsLetter />
           </div>
         </div>
