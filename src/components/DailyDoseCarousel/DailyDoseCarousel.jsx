@@ -3,7 +3,7 @@ import ArrowForward from "../../Icons/ArrowForward";
 import ArrowBack from "../../Icons/ArrowBack";
 import Slider from "react-slick";
 import API from "../../API";
-
+import { LanguageContext } from "../../App";
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
@@ -36,11 +36,11 @@ const DailyDoseCarousel = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
-
+  const { t } = React.useContext(LanguageContext);
   return (
     <div className=" mb-20 bg-white">
       <h2 className="text-center text-4xl text-green py-16 font-medium">
-        Your daily dose of Facts
+        {t("Your daily dose of Facts")}
       </h2>
       {facts.length != 0 && (
         <Slider
@@ -51,8 +51,10 @@ const DailyDoseCarousel = () => {
             <div key={fact.id} className="mb-4">
               <div className="flex justify-between items-center">
                 <div className="text-center px-24">
-                  <h3 className="text-3xl text-green mb-4">Fact {fact.nb}</h3>
-                  <p className="text-2xl text-red">{fact.Fact}</p>
+                  <h3 className="text-3xl text-green mb-4">
+                    {t("Fact")} {t(fact.nb)}
+                  </h3>
+                  <p className="text-2xl text-red">{t(fact.Fact)}</p>
                 </div>
                 <div className=" mr-8 shadow-fz max-w-xs">
                   <img src={fact.img} />

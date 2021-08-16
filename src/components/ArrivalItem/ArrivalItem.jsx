@@ -2,10 +2,15 @@ import React, { useState, useEffect } from "react";
 import API from "../../API";
 import ArrowForward from "../../Icons/ArrowForward";
 import ArrowBack from "../../Icons/ArrowBack";
+import SignInModal from "../SignInModal/SignInModal";
 import Slider from "react-slick";
+import { LanguageContext } from "../../App";
+import { useAuth } from "../../AuthProvider/AuthContext";
 
 const ArrivalItem = () => {
+  const [showModal, setShowModal] = useState(false);
   const [arrivalItems, setArrivalItems] = useState([]);
+  const { currentUser } = useAuth();
   useEffect(() => {
     API.getProducts().then((products) => {
       setArrivalItems(products);
@@ -20,7 +25,7 @@ const ArrivalItem = () => {
       </button>
     );
   }
-
+  const { t } = React.useContext(LanguageContext);
   function SamplePrevArrow(props) {
     const { onClick } = props;
     return (
@@ -41,7 +46,7 @@ const ArrivalItem = () => {
   return (
     <div className="">
       <h2 className="text-center text-4xl text-grey py-16 font-medium">
-        New Arrivals
+        {t("New Arrivals")}
       </h2>
       {arrivalItems.length != 0 && (
         <Slider
@@ -57,17 +62,26 @@ const ArrivalItem = () => {
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex items-center mx-3">
-                  <p className="text-grey mr-12 text-md">{item.Name}</p>
+                  <p className="text-grey mr-12 text-md">{t(item.Name)}</p>
                   <p className="text-grey">{item.Price}</p>
                 </div>
                 <button
                   onClick={() => {
-                    API.setCart(item);
+                    if (currentUser) {
+                      let payload = { ...item, uid: currentUser.uid };
+                      API.setCart(payload);
+                    } else {
+                      setShowModal(true);
+                    }
                   }}
                   className="text-md text-red font-regular border-2 border-grey px-2 mt-2 "
                 >
-                  Add To Bag
+                  {t("Add To Bag")}
                 </button>
+                <SignInModal
+                  showModal={showModal}
+                  setShowModal={setShowModal}
+                />
               </div>
             </div>
           ))}

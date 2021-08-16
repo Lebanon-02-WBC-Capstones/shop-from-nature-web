@@ -5,8 +5,10 @@ import CardIcon from "../../Icons/CardIcon";
 import Corner from "../../images/Corner";
 import { useAuth } from "../../AuthProvider/AuthContext";
 import SignInModal from "../SignInModal/SignInModal";
+import { LanguageContext } from "../../App";
 
 const Navbar = () => {
+  const { t } = React.useContext(LanguageContext);
   const { logout, currentUser } = useAuth();
   const [showModal, setShowModal] = useState(false);
   const handleSignIn = () => {
@@ -31,16 +33,16 @@ const Navbar = () => {
       </Link>
       <div className="flex items-center">
         <Link to="/">
-          <p className="text-xl mr-6 text-red font-regular">Home</p>
+          <p className="text-xl mr-6 text-red font-regular">{t("Home")}</p>
         </Link>
         <Link to="/shop">
-          <p className="text-xl mr-6 text-red font-regular">Shop</p>
+          <p className="text-xl mr-6 text-red font-regular">{t("Shop")}</p>
         </Link>
         <Link to="/blog">
-          <p className="text-xl mr-6 text-red font-regular">Blog</p>
+          <p className="text-xl mr-6 text-red font-regular">{t("Blog")}</p>
         </Link>
         <Link to={"/about"}>
-          <p className="text-xl mr-6 text-red font-regular">About Us</p>
+          <p className="text-xl mr-6 text-red font-regular">{t("About Us")}</p>
         </Link>
         <Link to="/card">
           <CardIcon className="mr-6" />

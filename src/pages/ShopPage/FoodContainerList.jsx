@@ -1,13 +1,15 @@
 import React from "react";
 import ShopListItem from "../../components/ShopListItem/ShoptListItem";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../../App";
 import PropTypes from "prop-types";
 
 const FoodContainer = ({ products }) => {
+  const { t } = React.useContext(LanguageContext);
   return (
     <div>
       <div className="text-red font-medium text-2xl  ml-11">
-        <p>Containers</p>
+        <p>{t("Containers")}</p>
         <div className="border-t-2 border-red my-1  w-10" />
       </div>
       <div className="flex flex-wrap">

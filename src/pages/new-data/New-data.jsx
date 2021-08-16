@@ -1,7 +1,7 @@
 export const NewData = [
   {
     id: 1,
-    title: "All you need to know about bamboo straws | Jungle Straws",
+    title: "All you need to know about bamboo straws | Jungle Straws ",
     subtitle: "Jungle Straw July 1st, 2021 . 5 min read",
     img1: "https://images.squarespace-cdn.com/content/v1/5b277af875f9ee04f69775de/1551750250996-KTIVXBN16ZL880GIRCNV/are+bamboo+straws+reusable-can+I+buy+bulk+bamboo+straws.jpg?format=500w",
     header1: "Bamboo straws impact.",

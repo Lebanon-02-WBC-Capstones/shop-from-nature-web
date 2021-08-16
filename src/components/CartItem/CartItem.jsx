@@ -1,8 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { db } from "../../firebase";
+import API from "../../API";
+import { LanguageContext } from "../../App";
 import SampleProduct from "../../images/SampleProduct";
 
-const Cartitem = (product) => {
+  const Cartitem = ({ product }) => {
   const [quantity, setQuantity] = useState(0);
+  const [doc, setDoc] = useState({});
+  
+    useEffect(() => {
+    db.collection("Cart")
+      .get()
+      .then((snapshot) => {
+        snapshot.docs.forEach((doc) => {
+          setDoc(doc);
+        });
+      });
+  }, []);
+
+
   let plus = () => {
     setQuantity(quantity + 1);
   };
@@ -11,11 +27,11 @@ const Cartitem = (product) => {
       setQuantity(quantity - 1);
     }
   };
-  product = {
-    img: <SampleProduct />,
-    price: "19$",
-  };
 
+  const handleDelete = () => {
+    API.deleteProduct(doc.id);
+  };
+  const { t } = React.useContext(LanguageContext);
   return (
     <div className="flex bg-mainbg">
       <div className=" pl-10 pt-10 ">{product.img}</div>
@@ -55,7 +71,8 @@ const Cartitem = (product) => {
         </div>
         <TabsRender />
       </div>
-    </div>
+      <div className="border-t-2 max-w-md border-red mb-1 border-opacity-60" />
+    </>
   );
 };
 

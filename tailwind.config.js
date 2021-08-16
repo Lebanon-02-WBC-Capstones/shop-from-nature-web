@@ -50,6 +50,7 @@ module.exports = {
         xs: "18vw",
         md: "50%",
         maxp: "65%",
+        prdsh: "250px",
       },
       maxHeight: {
         lg: "200px",

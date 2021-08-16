@@ -1,5 +1,4 @@
 import { db } from "./firebase";
-import firebase from "firebase";
 
 class API {
   static getProducts = () => {
@@ -52,14 +51,12 @@ class API {
   };
 
   static setContactData = (data) => {
-    db.collection("Contact-us").add(data).then(console.log("data added"));
+    db.collection("Contact-us").add(data);
   };
 
   static setCart = (data) => {
-    db.collection("Cart").add(data).then(console.log("added data"));
+    db.collection("Cart").add(data);
   };
-}
-
 
   static getProduct = () => {
     return new Promise((resolve) => {
@@ -72,5 +69,22 @@ class API {
       });
     });
   };
+
+  static getCart = () => {
+    return new Promise((resolve) => {
+      db.collection("Cart").onSnapshot((snapchot) => {
+        const Items = snapchot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        resolve(Items);
+      });
+    });
+  };
+
+  static deleteProduct = async (id) => {
+    db.collection("Cart").doc(id).delete();
+  };
+
 }
 export default API;
