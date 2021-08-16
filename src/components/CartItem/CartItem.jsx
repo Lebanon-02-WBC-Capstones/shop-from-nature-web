@@ -1,8 +1,19 @@
-import React, { useState } from "react";
-import SampleProduct from "../../images/SampleProduct";
+import React, { useEffect, useState } from "react";
+import { db } from "../../firebase";
+import API from "../../API";
 import { LanguageContext } from "../../App";
-const Cartitem = (product) => {
-  const [quantity, setQuantity] = useState(0);
+const Cartitem = ({ product }) => {
+  const [doc, setDoc] = useState({});
+  useEffect(() => {
+    db.collection("Cart")
+      .get()
+      .then((snapshot) => {
+        snapshot.docs.forEach((doc) => {
+          setDoc(doc);
+        });
+      });
+  }, []);
+  const [quantity, setQuantity] = useState(1);
   let plus = () => {
     setQuantity(quantity + 1);
   };
@@ -11,34 +22,44 @@ const Cartitem = (product) => {
       setQuantity(quantity - 1);
     }
   };
-  product = {
-    img: <SampleProduct />,
-    price: "19$",
+
+  const handleDelete = () => {
+    API.deleteProduct(doc.id);
   };
   const { t } = React.useContext(LanguageContext);
   return (
-    <div className="flex">
-      <div className=" mt-3 ml-5">{product.img}</div>
-      <div className="ml-4 flex flex-col">
-        <h3 className="text-2xl"> {t("Chapter Mips Helmet")} </h3>
-        <h4 className="text-xl text-left mt-5 text-red">{t("Quantity")}</h4>
-        <div className="bg-white mt-4 divide-x-2 divide-red divide-opacity-60 flex justify-between items-center max-w-2xs ">
-          <button onClick={plus} className="text-2xl pl-2">
-            +
-          </button>
-          <div className="min-h-full text-2xl  pl-2">{quantity}</div>
-          <button onClick={minus} className="text-2xl px-2 ">
-            &minus;
-          </button>
+    <>
+      <div className="flex ml-6 my-7">
+        <div className=" shadow-xl w-prd h-prd min-h-prdsh max-w-prdsh max-h-prdsh bg-white">
+          <img src={product.img1} />
         </div>
-        <div className="self-start mt-4">
-          <p className="text-red text-xl">
-            {t("Price:")}
-            <span className="text-black pl-1">{product.price}</span>
-          </p>
+        <div className="ml-10 flex flex-col">
+          <h3 className="text-2xl"> {product.Title} </h3>
+          <h4 className="text-xl text-left mt-5 text-red">Quantity</h4>
+          <div className="bg-white mt-4 divide-x-2 divide-red divide-opacity-60 flex justify-between items-center max-w-2xs ">
+            <button onClick={plus} className="text-2xl px-2">
+              +
+            </button>
+            <div className=" text-2xl px-1">{quantity}</div>
+            <button onClick={minus} className="text-2xl px-2 ">
+              &minus;
+            </button>
+          </div>
+          <div className="self-start mt-4">
+            <p className="text-red text-xl">
+              Price:<span className="text-black pl-1">{product.Price}</span>
+            </p>
+          </div>
+          <button
+            className="text-md text-red font-regular border-2 border-grey p-2 mt-2 "
+            onClick={handleDelete}
+          >
+            Delete
+          </button>
         </div>
       </div>
-    </div>
+      <div className="border-t-2 max-w-md border-red mb-1 border-opacity-60" />
+    </>
   );
 };
 

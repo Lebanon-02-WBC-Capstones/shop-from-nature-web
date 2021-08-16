@@ -7,7 +7,7 @@ import Newsletter from "../../components/Newsletter/Newsletter";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="bg-mainbg">
       <HomePageHeader />
       <ArrivalItem />
       <DailyDoseCarousel />
