@@ -1,25 +1,34 @@
+/* eslint-disable no-undef */
 module.exports = {
   important: true,
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     extend: {
       fontFamily: {
         sans: "Oswald",
       },
+      width: {
+        prd: "250px",
+      },
+      height: {
+        prd: "250px",
+      },
       colors: {
         transparent: "transparent",
         current: "currentColor",
+        mainbg: "#f4f0e9",
         grey: "#5F7264",
         olivegreen: "#7EAC8A",
         red: "#9F6544",
         green: "#5F7264",
         black: "#000000",
-        white: "#fcfbfb",
+        white: "#fffdfb",
         gray: "#c5cbc5",
         dark: "#717771",
         tan: "#fcfbf9",
         bric: "#892E2E",
+        darkGreen: "#186717",
       },
       minHeight: {
         0: "0",
@@ -29,23 +38,33 @@ module.exports = {
         full: "100vh",
         "1/2": "50%",
         "3/4": "75%",
+        "1/1": "100%",
+        prdsh: "250px",
       },
       maxWidth: {
         "2xs": "5rem",
+        xs: "18vw",
+        md: "50%",
+        maxp: "65%",
+        prdsh: "250px",
+      },
+      maxHeight: {
+        lg: "200px",
+        prdsh: "250px",
       },
       boxShadow: {
-        xl:"-15px -15px #7EAC8A",
+        xl: "-15px -15px #7EAC8A",
         xxl: "-40px -35px #7EAC8A",
-        ll:"-35px 20px #9F6544",
+        ll: "-35px 20px #9F6544",
+        fz: "15px -20px #9F6544",
       },
     },
   },
-  extend: {},
   variants: {
     boxShadow: ["active"],
     animation: ["motion-reduce"],
     padding: ["hover"],
     textColor: ["hover"],
+    backgroundOpacity: ["active"],
   },
 };
-
