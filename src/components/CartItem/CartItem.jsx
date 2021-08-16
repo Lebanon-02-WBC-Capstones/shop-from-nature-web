@@ -26,7 +26,7 @@ const Cartitem = ({ product }) => {
   const handleDelete = () => {
     API.deleteProduct(doc.id);
   };
-
+  const { t } = React.useContext(LanguageContext);
   return (
     <>
       <div className="flex ml-6 my-7">
