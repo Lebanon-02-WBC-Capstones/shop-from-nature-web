@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import API from "../../API";
 import { useParams } from "react-router-dom";
-
+import { LanguageContext } from "../../App";
 const BlogDetailsPage = () => {
+  const { t } = React.useContext(LanguageContext);
   const { id } = useParams();
   const [blogsData, setBlogDetails] = useState([]);
   useEffect(() => {
@@ -19,12 +20,12 @@ const BlogDetailsPage = () => {
         <section className="bg-tan p-32 text-xl">
           {blogData && (
             <h1 className="text-3xl text-red text-left m-16">
-              {blogData.title}
+              {t(blogData.title)}
             </h1>
           )}
           {blogData && (
             <h2 className="text-2xl text-green text-left m-16">
-              {blogData.subtitle}
+              {t(blogData.subtitle)}
             </h2>
           )}
           {blogData && (
@@ -38,10 +39,12 @@ const BlogDetailsPage = () => {
           <div className="m-16">
             {blogData && (
               <h1 className="text-3xl text-red text-left mb-12 ">
-                {blogData.header1}
+                {t(blogData.header1)}
               </h1>
             )}
-            {blogData && <p className="text-grey mb-12">{blogData.descp1}</p>}
+            {blogData && (
+              <p className="text-grey mb-12">{t(blogData.descp1)}</p>
+            )}
             <div className="flex justify-between mb-12">
               {blogData && (
                 <img
@@ -59,15 +62,19 @@ const BlogDetailsPage = () => {
               )}
             </div>
             {blogData && (
-              <h1 className="text-3xl text-red mb-12">{blogData.header2}</h1>
+              <h1 className="text-3xl text-red mb-12">{t(blogData.header2)}</h1>
             )}
-            {blogData && <p className="text-grey mb-12">{blogData.descp2}</p>}
+            {blogData && (
+              <p className="text-grey mb-12">{t(blogData.descp2)}</p>
+            )}
             {blogData && (
               <h1 className="text-3xl text-red text-left mb-12">
-                {blogData.header3}
+                {t(blogData.header3)}
               </h1>
             )}
-            {blogData && <p className="text-grey mb-12">{blogData.descp3}</p>}
+            {blogData && (
+              <p className="text-grey mb-12">{t(blogData.descp3)}</p>
+            )}
             <div className="flex justify-between">
               {blogData && (
                 <img

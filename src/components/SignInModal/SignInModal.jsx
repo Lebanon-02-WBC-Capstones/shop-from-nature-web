@@ -1,6 +1,6 @@
 import React from "react";
 import { useAuth } from "../../AuthProvider/AuthContext";
-
+import { LanguageContext } from "../../App";
 export default function ContactModal({ showModal, setShowModal }) {
   const { signinGoogle, signinGithub } = useAuth();
   const handleGoogle = () => {
@@ -10,6 +10,7 @@ export default function ContactModal({ showModal, setShowModal }) {
   const handleGithub = () => {
     signinGithub();
   };
+  const { t } = React.useContext(LanguageContext);
   return (
     <>
       {showModal ? (
@@ -24,7 +25,7 @@ export default function ContactModal({ showModal, setShowModal }) {
               <div className="bg-mainbg pl-20 pr-20 pb-5 border-0 rounded-lg shadow-lg relative flex flex-col w-full outline-none focus:outline-none">
                 <div className="flex items-start justify-between p-5 border-b border-solid border-red rounded-t">
                   <h3 className="w-full inline-flex justify-center text-2xl  leading-6 font-medium text-sans text-red">
-                    Choose how you want to Sign In
+                    {t("Choose how you want to Sign In")}
                   </h3>
                 </div>
                 <button
