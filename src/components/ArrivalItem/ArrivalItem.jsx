@@ -4,6 +4,7 @@ import ArrowForward from "../../Icons/ArrowForward";
 import ArrowBack from "../../Icons/ArrowBack";
 import SignInModal from "../SignInModal/SignInModal";
 import Slider from "react-slick";
+import { LanguageContext } from "../../App";
 import { useAuth } from "../../AuthProvider/AuthContext";
 
 const ArrivalItem = () => {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../../firebase";
 import API from "../../API";
-
+import { LanguageContext } from "../../App";
 const Cartitem = ({ product }) => {
   const [doc, setDoc] = useState({});
   useEffect(() => {
