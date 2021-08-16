@@ -9,16 +9,25 @@ import { AuthProvider } from "./AuthProvider/AuthContext";
 import HomePage from "./pages/HomePage/HomePage";
 import BlogPage from "./pages/BlogsPage/BlogPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage/BlogDetailsPage";
+import Translation from "./components/Translation/Translation";
+import { useTranslation } from "react-i18next";
+export const LanguageContext = React.createContext();
 import ShopPage from "./pages/ShopPage/ShopPage";
 import About from "./pages/About/About";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 function App() {
+  const { t, i18n } = useTranslation();
+
+  function handleClick(lang) {
+    i18n.changeLanguage(lang);
+  }
   return (
     <Router>
-      <AuthProvider>
-        <Navbar />
+      <LanguageContext.Provider value={{ t, i18n }}>
+        <AuthProvider>
+        <Translation handleClick={handleClick} />
+        <Navbar t={t} />
         <Switch>
           <Route path="/" component={HomePage} exact />
           <Route path="/shop" component={ShopPage} />
@@ -26,10 +35,11 @@ function App() {
           <Route exact path="/blog" component={BlogPage} />
           <Route path="/blog/:id" component={BlogDetailsPage} />
         </Switch>
-        <Footer />
-      </AuthProvider>
-    </Router>
+        <Footer t={t} />
+        </AuthProvider>
+      </LanguageContext.Provider>
+    </Router >
+
   );
 }
-
 export default App;

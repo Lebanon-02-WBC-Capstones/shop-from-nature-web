@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import SampleProduct from "../../images/SampleProduct";
+import { LanguageContext } from "../../App";
 const Cartitem = (product) => {
   const [quantity, setQuantity] = useState(0);
   let plus = () => {
@@ -14,13 +15,13 @@ const Cartitem = (product) => {
     img: <SampleProduct />,
     price: "19$",
   };
-
+  const { t } = React.useContext(LanguageContext);
   return (
     <div className="flex">
       <div className=" mt-3 ml-5">{product.img}</div>
       <div className="ml-4 flex flex-col">
-        <h3 className="text-2xl"> Chapter Mips Helmet </h3>
-        <h4 className="text-xl text-left mt-5 text-red">Quantity</h4>
+        <h3 className="text-2xl"> {t("Chapter Mips Helmet")} </h3>
+        <h4 className="text-xl text-left mt-5 text-red">{t("Quantity")}</h4>
         <div className="bg-white mt-4 divide-x-2 divide-red divide-opacity-60 flex justify-between items-center max-w-2xs ">
           <button onClick={plus} className="text-2xl pl-2">
             +
@@ -32,7 +33,8 @@ const Cartitem = (product) => {
         </div>
         <div className="self-start mt-4">
           <p className="text-red text-xl">
-            Price:<span className="text-black pl-1">{product.price}</span>
+            {t("Price:")}
+            <span className="text-black pl-1">{product.price}</span>
           </p>
         </div>
       </div>

@@ -1,9 +1,10 @@
 import React from "react";
 import ShopListItem from "../../components/ShopListItem/ShoptListItem";
-
+import { LanguageContext } from "../../App";
 import PropTypes from "prop-types";
 
 const PopularList = ({ products }) => {
+  const { t } = React.useContext(LanguageContext);
   return (
     <div className="flex flex-wrap">
       {products
