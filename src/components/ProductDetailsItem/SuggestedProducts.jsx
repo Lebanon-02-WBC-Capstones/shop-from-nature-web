@@ -1,9 +1,8 @@
 // eslint-disable
 
-import React, { useState } from "react";
+import React from "react";
 
-const TabsRender = ({ product, products }) => {
-  const [openTab, setOpenTab] = useState(1);
+const SuggestedProducts = ({ product, products }) => {
   let prdCat = product.Category;
   const suggestedPrd = products.filter((prod) => prod.Category == prdCat);
   return (
@@ -15,53 +14,19 @@ const TabsRender = ({ product, products }) => {
             role="tablist"
           >
             <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-              <a
+              <div
                 className={
-                  "text-lg  uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 1
-                    ? "text-red bg-white"
-                    : "text-white bg-olivegreen")
+                  "text-lg  text-white bg-olivegreen uppercase px-5 py-3 shadow-lg rounded block leading-normal "
                 }
-                onClick={(e) => {
-                  e.preventDefault();
-                  setOpenTab(1);
-                }}
-                data-toggle="tab"
-                href="#link1"
-                role="tablist"
-              >
-                Description
-              </a>
-            </li>
-            <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
-              <a
-                className={
-                  "text-lg  uppercase px-5 py-3 shadow-lg rounded block leading-normal " +
-                  (openTab === 2
-                    ? "text-red bg-white"
-                    : "text-white bg-olivegreen")
-                }
-                onClick={(e) => {
-                  e.preventDefault();
-                  setOpenTab(2);
-                }}
-                data-toggle="tab"
-                href="#link2"
-                role="tablist"
               >
                 Suggested products
-              </a>
+              </div>
             </li>
           </ul>
           <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
             <div className="px-4 py-5 flex-auto">
               <div className="tab-content tab-space">
-                <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                  <p className="text-grey text-sm">
-                    {product && product.Description}
-                  </p>
-                </div>
-                <div className={openTab === 2 ? "block" : "hidden"} id="link2">
+                <div>
                   <div>
                     <div className="flex flex-wrap justify-around  content-start m-5 ">
                       {suggestedPrd &&
@@ -91,4 +56,4 @@ const TabsRender = ({ product, products }) => {
   );
 };
 
-export default TabsRender;
+export default SuggestedProducts;

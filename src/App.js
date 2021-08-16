@@ -13,7 +13,6 @@ import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailPage";
 function App() {
   return (
     <Router>
-      
       <Navbar />
       <Switch>
         <Route path="/shop" component={ShopPage} />

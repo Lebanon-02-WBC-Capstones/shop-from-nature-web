@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import API from "../../API";
-import TabsRender from "./TabsRender";
-
+import SuggestedProducts from "./SuggestedProducts";
+import ProductDescription from "./ProductDescription";
 const ProductDetailsItem = () => {
   const id = useParams().id;
   const [quantity, setQuantity] = useState(0);
@@ -28,7 +28,7 @@ const ProductDetailsItem = () => {
         <>
           {prd && (
             <div>
-              <div className="ml-10 mt-10 border-gray-100 max-h-sm min-h-prdsh w-prd bg-white shadow-xl">
+              <div className="ml-10 mt-10 border-gray-100  max-h-sm min-h-prdsh  bg-white shadow-xl">
                 <img src={prd.img1}></img>
               </div>
               <div className="flex flex-wrap justify-around w-50 mt-5 ml-6 ">
@@ -92,7 +92,12 @@ const ProductDetailsItem = () => {
                 Add to cart
               </button>
             </div>
-            {prd && <TabsRender products={prdt} product={prd} />}
+            {prd && (
+              <>
+                <ProductDescription products={prdt} product={prd} />
+                <SuggestedProducts products={prdt} product={prd} />{" "}
+              </>
+            )}
           </div>
         </>
       )}
