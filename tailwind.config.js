@@ -8,23 +8,12 @@ module.exports = {
       fontFamily: {
         sans: "Oswald",
       },
-<<<<<<< HEAD
       width: {
         prd: "250px",
       },
       height: {
         prd: "250px",
       },
-
-||||||| 6cb1452
-=======
-      width: {
-        prd: "250px",
-      },
-      height: {
-        prd: "250px",
-      },
->>>>>>> main
       colors: {
         transparent: "transparent",
         current: "currentColor",
@@ -39,12 +28,7 @@ module.exports = {
         dark: "#717771",
         tan: "#fcfbf9",
         bric: "#892E2E",
-<<<<<<< HEAD
-        darkGreen:"#186717"
-||||||| 6cb1452
-=======
         darkGreen: "#186717",
->>>>>>> main
       },
       minHeight: {
         0: "0",
