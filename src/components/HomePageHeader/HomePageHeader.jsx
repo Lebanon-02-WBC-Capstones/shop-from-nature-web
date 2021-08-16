@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 export default function HomePageHeader() {
   return (
     <div className="flex bg-pink py-20" style={{ minHeight: "70vh" }}>
@@ -44,9 +44,11 @@ export default function HomePageHeader() {
           items.
         </p>
         <div className="w-auto mx-auto pt-12">
-          <button className="h-16 text-center text-xl border-b-2 border-red text text-red hover:pb-4 hover:text-olivegreen hover:border-olivegreen transition-all">
-            Start Shopping
-          </button>
+          <Link to="/shop">
+            <button className="h-16 text-center text-xl border-b-2 border-red text text-red hover:pb-4 hover:text-olivegreen hover:border-olivegreen transition-all">
+              Start Shopping
+            </button>
+          </Link>
         </div>
       </div>
     </div>

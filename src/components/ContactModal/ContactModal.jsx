@@ -1,7 +1,39 @@
-import React from "react";
-
+import React, { useState } from "react";
+import API from "../../API";
+import emailjs from "emailjs-com";
+import { init } from "emailjs-com";
+init("user_OFs54Rn8o7nmderUPBxSC");
 export default function ContactModal() {
-  const [showModal, setShowModal] = React.useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [contactData, setContactData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  let handleChange = (e) => {
+    setContactData({ ...contactData, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    API.setContactData(contactData);
+    emailjs
+      .sendForm(
+        "service_ia0wvrl",
+        "template_nkvmjft",
+        e.target,
+        "user_OFs54Rn8o7nmderUPBxSC"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    setShowModal(false);
+  };
+
   return (
     <>
       <button
@@ -28,11 +60,13 @@ export default function ContactModal() {
                     </span>
                   </button>
                 </div>
-
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="relative w-full p-6 flex-auto">
                     <p className="text-red text-sans text-xl">Name</p>
-                    <textarea
+                    <input
+                      onChange={handleChange}
+                      name="name"
+                      value={contactData.name}
                       type="text"
                       className="pr-1 pl-1 h-8 w-80 wx-auto focus:outline-none shadow-lg"
                       required
@@ -41,9 +75,18 @@ export default function ContactModal() {
                     <p className="text-red text-sans text-xl pr-4 pt-3">
                       Email
                     </p>
+
                     <textarea
                       required
                       type="text"
+
+                    <input
+                      required
+                      onChange={handleChange}
+                      name="email"
+                      value={contactData.email}
+                      type="email"
+
                       className="border w-full border-transparent pr-1 pl-1 h-8 focus:outline-none shadow-lg"
                     />
                     <br />
@@ -51,6 +94,8 @@ export default function ContactModal() {
                       Message
                     </p>
                     <textarea
+                      onChange={handleChange}
+                      name="message"
                       type="text"
                       className="pl-1 pr-1 wx-auto w-full h-40 shadow-lg focus:outline-none"
                       placeholder=""
