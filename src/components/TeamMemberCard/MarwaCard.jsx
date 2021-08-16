@@ -1,19 +1,23 @@
 import React from "react";
 import MarwaPhoto from "../../images/MarwaPhoto";
-function Member6() {
+import { LanguageContext } from "../../App";
+function MarwaCard() {
+  const { t } = React.useContext(LanguageContext);
   return (
     <div className="flex justify-center flex-col m-auto p-4">
-      <MarwaPhoto />
-      <div className="block justify-center text-center">
-        <p className="text-green font-sans font-normal text-xl uppercase">
-          Mohamad Al-Sabaa
-        </p>
-        <p className="text-green font-sans font-normal text-xl">
-          Front-end Web Developer
-        </p>
-      </div>
+      <a href="https://github.com/marwaghassa" target="_blank">
+        <MarwaPhoto />
+        <div className="block justify-center text-center">
+          <p className="text-green font-sans font-normal text-xl uppercase">
+            {t("Marwa Ghassa")}
+          </p>
+          <p className="text-green font-sans font-normal text-xl">
+            {t("Front-end Web Developer")}
+          </p>
+        </div>
+      </a>
     </div>
   );
 }
 
-export default Member6;
+export default MarwaCard;
