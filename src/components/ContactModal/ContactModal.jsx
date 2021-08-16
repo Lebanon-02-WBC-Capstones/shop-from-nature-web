@@ -81,7 +81,6 @@ export default function ContactModal() {
                       name="email"
                       value={contactData.email}
                       type="email"
-
                       className="border w-full border-transparent pr-1 pl-1 h-8 focus:outline-none shadow-lg"
                     />
                     <br />
