@@ -43,10 +43,10 @@ const Navbar = () => {
           <p className="text-xl mr-6 text-red font-regular">About Us</p>
         </Link>
         <Link to="/card">
-          <CardIcon className="mr-20" />
+          <CardIcon className="mr-6" />
         </Link>
         <button
-          className="bg-green px-2 py-1 text-xl mr-6 text-white rounded-sm font-regular "
+          className="bg-green px-2 py-1 text-xl mr-52 text-white rounded-sm font-regular "
           onClick={currentUser ? handleLogout : handleSignIn}
         >
           {currentUser ? "Logout" : "Login"}
