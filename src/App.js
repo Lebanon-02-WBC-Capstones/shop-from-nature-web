@@ -12,7 +12,7 @@ import Translation from "./components/Translation/Translation";
 import { useTranslation } from "react-i18next";
 export const LanguageContext = React.createContext();
 import ShopPage from "./pages/ShopPage/ShopPage";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailPage";
 function App() {
   return (
@@ -32,7 +32,7 @@ import About from "./pages/About/About";
 import CartPage from "./pages/CartPage/CartPage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 
 function App() {
   const { t, i18n } = useTranslation();
