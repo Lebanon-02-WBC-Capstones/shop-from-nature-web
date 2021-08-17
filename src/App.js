@@ -11,6 +11,7 @@ import BlogPage from "./pages/BlogsPage/BlogPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage/BlogDetailsPage";
 import Translation from "./components/Translation/Translation";
 import { useTranslation } from "react-i18next";
+import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailPage";
 export const LanguageContext = React.createContext();
 import ShopPage from "./pages/ShopPage/ShopPage";
 import About from "./pages/About/About";
@@ -37,6 +38,7 @@ function App() {
             <Route path="/about" component={About} />
             <Route exact path="/blog" component={BlogPage} />
             <Route path="/blog/:id" component={BlogDetailsPage} />
+            <Route path="/productDetail/:id" component={ProductDetailsPage} />
             <Route path="/card" component={CartPage} />
           </Switch>
           <Footer t={t} />
