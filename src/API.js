@@ -25,6 +25,7 @@ class API {
     });
   };
 
+
   static getCategories = () => {
     return new Promise((resolve) => {
       db.collection("Categories").onSnapshot((snapchot) => {
@@ -57,6 +58,18 @@ class API {
     db.collection("Cart").add(data);
   };
 
+  static getProduct = () => {
+    return new Promise((resolve) => {
+      db.collection("Product").onSnapshot((snapchot) => {
+        const allProduct = snapchot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        resolve(allProduct);
+      });
+    });
+  };
+
   static getCart = () => {
     return new Promise((resolve) => {
       db.collection("Cart").onSnapshot((snapchot) => {
@@ -72,5 +85,6 @@ class API {
   static deleteProduct = async (id) => {
     db.collection("Cart").doc(id).delete();
   };
+
 }
 export default API;

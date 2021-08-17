@@ -10,6 +10,8 @@ module.exports = {
       },
       width: {
         prd: "250px",
+        prdsp:"180px",
+        prdss: "70px"
       },
       height: {
         prd: "250px",
@@ -40,6 +42,8 @@ module.exports = {
         "3/4": "75%",
         "1/1": "100%",
         prdsh: "250px",
+        prdsp: "180px",
+        prdss: "70px"
       },
       maxWidth: {
         "2xs": "5rem",
@@ -53,6 +57,7 @@ module.exports = {
         prdsh: "250px",
       },
       boxShadow: {
+        md: ' -6px -6px  #7EAC8A',
         xl: "-15px -15px #7EAC8A",
         xxl: "-40px -35px #7EAC8A",
         ll: "-35px 20px #9F6544",

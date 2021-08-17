@@ -83,6 +83,8 @@ export default function ContactModal() {
                     <p className="text-red text-sans text-xl pr-4 pt-3">
                       {t("Email")}
                     </p>
+
+                    <textarea required type="text" />
                     <input
                       required
                       onChange={handleChange}
