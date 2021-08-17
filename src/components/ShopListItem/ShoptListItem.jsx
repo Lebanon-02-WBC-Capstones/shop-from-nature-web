@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { LanguageContext } from "../../App";
 const ShopListItem = ({ id, img, title, price }) => {
   const { t } = React.useContext(LanguageContext);
@@ -14,12 +13,6 @@ const ShopListItem = ({ id, img, title, price }) => {
       </div>
     </div>
   );
-};
-ShopListItem.propTypes = {
-  id: PropTypes.number,
-  img: PropTypes.string,
-  title: PropTypes.string,
-  price: PropTypes.string,
 };
 
 export default ShopListItem;
