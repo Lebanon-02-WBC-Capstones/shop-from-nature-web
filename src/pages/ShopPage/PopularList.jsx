@@ -1,5 +1,6 @@
 import React from "react";
 import ShopListItem from "../../components/ShopListItem/ShoptListItem";
+import { Link } from "react-router-dom";
 import { LanguageContext } from "../../App";
 import PropTypes from "prop-types";
 
@@ -10,12 +11,17 @@ const PopularList = ({ products }) => {
       {products
         .filter((data) => data.Category === "Other")
         .map((filteredProduct) => (
-          <ShopListItem
+          <Link
             key={filteredProduct.id}
-            img={filteredProduct.img1}
-            title={filteredProduct.Name}
-            price={filteredProduct.Price}
-          />
+            to={`productDetail/${filteredProduct.id}`}
+          >
+            <ShopListItem
+              key={filteredProduct.id}
+              img={filteredProduct.img1}
+              title={filteredProduct.Name}
+              price={filteredProduct.Price}
+            />
+          </Link>
         ))}
     </div>
   );
