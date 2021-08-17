@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
+
 import Footer from "./components/Footer/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -12,27 +13,11 @@ import Translation from "./components/Translation/Translation";
 import { useTranslation } from "react-i18next";
 export const LanguageContext = React.createContext();
 import ShopPage from "./pages/ShopPage/ShopPage";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ProductDetailsPage from "./pages/ProductDetailsPage/ProductDetailPage";
-function App() {
-  return (
-    <Router>
-      <Navbar />
-      <Switch>
-        <Route path="/shop" component={ShopPage} />
-        <Route path="/about" component={About} />
-        <Route exact path="/blog" component={BlogPage} />
-        <Route path="/blog/:id" component={BlogDetailsPage} />
-        <Route exact path="/productDetail/:id" component={ProductDetailsPage} />
-      </Switch>
-
-      <Footer />
-
 import About from "./pages/About/About";
 import CartPage from "./pages/CartPage/CartPage";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -42,7 +27,7 @@ function App() {
   }
   return (
     <Router>
-    <LanguageContext.Provider value={{ t, i18n }}>
+      <LanguageContext.Provider value={{ t, i18n }}>
         <AuthProvider>
           <Translation handleClick={handleClick} />
           <Navbar t={t} />
