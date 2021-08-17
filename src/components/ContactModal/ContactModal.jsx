@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import API from "../../API";
+import ThankYouModel from "../contactUsModel/ThankYouModal";
 import { LanguageContext } from "../../App";
 import emailjs, { init } from "emailjs-com";
 init("user_OFs54Rn8o7nmderUPBxSC");
 export default function ContactModal() {
   const [showModal, setShowModal] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
   const { t } = React.useContext(LanguageContext);
   const [contactData, setContactData] = useState({
     name: "",
@@ -27,12 +29,17 @@ export default function ContactModal() {
       .then(
         (result) => {
           console.log(result.text);
+          setShowModal(false);
+        },
+        () => {
+          setShowThankYou(true);
         },
         (error) => {
           console.log(error.text);
         }
       );
-    setShowModal(false);
+
+    setShowThankYou(true);
   };
 
   return (
@@ -121,6 +128,7 @@ export default function ContactModal() {
             </div>
           </div>
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          <ThankYouModel show={showThankYou} setShow={setShowThankYou} />
         </>
       ) : null}
     </>
